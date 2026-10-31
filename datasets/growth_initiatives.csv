@@ -1,0 +1,8 @@
+InitiativeID,Title,Category,Status,TargetMetric,TargetValuePercent,ActualValuePercent,StartDate,CheckInDate,Notes
+GRW001,Expand Product A - Small Electronics,Product Expansion,Completed,Revenue Growth,13,11.2,2025-05-10,2025-06-24,Target nearly met; slower than expected due to festive season lull
+GRW002,Digital Marketing Campaign,Marketing,Completed,Revenue Growth,8,9.4,2025-05-15,2025-06-30,Exceeded target; strongest channel was WhatsApp catalog sharing
+GRW003,New Store - Bannerghatta,Store Expansion,Planned,Revenue Growth,22,,2025-10-01,,Awaiting lease finalization
+GRW004,Expand to Online Store,Channel Expansion,Planned,Revenue Growth,15,,2025-11-01,,Vendor evaluation in progress
+GRW005,Bulk Discount Program for Top 20 Customers,Retention,In Progress,Revenue Growth,6,3.1,2025-06-01,,"Early results below target, reviewing discount tiers"
+GRW006,Inventory Rebalancing - Festive Stock,Operations,In Progress,Cost Reduction,10,6.8,2025-06-15,,On track ahead of Diwali demand spike
+GRW007,Premium Product Line Launch,Product Expansion,Completed,Revenue Growth,12,14.7,2025-04-20,2025-06-05,Outperformed target; strong demand in Electronics & Appliances

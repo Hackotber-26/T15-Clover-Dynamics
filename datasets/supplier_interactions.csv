@@ -1,0 +1,178 @@
+InteractionID,SupplierID,Date,Channel,EventType,Notes
+SUP_INT00001,SUP001,2025-05-18,In-Person Visit,Unresponsive,No response to follow-up In-Person Visit after 48 hours
+SUP_INT00002,SUP001,2025-05-25,In-Person Visit,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00003,SUP001,2025-06-10,Email,Unresponsive,No response to follow-up Email after 48 hours
+SUP_INT00004,SUP001,2025-06-22,Phone Call,Order Placed,New purchase order confirmed via Phone Call
+SUP_INT00005,SUP001,2025-07-03,WhatsApp,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00006,SUP001,2025-07-20,Phone Call,Delivery Delayed,"Delivery delayed by 3 days, supplier cited logistics issue"
+SUP_INT00007,SUP002,2025-05-17,WhatsApp,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00008,SUP002,2025-05-31,Phone Call,Delivery Delayed,"Delivery delayed by 5 days, supplier cited logistics issue"
+SUP_INT00009,SUP002,2025-06-10,Email,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00010,SUP003,2025-05-05,In-Person Visit,Delivery Delayed,"Delivery delayed by 2 days, supplier cited logistics issue"
+SUP_INT00011,SUP003,2025-05-15,Phone Call,Delivery Delayed,"Delivery delayed by 3 days, supplier cited logistics issue"
+SUP_INT00012,SUP003,2025-06-02,In-Person Visit,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00013,SUP003,2025-06-12,Email,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00014,SUP003,2025-06-20,Phone Call,Unresponsive,No response to follow-up Phone Call after 48 hours
+SUP_INT00015,SUP004,2025-05-05,WhatsApp,Unresponsive,No response to follow-up WhatsApp after 48 hours
+SUP_INT00016,SUP004,2025-05-12,WhatsApp,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00017,SUP004,2025-05-17,Phone Call,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00018,SUP005,2025-05-19,In-Person Visit,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00019,SUP005,2025-05-24,WhatsApp,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00020,SUP005,2025-05-28,Email,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00021,SUP005,2025-06-02,WhatsApp,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00022,SUP005,2025-06-11,WhatsApp,Unresponsive,No response to follow-up WhatsApp after 48 hours
+SUP_INT00023,SUP006,2025-05-18,Email,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00024,SUP006,2025-05-25,WhatsApp,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00025,SUP006,2025-06-12,In-Person Visit,Delivery Delayed,"Delivery delayed by 2 days, supplier cited logistics issue"
+SUP_INT00026,SUP006,2025-06-17,WhatsApp,Price Increase Notice,Supplier informed of 8% price increase effective next order
+SUP_INT00027,SUP007,2025-05-11,In-Person Visit,Order Placed,New purchase order confirmed via In-Person Visit
+SUP_INT00028,SUP007,2025-05-17,WhatsApp,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00029,SUP007,2025-05-29,Phone Call,Order Placed,New purchase order confirmed via Phone Call
+SUP_INT00030,SUP007,2025-06-16,Phone Call,Order Placed,New purchase order confirmed via Phone Call
+SUP_INT00031,SUP007,2025-06-26,Phone Call,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00032,SUP008,2025-05-13,Phone Call,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00033,SUP008,2025-05-31,WhatsApp,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00034,SUP008,2025-06-18,Email,Price Increase Notice,Supplier informed of 4% price increase effective next order
+SUP_INT00035,SUP008,2025-07-01,Phone Call,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00036,SUP008,2025-07-10,Phone Call,Delivery Delayed,"Delivery delayed by 5 days, supplier cited logistics issue"
+SUP_INT00037,SUP009,2025-05-16,Email,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00038,SUP009,2025-05-30,In-Person Visit,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00039,SUP009,2025-06-12,In-Person Visit,Unresponsive,No response to follow-up In-Person Visit after 48 hours
+SUP_INT00040,SUP009,2025-06-25,Phone Call,Delivery Delayed,"Delivery delayed by 4 days, supplier cited logistics issue"
+SUP_INT00041,SUP009,2025-07-10,In-Person Visit,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00042,SUP010,2025-05-13,Email,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00043,SUP010,2025-05-24,In-Person Visit,Delivery Delayed,"Delivery delayed by 6 days, supplier cited logistics issue"
+SUP_INT00044,SUP010,2025-06-01,Email,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00045,SUP011,2025-05-13,In-Person Visit,Price Increase Notice,Supplier informed of 5% price increase effective next order
+SUP_INT00046,SUP011,2025-05-22,WhatsApp,Price Increase Notice,Supplier informed of 8% price increase effective next order
+SUP_INT00047,SUP011,2025-06-07,WhatsApp,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00048,SUP011,2025-06-20,WhatsApp,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00049,SUP012,2025-05-18,Phone Call,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00050,SUP012,2025-05-23,WhatsApp,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00051,SUP012,2025-06-06,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00052,SUP012,2025-06-17,Email,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00053,SUP012,2025-07-01,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00054,SUP013,2025-05-15,WhatsApp,Unresponsive,No response to follow-up WhatsApp after 48 hours
+SUP_INT00055,SUP013,2025-05-22,Phone Call,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00056,SUP013,2025-06-05,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00057,SUP014,2025-05-18,Phone Call,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00058,SUP014,2025-06-02,Email,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00059,SUP014,2025-06-17,WhatsApp,Order Placed,New purchase order confirmed via WhatsApp
+SUP_INT00060,SUP014,2025-06-22,In-Person Visit,Order Placed,New purchase order confirmed via In-Person Visit
+SUP_INT00061,SUP015,2025-05-08,In-Person Visit,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00062,SUP015,2025-05-22,In-Person Visit,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00063,SUP015,2025-05-27,Phone Call,Order Placed,New purchase order confirmed via Phone Call
+SUP_INT00064,SUP015,2025-06-14,Email,Delivery Delayed,"Delivery delayed by 6 days, supplier cited logistics issue"
+SUP_INT00065,SUP015,2025-06-22,Email,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00066,SUP015,2025-06-26,In-Person Visit,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00067,SUP016,2025-05-08,In-Person Visit,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00068,SUP016,2025-05-20,In-Person Visit,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00069,SUP016,2025-06-07,In-Person Visit,Order Placed,New purchase order confirmed via In-Person Visit
+SUP_INT00070,SUP017,2025-05-17,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00071,SUP017,2025-05-31,Email,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00072,SUP017,2025-06-17,WhatsApp,Order Placed,New purchase order confirmed via WhatsApp
+SUP_INT00073,SUP018,2025-05-14,Phone Call,Unresponsive,No response to follow-up Phone Call after 48 hours
+SUP_INT00074,SUP018,2025-05-27,Phone Call,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00075,SUP018,2025-06-08,Phone Call,Order Placed,New purchase order confirmed via Phone Call
+SUP_INT00076,SUP018,2025-06-23,In-Person Visit,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00077,SUP018,2025-07-01,WhatsApp,Unresponsive,No response to follow-up WhatsApp after 48 hours
+SUP_INT00078,SUP019,2025-05-13,In-Person Visit,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00079,SUP019,2025-05-31,Phone Call,Delivery Delayed,"Delivery delayed by 3 days, supplier cited logistics issue"
+SUP_INT00080,SUP019,2025-06-07,Email,Price Increase Notice,Supplier informed of 6% price increase effective next order
+SUP_INT00081,SUP019,2025-06-14,In-Person Visit,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00082,SUP019,2025-06-19,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00083,SUP019,2025-07-04,Phone Call,Unresponsive,No response to follow-up Phone Call after 48 hours
+SUP_INT00084,SUP020,2025-05-13,WhatsApp,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00085,SUP020,2025-05-30,WhatsApp,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00086,SUP020,2025-06-17,Email,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00087,SUP020,2025-07-03,WhatsApp,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00088,SUP021,2025-05-09,In-Person Visit,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00089,SUP021,2025-05-16,Phone Call,Order Placed,New purchase order confirmed via Phone Call
+SUP_INT00090,SUP021,2025-05-29,Phone Call,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00091,SUP022,2025-05-13,Phone Call,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00092,SUP022,2025-05-17,In-Person Visit,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00093,SUP022,2025-05-23,WhatsApp,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00094,SUP022,2025-06-05,Phone Call,Unresponsive,No response to follow-up Phone Call after 48 hours
+SUP_INT00095,SUP022,2025-06-15,Email,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00096,SUP023,2025-05-05,WhatsApp,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00097,SUP023,2025-05-16,In-Person Visit,Price Increase Notice,Supplier informed of 10% price increase effective next order
+SUP_INT00098,SUP023,2025-05-22,Email,Delivery Delayed,"Delivery delayed by 2 days, supplier cited logistics issue"
+SUP_INT00099,SUP023,2025-06-04,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00100,SUP023,2025-06-22,In-Person Visit,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00101,SUP024,2025-05-17,In-Person Visit,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00102,SUP024,2025-05-22,In-Person Visit,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00103,SUP024,2025-06-09,Phone Call,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00104,SUP024,2025-06-23,In-Person Visit,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00105,SUP024,2025-07-05,In-Person Visit,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00106,SUP025,2025-05-17,Phone Call,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00107,SUP025,2025-05-22,In-Person Visit,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00108,SUP025,2025-05-26,In-Person Visit,Order Placed,New purchase order confirmed via In-Person Visit
+SUP_INT00109,SUP026,2025-05-09,In-Person Visit,Price Increase Notice,Supplier informed of 10% price increase effective next order
+SUP_INT00110,SUP026,2025-05-26,In-Person Visit,Order Placed,New purchase order confirmed via In-Person Visit
+SUP_INT00111,SUP026,2025-06-07,In-Person Visit,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00112,SUP026,2025-06-18,Phone Call,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00113,SUP026,2025-06-28,Email,Unresponsive,No response to follow-up Email after 48 hours
+SUP_INT00114,SUP027,2025-05-12,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00115,SUP027,2025-05-16,Phone Call,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00116,SUP027,2025-05-26,Phone Call,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00117,SUP027,2025-05-30,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00118,SUP027,2025-06-09,WhatsApp,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00119,SUP028,2025-05-19,WhatsApp,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00120,SUP028,2025-06-03,In-Person Visit,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00121,SUP028,2025-06-10,WhatsApp,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00122,SUP029,2025-05-07,Email,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00123,SUP029,2025-05-21,WhatsApp,Order Placed,New purchase order confirmed via WhatsApp
+SUP_INT00124,SUP029,2025-05-28,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00125,SUP029,2025-06-14,WhatsApp,Price Increase Notice,Supplier informed of 6% price increase effective next order
+SUP_INT00126,SUP029,2025-06-30,WhatsApp,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00127,SUP029,2025-07-14,Email,Price Increase Notice,Supplier informed of 4% price increase effective next order
+SUP_INT00128,SUP030,2025-05-06,Phone Call,Price Increase Notice,Supplier informed of 5% price increase effective next order
+SUP_INT00129,SUP030,2025-05-18,In-Person Visit,Price Increase Notice,Supplier informed of 6% price increase effective next order
+SUP_INT00130,SUP030,2025-05-25,WhatsApp,Unresponsive,No response to follow-up WhatsApp after 48 hours
+SUP_INT00131,SUP031,2025-05-17,In-Person Visit,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00132,SUP031,2025-05-27,WhatsApp,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00133,SUP031,2025-06-05,In-Person Visit,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00134,SUP031,2025-06-18,Phone Call,Price Increase Notice,Supplier informed of 4% price increase effective next order
+SUP_INT00135,SUP031,2025-06-28,In-Person Visit,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00136,SUP031,2025-07-03,Phone Call,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00137,SUP032,2025-05-16,Email,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00138,SUP032,2025-05-25,Email,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00139,SUP032,2025-06-09,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00140,SUP032,2025-06-25,Email,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00141,SUP032,2025-07-13,WhatsApp,Order Placed,New purchase order confirmed via WhatsApp
+SUP_INT00142,SUP032,2025-07-30,In-Person Visit,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00143,SUP033,2025-05-16,WhatsApp,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00144,SUP033,2025-05-22,Email,Unresponsive,No response to follow-up Email after 48 hours
+SUP_INT00145,SUP033,2025-06-03,Email,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00146,SUP033,2025-06-08,Phone Call,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00147,SUP034,2025-05-16,Phone Call,Price Increase Notice,Supplier informed of 5% price increase effective next order
+SUP_INT00148,SUP034,2025-05-21,In-Person Visit,Order Placed,New purchase order confirmed via In-Person Visit
+SUP_INT00149,SUP034,2025-06-01,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00150,SUP034,2025-06-10,WhatsApp,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00151,SUP034,2025-06-22,Phone Call,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00152,SUP035,2025-05-17,In-Person Visit,Delivery Delayed,"Delivery delayed by 6 days, supplier cited logistics issue"
+SUP_INT00153,SUP035,2025-05-29,Phone Call,Delivery Delayed,"Delivery delayed by 5 days, supplier cited logistics issue"
+SUP_INT00154,SUP035,2025-06-16,In-Person Visit,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00155,SUP036,2025-05-08,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00156,SUP036,2025-05-19,Email,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00157,SUP036,2025-06-04,In-Person Visit,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00158,SUP036,2025-06-15,Email,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00159,SUP036,2025-06-21,WhatsApp,Order Placed,New purchase order confirmed via WhatsApp
+SUP_INT00160,SUP037,2025-05-12,In-Person Visit,Price Increase Notice,Supplier informed of 6% price increase effective next order
+SUP_INT00161,SUP037,2025-05-26,In-Person Visit,Order Placed,New purchase order confirmed via In-Person Visit
+SUP_INT00162,SUP037,2025-06-13,Phone Call,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00163,SUP037,2025-06-23,In-Person Visit,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00164,SUP038,2025-05-17,WhatsApp,Order Placed,New purchase order confirmed via WhatsApp
+SUP_INT00165,SUP038,2025-06-04,In-Person Visit,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00166,SUP038,2025-06-14,WhatsApp,Price Increase Notice,Supplier informed of 10% price increase effective next order
+SUP_INT00167,SUP038,2025-06-20,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00168,SUP038,2025-06-24,Phone Call,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00169,SUP039,2025-05-06,Phone Call,Escalation,"Repeated delays flagged internally, considering alternate supplier"
+SUP_INT00170,SUP039,2025-05-11,Email,Order Placed,New purchase order confirmed via Email
+SUP_INT00171,SUP039,2025-05-21,In-Person Visit,Delivery Delayed,"Delivery delayed by 3 days, supplier cited logistics issue"
+SUP_INT00172,SUP039,2025-06-02,WhatsApp,Price Quote Received,Supplier shared updated rate card for next quarter
+SUP_INT00173,SUP040,2025-05-11,In-Person Visit,Price Increase Notice,Supplier informed of 4% price increase effective next order
+SUP_INT00174,SUP040,2025-05-20,Phone Call,Quality Complaint,"Customer-facing quality issue traced to this batch, flagged to supplier"
+SUP_INT00175,SUP040,2025-06-03,In-Person Visit,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00176,SUP040,2025-06-18,Email,Delivery Confirmed,"Order delivered on schedule, quality verified"
+SUP_INT00177,SUP040,2025-06-29,WhatsApp,Order Placed,New purchase order confirmed via WhatsApp

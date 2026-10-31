@@ -1,0 +1,19 @@
+ActionID,AgentType,EntityID,EntityName,ActionType,RiskTier,Status,ReasoningSummary,ProposedDate
+ACT0001,Pricing,PROD219,Borosil Casserole Dish,Price change +9%,High,Pending Approval,Based on demand trend and past price-change history for this product,2025-09-20
+ACT0002,Pricing,PROD192,Biba Embroidered Kurti,Price change +7%,Medium,Pending Approval,Based on demand trend and past price-change history for this product,2025-09-20
+ACT0003,Pricing,PROD118,Fresh Paneer 200g (Pack of 3),Price change +5%,Medium,Pending Approval,Based on demand trend and past price-change history for this product,2025-09-20
+ACT0004,Pricing,PROD051,Allen Solly Polo Tee,Price change +5%,Medium,Pending Approval,Based on demand trend and past price-change history for this product,2025-09-20
+ACT0005,Pricing,PROD349,Panasonic Electric Kettle 1.5L,Price change +9%,High,Pending Approval,Based on demand trend and past price-change history for this product,2025-09-20
+ACT0006,Pricing,PROD283,Cello Water Bottle 1L,Price change +12%,High,Pending Approval,Based on demand trend and past price-change history for this product,2025-09-20
+ACT0007,Supplier,SUP008,Suresh-Bahl,Renew standing order,Low,Auto-Applied,Reliability score 6/10 based on delivery & quality history,2025-09-21
+ACT0008,Supplier,SUP035,Ravel Ltd,Renew standing order,Low,Auto-Applied,Reliability score 6/10 based on delivery & quality history,2025-09-21
+ACT0009,Supplier,SUP022,"Sarin, Agarwal and Venkatesh",Recommend supplier replacement,High,Pending Approval,Reliability score 4/10 based on delivery & quality history,2025-09-21
+ACT0010,Supplier,SUP004,Kadakia-Loke,Recommend supplier replacement,High,Pending Approval,Reliability score 4/10 based on delivery & quality history,2025-09-21
+ACT0011,Collections,CUST0120,Chasmum Ahuja,Send follow-up with late fee notice,High,Pending Approval,AI recommends late fee notice + phone call; customer has repeated late-payment history,2025-05-22
+ACT0012,Collections,CUST0510,Lila Ramanathan,Send follow-up with late fee notice,Medium,Pending Approval,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",2025-06-02
+ACT0013,Collections,CUST0445,Tejas Sem,Send follow-up with late fee notice,High,Pending Approval,AI recommends late fee notice + phone call; customer has repeated late-payment history,2025-05-13
+ACT0014,Collections,CUST0332,Rishi Chopra,Send follow-up with late fee notice,High,Pending Approval,AI recommends late fee notice + phone call; customer has repeated late-payment history,2025-05-26
+ACT0015,Collections,CUST0394,Lila Munshi,Send follow-up with late fee notice,High,Pending Approval,AI recommends late fee notice + phone call; customer has repeated late-payment history,2025-06-07
+ACT0016,Collections,CUST0674,Gaurang Bhatia,Send follow-up with late fee notice,Medium,Pending Approval,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",2025-06-19
+ACT0017,Growth,GRW-STRAT,Business Strategy,Increase inventory 10% before Diwali,Medium,Pending Approval,"Based on growth history, similar pre-festive stock increases lifted revenue 12-16%",2025-09-22
+ACT0018,Growth,GRW-STRAT,Business Strategy,Launch bulk discount tier 4,Low,Auto-Applied,Small-scale test extension of existing discount program,2025-09-22

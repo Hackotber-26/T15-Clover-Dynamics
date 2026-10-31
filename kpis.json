@@ -1,0 +1,448 @@
+{
+  "totalRevenue": 201890500.20000014,
+  "totalRevenueFmt": "₹20.19Cr",
+  "netProfit": 31074540.4806532,
+  "netProfitFmt": "₹3.11Cr",
+  "netProfitMargin": 15.4,
+  "cashInHand": 485230779.6599992,
+  "cashInHandFmt": "₹48.52Cr",
+  "pendingReceivables": 43316203.22,
+  "pendingReceivablesFmt": "₹4.33Cr",
+  "overdueCount": 144,
+  "overdueAmount": "₹2.54Cr",
+  "overdueAmountRaw": 25414226.01,
+  "totalExpenses": 21263899.09,
+  "totalExpensesFmt": "₹2.13Cr",
+  "totalCOGS": 149552060.62934694,
+  "totalCOGSFmt": "₹14.96Cr",
+  "totalOrders": 20000,
+  "avgOrderValue": 10094.525010000007,
+  "avgOrderValueFmt": "₹10,095",
+  "activeCustomers": 956,
+  "totalCustomers": 1000,
+  "collectionRate": 92.1,
+  "totalInvoiced": "₹54.98Cr",
+  "totalCollected": "₹50.65Cr",
+  "totalInvoices": 3000,
+  "totalInventoryValue": 26918354.16647622,
+  "totalInventoryValueFmt": "₹2.69Cr",
+  "lowStockCount": 60,
+  "outOfStockCount": 1,
+  "lowStockItems": [
+    {
+      "id": "PROD001",
+      "name": "Tata Tea Premium 250g",
+      "qty": 12,
+      "reorder": 30
+    },
+    {
+      "id": "PROD002",
+      "name": "LG Frost Free Refrigerator 260L",
+      "qty": 2,
+      "reorder": 5
+    },
+    {
+      "id": "PROD003",
+      "name": "Prestige Stainless Steel Knife Set (5pc)",
+      "qty": 0,
+      "reorder": 15
+    },
+    {
+      "id": "PROD009",
+      "name": "Biba Embroidered Kurti",
+      "qty": 5,
+      "reorder": 15
+    },
+    {
+      "id": "PROD026",
+      "name": "Wonderchef Tawa 28cm",
+      "qty": 12,
+      "reorder": 15
+    }
+  ],
+  "totalProducts": 400,
+  "totalEmployees": 25,
+  "totalSuppliers": 40,
+  "healthScore": 86,
+  "healthLabel": "Excellent",
+  "healthColor": "green",
+  "revenueSparkline": [
+    6153,
+    6770,
+    6018,
+    7190,
+    6326,
+    6962,
+    6824
+  ],
+  "profitSparkline": [
+    947,
+    1042,
+    926,
+    1107,
+    974,
+    1072,
+    1050
+  ],
+  "chartLabels": [
+    "Week 1",
+    "Week 2",
+    "Week 3",
+    "Week 4",
+    "Week 5"
+  ],
+  "chartRevData": [
+    46420,
+    46130,
+    45135,
+    45328,
+    18878
+  ],
+  "salesCatLabels": [
+    "Large Appliances",
+    "Men's Apparel",
+    "Women's Apparel",
+    "Packaged Foods",
+    "Kitchen Gadgets",
+    "Cookware & Pots",
+    "Fresh Groceries",
+    "Small Electronics"
+  ],
+  "salesCatData": [
+    59041,
+    35630,
+    22793,
+    22352,
+    20491,
+    20129,
+    11658,
+    9797
+  ],
+  "catChartLabels": [
+    "Large Appliances",
+    "Men's Apparel",
+    "Women's Apparel",
+    "Packaged Foods",
+    "Kitchen Gadgets",
+    "Cookware & Pots"
+  ],
+  "catChartData": [
+    59041,
+    35630,
+    22793,
+    22352,
+    20491,
+    20129
+  ],
+  "topProducts": [
+    {
+      "name": "Bosch Dishwasher 12 Place",
+      "revenue": "₹25.20L",
+      "qty": 60
+    },
+    {
+      "name": "Bosch Dishwasher 12 Place",
+      "revenue": "₹23.94L",
+      "qty": 57
+    },
+    {
+      "name": "Bosch Dishwasher 12 Place",
+      "revenue": "₹23.94L",
+      "qty": 57
+    },
+    {
+      "name": "Bosch Dishwasher 12 Place",
+      "revenue": "₹23.10L",
+      "qty": 55
+    },
+    {
+      "name": "Bosch Dishwasher 12 Place",
+      "revenue": "₹23.10L",
+      "qty": 55
+    }
+  ],
+  "topByQty": [
+    {
+      "name": "Aashirvaad Atta 5kg (Pack of 1)",
+      "qty": 3076
+    },
+    {
+      "name": "Maggi Masala Noodles 2-min (Pack of 2)",
+      "qty": 2673
+    },
+    {
+      "name": "Amul Milk 1L (Pack of 2)",
+      "qty": 2653
+    },
+    {
+      "name": "Tomato 1kg (Pack of 1)",
+      "qty": 2610
+    },
+    {
+      "name": "Amul Milk 1L (Pack of 1)",
+      "qty": 2606
+    }
+  ],
+  "topCategories": [
+    {
+      "name": "Large Appliances",
+      "revenue": "₹5.90Cr",
+      "pct": "29.2"
+    },
+    {
+      "name": "Men's Apparel",
+      "revenue": "₹3.56Cr",
+      "pct": "17.6"
+    },
+    {
+      "name": "Women's Apparel",
+      "revenue": "₹2.28Cr",
+      "pct": "11.3"
+    },
+    {
+      "name": "Packaged Foods",
+      "revenue": "₹2.24Cr",
+      "pct": "11.1"
+    },
+    {
+      "name": "Kitchen Gadgets",
+      "revenue": "₹2.05Cr",
+      "pct": "10.1"
+    },
+    {
+      "name": "Cookware & Pots",
+      "revenue": "₹2.01Cr",
+      "pct": "10.0"
+    }
+  ],
+  "topCustomers": [
+    {
+      "id": "CUST0945",
+      "name": "Girindra Tak",
+      "revenue": "₹7.02L"
+    },
+    {
+      "id": "CUST0077",
+      "name": "Wyatt Pradhan",
+      "revenue": "₹6.63L"
+    },
+    {
+      "id": "CUST0831",
+      "name": "Damini Taneja",
+      "revenue": "₹5.94L"
+    },
+    {
+      "id": "CUST0464",
+      "name": "Patrick Chaudhry",
+      "revenue": "₹5.84L"
+    },
+    {
+      "id": "CUST0536",
+      "name": "Pranav Nadkarni",
+      "revenue": "₹5.72L"
+    }
+  ],
+  "topSuppliers": [
+    {
+      "id": "SUP027",
+      "name": "Devi and Sons",
+      "value": "₹87.71L",
+      "reliability": "8"
+    },
+    {
+      "id": "SUP023",
+      "name": "Raghavan-Ghosh",
+      "value": "₹80.45L",
+      "reliability": "6"
+    },
+    {
+      "id": "SUP017",
+      "name": "Chhabra Ltd",
+      "value": "₹71.49L",
+      "reliability": "8"
+    },
+    {
+      "id": "SUP001",
+      "name": "Choudhury, Bakshi and Maharaj",
+      "value": "₹65.56L",
+      "reliability": "3"
+    },
+    {
+      "id": "SUP015",
+      "name": "Bumb Group",
+      "value": "₹58.82L",
+      "reliability": "4"
+    }
+  ],
+  "topPendingPayments": [
+    {
+      "invoice": "INV00145",
+      "customer": "Tejas Sem",
+      "amount": "₹2.07L",
+      "amount_raw": 206590,
+      "days_overdue": 30,
+      "due_date": "2025-06-12"
+    },
+    {
+      "invoice": "INV00913",
+      "customer": "Nachiket Divan",
+      "amount": "₹1.38L",
+      "amount_raw": 138197,
+      "days_overdue": 29,
+      "due_date": "2025-06-17"
+    },
+    {
+      "invoice": "INV01616",
+      "customer": "Amrita Bhargava",
+      "amount": "₹2.17L",
+      "amount_raw": 216726,
+      "days_overdue": 28,
+      "due_date": "2025-06-13"
+    },
+    {
+      "invoice": "INV02664",
+      "customer": "Mekhala Wali",
+      "amount": "₹2.09L",
+      "amount_raw": 209042,
+      "days_overdue": 28,
+      "due_date": "2025-06-03"
+    },
+    {
+      "invoice": "INV02692",
+      "customer": "Tristan Ray",
+      "amount": "₹58,227",
+      "amount_raw": 58227,
+      "days_overdue": 28,
+      "due_date": "2025-06-17"
+    },
+    {
+      "invoice": "INV00821",
+      "customer": "Nakul Purohit",
+      "amount": "₹2.30L",
+      "amount_raw": 229995,
+      "days_overdue": 27,
+      "due_date": "2025-06-26"
+    },
+    {
+      "invoice": "INV00567",
+      "customer": "Hema Lal",
+      "amount": "₹1.68L",
+      "amount_raw": 167795,
+      "days_overdue": 27,
+      "due_date": "2025-06-28"
+    },
+    {
+      "invoice": "INV02887",
+      "customer": "Sachi Virk",
+      "amount": "₹2.79L",
+      "amount_raw": 279474,
+      "days_overdue": 26,
+      "due_date": "2025-06-08"
+    },
+    {
+      "invoice": "INV00252",
+      "customer": "Brinda Ben",
+      "amount": "₹1.93L",
+      "amount_raw": 192957,
+      "days_overdue": 26,
+      "due_date": "2025-06-04"
+    },
+    {
+      "invoice": "INV02135",
+      "customer": "Yashoda Gola",
+      "amount": "₹1.57L",
+      "amount_raw": 157441,
+      "days_overdue": 26,
+      "due_date": "2025-06-20"
+    }
+  ],
+  "expByCode": [
+    {
+      "code": "MKT",
+      "amount": "₹1.40Cr",
+      "raw": 14000000
+    },
+    {
+      "code": "MARKETING",
+      "amount": "₹10.44L",
+      "raw": 1043802
+    },
+    {
+      "code": "FREIGHT",
+      "amount": "₹10.23L",
+      "raw": 1023127
+    },
+    {
+      "code": "OTHER",
+      "amount": "₹9.47L",
+      "raw": 946694
+    },
+    {
+      "code": "OFFICE_SUPPLIES",
+      "amount": "₹9.34L",
+      "raw": 934303
+    },
+    {
+      "code": "EQUIPMENT",
+      "amount": "₹9.23L",
+      "raw": 922988
+    },
+    {
+      "code": "PACKAGING",
+      "amount": "₹8.79L",
+      "raw": 879424
+    },
+    {
+      "code": "RAW_MATERIALS",
+      "amount": "₹8.18L",
+      "raw": 817561
+    },
+    {
+      "code": "SALARY",
+      "amount": "₹6.00L",
+      "raw": 600000
+    },
+    {
+      "code": "RENT",
+      "amount": "₹80,000",
+      "raw": 80000
+    },
+    {
+      "code": "ELECTRICITY",
+      "amount": "₹12,000",
+      "raw": 12000
+    },
+    {
+      "code": "INTERNET",
+      "amount": "₹4,000",
+      "raw": 4000
+    }
+  ],
+  "totalPOCount": 800,
+  "totalPOSpend": "₹12.54Cr",
+  "forecastNextMonth": 211985025.21000016,
+  "forecastNextMonthFmt": "₹21.20Cr",
+  "forecastGrowthPct": 5.0,
+  "empRoles": [
+    {
+      "role": "Cashier",
+      "count": 5
+    },
+    {
+      "role": "Logistics Coordinator",
+      "count": 3
+    },
+    {
+      "role": "Sales Associate",
+      "count": 4
+    },
+    {
+      "role": "Store Manager",
+      "count": 9
+    },
+    {
+      "role": "Warehouse Associate",
+      "count": 4
+    }
+  ]
+}

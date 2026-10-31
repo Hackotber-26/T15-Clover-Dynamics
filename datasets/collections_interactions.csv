@@ -1,0 +1,1118 @@
+InteractionID,InvoiceID,CustomerID,Date,Channel,ActionType,Notes,Status
+COL00001,INV01377,CUST0120,2025-05-14,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01377,Sent
+COL00002,INV01377,CUST0120,2025-05-16,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00003,INV01377,CUST0120,2025-05-20,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00004,INV01377,CUST0120,2025-05-21,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00005,INV01377,CUST0120,2025-05-22,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00006,INV00934,CUST0510,2025-05-27,Email,Reminder Sent,Automated Email reminder sent for invoice INV00934,Sent
+COL00007,INV00934,CUST0510,2025-05-30,Email,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00008,INV00934,CUST0510,2025-05-31,Email,Follow-up Sent,Follow-up Email message sent after promised date passed,Sent
+COL00009,INV00934,CUST0510,2025-06-02,Email,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00010,INV00145,CUST0445,2025-05-03,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00145,Sent
+COL00011,INV00145,CUST0445,2025-05-04,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00012,INV00145,CUST0445,2025-05-08,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00013,INV00145,CUST0445,2025-05-12,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00014,INV00145,CUST0445,2025-05-13,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00015,INV02560,CUST0332,2025-05-19,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02560,Sent
+COL00016,INV02560,CUST0332,2025-05-20,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00017,INV02560,CUST0332,2025-05-24,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00018,INV02560,CUST0332,2025-05-25,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00019,INV02560,CUST0332,2025-05-26,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00020,INV00052,CUST0394,2025-05-30,Email,Reminder Sent,Automated Email reminder sent for invoice INV00052,Sent
+COL00021,INV00052,CUST0394,2025-05-31,Email,No Response,No response received after 3 days,Unresolved
+COL00022,INV00052,CUST0394,2025-06-04,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00023,INV00052,CUST0394,2025-06-05,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00024,INV00052,CUST0394,2025-06-07,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00025,INV00415,CUST0674,2025-06-10,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00415,Sent
+COL00026,INV00415,CUST0674,2025-06-12,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00027,INV00415,CUST0674,2025-06-15,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00028,INV00415,CUST0674,2025-06-19,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00029,INV02308,CUST0687,2025-06-18,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02308,Sent
+COL00030,INV02308,CUST0687,2025-06-19,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00031,INV02308,CUST0687,2025-06-22,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00032,INV02308,CUST0687,2025-06-24,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00033,INV00267,CUST0563,2025-05-22,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00267,Sent
+COL00034,INV00267,CUST0563,2025-05-24,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00035,INV00267,CUST0563,2025-05-27,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00036,INV00267,CUST0563,2025-05-28,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00037,INV00267,CUST0563,2025-05-29,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00038,INV02707,CUST0292,2025-06-09,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02707,Sent
+COL00039,INV02707,CUST0292,2025-06-11,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00040,INV02707,CUST0292,2025-06-15,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00041,INV02707,CUST0292,2025-06-19,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00042,INV02707,CUST0292,2025-06-22,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00043,INV02426,CUST0139,2025-05-18,Email,Reminder Sent,Automated Email reminder sent for invoice INV02426,Sent
+COL00044,INV02426,CUST0139,2025-05-22,Email,No Response,No response received after 3 days,Unresolved
+COL00045,INV02426,CUST0139,2025-05-25,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00046,INV02426,CUST0139,2025-05-28,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00047,INV02426,CUST0139,2025-05-30,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00048,INV02970,CUST0544,2025-05-13,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02970,Sent
+COL00049,INV02970,CUST0544,2025-05-15,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00050,INV02970,CUST0544,2025-05-16,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00051,INV02970,CUST0544,2025-05-19,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00052,INV02970,CUST0544,2025-05-23,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00053,INV00417,CUST0905,2025-05-31,Email,Reminder Sent,Automated Email reminder sent for invoice INV00417,Sent
+COL00054,INV00417,CUST0905,2025-06-04,Email,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00055,INV00417,CUST0905,2025-06-07,Email,Follow-up Sent,Follow-up Email message sent after promised date passed,Sent
+COL00056,INV00417,CUST0905,2025-06-08,Email,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00057,INV01039,CUST0520,2025-05-26,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01039,Sent
+COL00058,INV01039,CUST0520,2025-05-30,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00059,INV01039,CUST0520,2025-06-01,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00060,INV01039,CUST0520,2025-06-04,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00061,INV01039,CUST0520,2025-06-06,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00062,INV02713,CUST0079,2025-05-25,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02713,Sent
+COL00063,INV02713,CUST0079,2025-05-29,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00064,INV02713,CUST0079,2025-05-30,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00065,INV02713,CUST0079,2025-05-31,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00066,INV02713,CUST0079,2025-06-03,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00067,INV02792,CUST0659,2025-05-28,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02792,Sent
+COL00068,INV02792,CUST0659,2025-05-31,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00069,INV02792,CUST0659,2025-06-04,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00070,INV02792,CUST0659,2025-06-08,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00071,INV02360,CUST0422,2025-05-19,Email,Reminder Sent,Automated Email reminder sent for invoice INV02360,Sent
+COL00072,INV02360,CUST0422,2025-05-20,Email,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00073,INV02360,CUST0422,2025-05-23,Email,Follow-up Sent,Follow-up Email message sent after promised date passed,Sent
+COL00074,INV02360,CUST0422,2025-05-27,Email,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00075,INV02345,CUST0107,2025-05-15,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02345,Sent
+COL00076,INV02345,CUST0107,2025-05-16,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00077,INV02345,CUST0107,2025-05-19,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00078,INV02345,CUST0107,2025-05-23,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00079,INV00461,CUST0393,2025-06-12,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00461,Sent
+COL00080,INV00461,CUST0393,2025-06-16,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00081,INV00461,CUST0393,2025-06-19,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00082,INV00461,CUST0393,2025-06-20,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00083,INV01839,CUST0128,2025-06-14,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01839,Sent
+COL00084,INV01839,CUST0128,2025-06-17,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00085,INV01839,CUST0128,2025-06-19,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00086,INV01839,CUST0128,2025-06-20,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00087,INV02320,CUST0166,2025-06-14,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02320,Sent
+COL00088,INV02320,CUST0166,2025-06-15,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00089,INV02320,CUST0166,2025-06-17,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00090,INV02320,CUST0166,2025-06-20,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00091,INV02320,CUST0166,2025-06-22,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00092,INV02439,CUST0210,2025-06-18,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02439,Sent
+COL00093,INV02439,CUST0210,2025-06-22,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00094,INV02439,CUST0210,2025-06-26,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00095,INV02439,CUST0210,2025-06-30,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00096,INV00763,CUST0945,2025-05-12,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00763,Sent
+COL00097,INV00763,CUST0945,2025-05-14,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00098,INV00763,CUST0945,2025-05-18,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00099,INV00763,CUST0945,2025-05-22,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00100,INV00763,CUST0945,2025-05-25,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00101,INV00103,CUST0749,2025-06-18,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00103,Sent
+COL00102,INV00103,CUST0749,2025-06-22,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00103,INV00103,CUST0749,2025-06-25,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00104,INV00103,CUST0749,2025-06-29,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00105,INV01813,CUST0946,2025-06-01,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01813,Sent
+COL00106,INV01813,CUST0946,2025-06-05,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00107,INV01813,CUST0946,2025-06-07,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00108,INV01813,CUST0946,2025-06-09,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00109,INV01813,CUST0946,2025-06-10,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00110,INV00045,CUST0052,2025-05-23,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00045,Sent
+COL00111,INV00045,CUST0052,2025-05-25,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00112,INV00045,CUST0052,2025-05-27,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00113,INV00045,CUST0052,2025-05-29,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00114,INV01489,CUST0079,2025-05-22,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01489,Sent
+COL00115,INV01489,CUST0079,2025-05-26,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00116,INV01489,CUST0079,2025-05-28,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00117,INV01489,CUST0079,2025-05-31,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00118,INV01489,CUST0079,2025-06-03,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00119,INV00292,CUST0212,2025-06-18,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00292,Sent
+COL00120,INV00292,CUST0212,2025-06-20,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00121,INV00292,CUST0212,2025-06-24,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00122,INV00292,CUST0212,2025-06-27,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00123,INV02471,CUST0318,2025-05-12,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02471,Sent
+COL00124,INV02471,CUST0318,2025-05-14,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00125,INV02471,CUST0318,2025-05-15,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00126,INV02471,CUST0318,2025-05-19,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00127,INV02471,CUST0318,2025-05-23,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00128,INV02135,CUST0739,2025-05-10,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02135,Sent
+COL00129,INV02135,CUST0739,2025-05-14,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00130,INV02135,CUST0739,2025-05-18,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00131,INV02135,CUST0739,2025-05-19,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00132,INV02135,CUST0739,2025-05-23,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00133,INV00053,CUST0571,2025-05-14,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00053,Sent
+COL00134,INV00053,CUST0571,2025-05-15,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00135,INV00053,CUST0571,2025-05-17,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00136,INV00053,CUST0571,2025-05-18,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00137,INV00053,CUST0571,2025-05-20,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00138,INV00507,CUST0585,2025-05-20,Email,Reminder Sent,Automated Email reminder sent for invoice INV00507,Sent
+COL00139,INV00507,CUST0585,2025-05-22,Email,No Response,No response received after 3 days,Unresolved
+COL00140,INV00507,CUST0585,2025-05-23,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00141,INV00507,CUST0585,2025-05-26,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00142,INV00507,CUST0585,2025-05-27,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00143,INV00290,CUST0146,2025-05-25,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00290,Sent
+COL00144,INV00290,CUST0146,2025-05-26,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00145,INV00290,CUST0146,2025-05-28,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00146,INV00290,CUST0146,2025-05-29,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00147,INV00175,CUST0325,2025-06-17,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00175,Sent
+COL00148,INV00175,CUST0325,2025-06-18,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00149,INV00175,CUST0325,2025-06-19,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00150,INV00175,CUST0325,2025-06-21,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00151,INV02692,CUST0304,2025-05-08,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02692,Sent
+COL00152,INV02692,CUST0304,2025-05-10,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00153,INV02692,CUST0304,2025-05-13,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00154,INV02692,CUST0304,2025-05-16,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00155,INV02692,CUST0304,2025-05-19,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00156,INV02815,CUST0570,2025-06-06,Email,Reminder Sent,Automated Email reminder sent for invoice INV02815,Sent
+COL00157,INV02815,CUST0570,2025-06-07,Email,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00158,INV02815,CUST0570,2025-06-08,Email,Follow-up Sent,Follow-up Email message sent after promised date passed,Sent
+COL00159,INV02815,CUST0570,2025-06-12,Email,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00160,INV01241,CUST0077,2025-05-20,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01241,Sent
+COL00161,INV01241,CUST0077,2025-05-24,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00162,INV01241,CUST0077,2025-05-28,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00163,INV01241,CUST0077,2025-05-31,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00164,INV01241,CUST0077,2025-06-01,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00165,INV02960,CUST0886,2025-05-17,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02960,Sent
+COL00166,INV02960,CUST0886,2025-05-18,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00167,INV02960,CUST0886,2025-05-21,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00168,INV02960,CUST0886,2025-05-24,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00169,INV01115,CUST0262,2025-05-11,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01115,Sent
+COL00170,INV01115,CUST0262,2025-05-13,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00171,INV01115,CUST0262,2025-05-14,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00172,INV01115,CUST0262,2025-05-16,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00173,INV01115,CUST0262,2025-05-19,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00174,INV02555,CUST0389,2025-05-10,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02555,Sent
+COL00175,INV02555,CUST0389,2025-05-11,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00176,INV02555,CUST0389,2025-05-14,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00177,INV02555,CUST0389,2025-05-15,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00178,INV02555,CUST0389,2025-05-18,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00179,INV01230,CUST0866,2025-05-27,Email,Reminder Sent,Automated Email reminder sent for invoice INV01230,Sent
+COL00180,INV01230,CUST0866,2025-05-29,Email,No Response,No response received after 3 days,Unresolved
+COL00181,INV01230,CUST0866,2025-06-01,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00182,INV01230,CUST0866,2025-06-03,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00183,INV01230,CUST0866,2025-06-06,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00184,INV00566,CUST0664,2025-06-18,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00566,Sent
+COL00185,INV00566,CUST0664,2025-06-20,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00186,INV00566,CUST0664,2025-06-22,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00187,INV00566,CUST0664,2025-06-26,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00188,INV00566,CUST0664,2025-06-28,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00189,INV00299,CUST0602,2025-05-21,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00299,Sent
+COL00190,INV00299,CUST0602,2025-05-25,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00191,INV00299,CUST0602,2025-05-28,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00192,INV00299,CUST0602,2025-05-29,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00193,INV01328,CUST0920,2025-05-26,Email,Reminder Sent,Automated Email reminder sent for invoice INV01328,Sent
+COL00194,INV01328,CUST0920,2025-05-29,Email,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00195,INV01328,CUST0920,2025-06-02,Email,Follow-up Sent,Follow-up Email message sent after promised date passed,Sent
+COL00196,INV01328,CUST0920,2025-06-05,Email,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00197,INV00680,CUST0619,2025-05-20,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00680,Sent
+COL00198,INV00680,CUST0619,2025-05-23,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00199,INV00680,CUST0619,2025-05-27,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00200,INV00680,CUST0619,2025-05-30,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00201,INV00195,CUST0565,2025-06-02,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00195,Sent
+COL00202,INV00195,CUST0565,2025-06-03,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00203,INV00195,CUST0565,2025-06-05,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00204,INV00195,CUST0565,2025-06-06,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00205,INV01190,CUST0394,2025-05-29,Email,Reminder Sent,Automated Email reminder sent for invoice INV01190,Sent
+COL00206,INV01190,CUST0394,2025-06-02,Email,No Response,No response received after 3 days,Unresolved
+COL00207,INV01190,CUST0394,2025-06-04,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00208,INV01190,CUST0394,2025-06-07,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00209,INV01190,CUST0394,2025-06-09,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00210,INV00064,CUST0294,2025-05-16,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00064,Sent
+COL00211,INV00064,CUST0294,2025-05-17,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00212,INV00064,CUST0294,2025-05-21,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00213,INV00064,CUST0294,2025-05-24,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00214,INV00767,CUST0423,2025-06-05,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00767,Sent
+COL00215,INV00767,CUST0423,2025-06-06,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00216,INV00767,CUST0423,2025-06-10,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00217,INV00767,CUST0423,2025-06-12,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00218,INV01738,CUST0057,2025-06-10,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01738,Sent
+COL00219,INV01738,CUST0057,2025-06-12,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00220,INV01738,CUST0057,2025-06-16,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00221,INV01738,CUST0057,2025-06-19,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00222,INV01738,CUST0057,2025-06-20,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00223,INV00394,CUST0945,2025-05-17,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00394,Sent
+COL00224,INV00394,CUST0945,2025-05-21,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00225,INV00394,CUST0945,2025-05-25,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00226,INV00394,CUST0945,2025-05-26,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00227,INV00394,CUST0945,2025-05-28,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00228,INV01212,CUST0323,2025-05-27,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01212,Sent
+COL00229,INV01212,CUST0323,2025-05-29,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00230,INV01212,CUST0323,2025-05-30,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00231,INV01212,CUST0323,2025-06-01,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00232,INV02907,CUST0443,2025-06-06,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02907,Sent
+COL00233,INV02907,CUST0443,2025-06-08,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00234,INV02907,CUST0443,2025-06-12,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00235,INV02907,CUST0443,2025-06-15,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00236,INV02907,CUST0443,2025-06-17,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00237,INV01029,CUST0136,2025-06-07,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01029,Sent
+COL00238,INV01029,CUST0136,2025-06-08,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00239,INV01029,CUST0136,2025-06-09,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00240,INV01029,CUST0136,2025-06-10,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00241,INV00567,CUST0200,2025-05-07,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00567,Sent
+COL00242,INV00567,CUST0200,2025-05-11,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00243,INV00567,CUST0200,2025-05-13,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00244,INV00567,CUST0200,2025-05-15,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00245,INV00567,CUST0200,2025-05-16,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00246,INV02268,CUST0755,2025-05-24,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02268,Sent
+COL00247,INV02268,CUST0755,2025-05-26,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00248,INV02268,CUST0755,2025-05-29,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00249,INV02268,CUST0755,2025-05-31,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00250,INV02897,CUST0124,2025-05-15,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02897,Sent
+COL00251,INV02897,CUST0124,2025-05-18,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00252,INV02897,CUST0124,2025-05-22,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00253,INV02897,CUST0124,2025-05-24,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00254,INV02890,CUST0664,2025-06-17,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02890,Sent
+COL00255,INV02890,CUST0664,2025-06-20,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00256,INV02890,CUST0664,2025-06-24,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00257,INV02890,CUST0664,2025-06-28,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00258,INV02890,CUST0664,2025-06-30,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00259,INV01512,CUST0560,2025-06-16,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01512,Sent
+COL00260,INV01512,CUST0560,2025-06-17,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00261,INV01512,CUST0560,2025-06-21,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00262,INV01512,CUST0560,2025-06-23,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00263,INV01512,CUST0560,2025-06-24,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00264,INV00333,CUST0268,2025-06-18,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00333,Sent
+COL00265,INV00333,CUST0268,2025-06-20,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00266,INV00333,CUST0268,2025-06-22,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00267,INV00333,CUST0268,2025-06-26,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00268,INV00333,CUST0268,2025-06-27,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00269,INV01616,CUST0796,2025-05-05,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01616,Sent
+COL00270,INV01616,CUST0796,2025-05-08,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00271,INV01616,CUST0796,2025-05-12,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00272,INV01616,CUST0796,2025-05-13,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00273,INV01616,CUST0796,2025-05-14,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00274,INV02868,CUST0285,2025-05-31,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02868,Sent
+COL00275,INV02868,CUST0285,2025-06-02,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00276,INV02868,CUST0285,2025-06-05,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00277,INV02868,CUST0285,2025-06-06,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00278,INV02868,CUST0285,2025-06-07,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00279,INV00355,CUST0613,2025-05-27,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00355,Sent
+COL00280,INV00355,CUST0613,2025-05-28,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00281,INV00355,CUST0613,2025-05-29,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00282,INV00355,CUST0613,2025-06-02,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00283,INV00355,CUST0613,2025-06-05,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00284,INV01319,CUST0442,2025-05-16,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01319,Sent
+COL00285,INV01319,CUST0442,2025-05-19,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00286,INV01319,CUST0442,2025-05-23,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00287,INV01319,CUST0442,2025-05-27,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00288,INV00652,CUST0685,2025-05-25,Email,Reminder Sent,Automated Email reminder sent for invoice INV00652,Sent
+COL00289,INV00652,CUST0685,2025-05-28,Email,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00290,INV00652,CUST0685,2025-05-30,Email,Follow-up Sent,Follow-up Email message sent after promised date passed,Sent
+COL00291,INV00652,CUST0685,2025-06-03,Email,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00292,INV00746,CUST0922,2025-06-01,Email,Reminder Sent,Automated Email reminder sent for invoice INV00746,Sent
+COL00293,INV00746,CUST0922,2025-06-05,Email,No Response,No response received after 3 days,Unresolved
+COL00294,INV00746,CUST0922,2025-06-06,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00295,INV00746,CUST0922,2025-06-10,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00296,INV00746,CUST0922,2025-06-14,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00297,INV02420,CUST0116,2025-05-27,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02420,Sent
+COL00298,INV02420,CUST0116,2025-05-28,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00299,INV02420,CUST0116,2025-05-30,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00300,INV02420,CUST0116,2025-06-03,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00301,INV02177,CUST0909,2025-06-19,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02177,Sent
+COL00302,INV02177,CUST0909,2025-06-21,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00303,INV02177,CUST0909,2025-06-24,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00304,INV02177,CUST0909,2025-06-25,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00305,INV02014,CUST0386,2025-06-17,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02014,Sent
+COL00306,INV02014,CUST0386,2025-06-20,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00307,INV02014,CUST0386,2025-06-22,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00308,INV02014,CUST0386,2025-06-25,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00309,INV02014,CUST0386,2025-06-27,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00310,INV02664,CUST0730,2025-05-08,Email,Reminder Sent,Automated Email reminder sent for invoice INV02664,Sent
+COL00311,INV02664,CUST0730,2025-05-10,Email,No Response,No response received after 3 days,Unresolved
+COL00312,INV02664,CUST0730,2025-05-11,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00313,INV02664,CUST0730,2025-05-15,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00314,INV02664,CUST0730,2025-05-19,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00315,INV00247,CUST0634,2025-05-28,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00247,Sent
+COL00316,INV00247,CUST0634,2025-05-30,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00317,INV00247,CUST0634,2025-06-01,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00318,INV00247,CUST0634,2025-06-05,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00319,INV00247,CUST0634,2025-06-09,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00320,INV00458,CUST0405,2025-06-14,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00458,Sent
+COL00321,INV00458,CUST0405,2025-06-18,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00322,INV00458,CUST0405,2025-06-20,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00323,INV00458,CUST0405,2025-06-23,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00324,INV01107,CUST0086,2025-05-29,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01107,Sent
+COL00325,INV01107,CUST0086,2025-05-30,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00326,INV01107,CUST0086,2025-06-02,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00327,INV01107,CUST0086,2025-06-03,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00328,INV02637,CUST0727,2025-06-13,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02637,Sent
+COL00329,INV02637,CUST0727,2025-06-17,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00330,INV02637,CUST0727,2025-06-21,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00331,INV02637,CUST0727,2025-06-22,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00332,INV02637,CUST0727,2025-06-26,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00333,INV01270,CUST0580,2025-05-11,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01270,Sent
+COL00334,INV01270,CUST0580,2025-05-14,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00335,INV01270,CUST0580,2025-05-15,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00336,INV01270,CUST0580,2025-05-16,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00337,INV01270,CUST0580,2025-05-18,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00338,INV00512,CUST0598,2025-06-18,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00512,Sent
+COL00339,INV00512,CUST0598,2025-06-19,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00340,INV00512,CUST0598,2025-06-22,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00341,INV00512,CUST0598,2025-06-25,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00342,INV02285,CUST0053,2025-06-07,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02285,Sent
+COL00343,INV02285,CUST0053,2025-06-09,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00344,INV02285,CUST0053,2025-06-12,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00345,INV02285,CUST0053,2025-06-14,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00346,INV02285,CUST0053,2025-06-18,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00347,INV02710,CUST0380,2025-05-28,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02710,Sent
+COL00348,INV02710,CUST0380,2025-06-01,WhatsApp,Customer Replied,Customer confirmed payment will be made shortly,Acknowledged
+COL00349,INV02710,CUST0380,2025-06-03,WhatsApp,Payment Received,"Full payment received, invoice closed",Resolved
+COL00350,INV00695,CUST0388,2025-05-20,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00695,Sent
+COL00351,INV00695,CUST0388,2025-05-23,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00352,INV00695,CUST0388,2025-05-24,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00353,INV00695,CUST0388,2025-05-27,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00354,INV00695,CUST0388,2025-05-28,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00355,INV02888,CUST0880,2025-05-15,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02888,Sent
+COL00356,INV02888,CUST0880,2025-05-19,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00357,INV02888,CUST0880,2025-05-20,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00358,INV02888,CUST0880,2025-05-23,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00359,INV01434,CUST0127,2025-05-30,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01434,Sent
+COL00360,INV01434,CUST0127,2025-05-31,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00361,INV01434,CUST0127,2025-06-03,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00362,INV01434,CUST0127,2025-06-04,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00363,INV00451,CUST0271,2025-06-10,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00451,Sent
+COL00364,INV00451,CUST0271,2025-06-11,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00365,INV00451,CUST0271,2025-06-14,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00366,INV00451,CUST0271,2025-06-15,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00367,INV00451,CUST0271,2025-06-19,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00368,INV00939,CUST0355,2025-05-12,Email,Reminder Sent,Automated Email reminder sent for invoice INV00939,Sent
+COL00369,INV00939,CUST0355,2025-05-15,Email,No Response,No response received after 3 days,Unresolved
+COL00370,INV00939,CUST0355,2025-05-19,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00371,INV00939,CUST0355,2025-05-22,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00372,INV00939,CUST0355,2025-05-24,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00373,INV01136,CUST0594,2025-06-12,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01136,Sent
+COL00374,INV01136,CUST0594,2025-06-14,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00375,INV01136,CUST0594,2025-06-15,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00376,INV01136,CUST0594,2025-06-17,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00377,INV01136,CUST0594,2025-06-20,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00378,INV02164,CUST0575,2025-05-15,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02164,Sent
+COL00379,INV02164,CUST0575,2025-05-17,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00380,INV02164,CUST0575,2025-05-19,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00381,INV02164,CUST0575,2025-05-22,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00382,INV00583,CUST0223,2025-05-28,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00583,Sent
+COL00383,INV00583,CUST0223,2025-05-30,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00384,INV00583,CUST0223,2025-06-02,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00385,INV00583,CUST0223,2025-06-06,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00386,INV00583,CUST0223,2025-06-08,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00387,INV02881,CUST0560,2025-06-14,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02881,Sent
+COL00388,INV02881,CUST0560,2025-06-17,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00389,INV02881,CUST0560,2025-06-18,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00390,INV02881,CUST0560,2025-06-21,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00391,INV02881,CUST0560,2025-06-22,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00392,INV02028,CUST0825,2025-06-17,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02028,Sent
+COL00393,INV02028,CUST0825,2025-06-18,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00394,INV02028,CUST0825,2025-06-20,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00395,INV02028,CUST0825,2025-06-24,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00396,INV01742,CUST0891,2025-06-07,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01742,Sent
+COL00397,INV01742,CUST0891,2025-06-11,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00398,INV01742,CUST0891,2025-06-12,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00399,INV01742,CUST0891,2025-06-16,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00400,INV01742,CUST0891,2025-06-20,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00401,INV00332,CUST0271,2025-06-05,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00332,Sent
+COL00402,INV00332,CUST0271,2025-06-08,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00403,INV00332,CUST0271,2025-06-10,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00404,INV00332,CUST0271,2025-06-12,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00405,INV00332,CUST0271,2025-06-15,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00406,INV01579,CUST0946,2025-05-30,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01579,Sent
+COL00407,INV01579,CUST0946,2025-06-01,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00408,INV01579,CUST0946,2025-06-05,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00409,INV01579,CUST0946,2025-06-08,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00410,INV01579,CUST0946,2025-06-09,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00411,INV00046,CUST0329,2025-06-15,Email,Reminder Sent,Automated Email reminder sent for invoice INV00046,Sent
+COL00412,INV00046,CUST0329,2025-06-16,Email,No Response,No response received after 3 days,Unresolved
+COL00413,INV00046,CUST0329,2025-06-17,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00414,INV00046,CUST0329,2025-06-20,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00415,INV00046,CUST0329,2025-06-24,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00416,INV01956,CUST0066,2025-06-01,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01956,Sent
+COL00417,INV01956,CUST0066,2025-06-02,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00418,INV01956,CUST0066,2025-06-03,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00419,INV01956,CUST0066,2025-06-07,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00420,INV01956,CUST0066,2025-06-10,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00421,INV00212,CUST0892,2025-05-20,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00212,Sent
+COL00422,INV00212,CUST0892,2025-05-23,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00423,INV00212,CUST0892,2025-05-24,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00424,INV00212,CUST0892,2025-05-28,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00425,INV02255,CUST0434,2025-05-25,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02255,Sent
+COL00426,INV02255,CUST0434,2025-05-27,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00427,INV02255,CUST0434,2025-05-30,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00428,INV02255,CUST0434,2025-06-03,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00429,INV00179,CUST0930,2025-06-01,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00179,Sent
+COL00430,INV00179,CUST0930,2025-06-04,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00431,INV00179,CUST0930,2025-06-07,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00432,INV00179,CUST0930,2025-06-10,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00433,INV00179,CUST0930,2025-06-13,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00434,INV02724,CUST0298,2025-06-17,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02724,Sent
+COL00435,INV02724,CUST0298,2025-06-18,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00436,INV02724,CUST0298,2025-06-21,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00437,INV02724,CUST0298,2025-06-23,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00438,INV02724,CUST0298,2025-06-26,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00439,INV01922,CUST0276,2025-06-04,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01922,Sent
+COL00440,INV01922,CUST0276,2025-06-05,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00441,INV01922,CUST0276,2025-06-08,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00442,INV01922,CUST0276,2025-06-12,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00443,INV00094,CUST0712,2025-05-17,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00094,Sent
+COL00444,INV00094,CUST0712,2025-05-21,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00445,INV00094,CUST0712,2025-05-24,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00446,INV00094,CUST0712,2025-05-26,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00447,INV02442,CUST0406,2025-06-22,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02442,Sent
+COL00448,INV02442,CUST0406,2025-06-23,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00449,INV02442,CUST0406,2025-06-24,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00450,INV02442,CUST0406,2025-06-27,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00451,INV01963,CUST0647,2025-06-02,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01963,Sent
+COL00452,INV01963,CUST0647,2025-06-04,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00453,INV01963,CUST0647,2025-06-08,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00454,INV01963,CUST0647,2025-06-09,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00455,INV01997,CUST0414,2025-06-16,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01997,Sent
+COL00456,INV01997,CUST0414,2025-06-17,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00457,INV01997,CUST0414,2025-06-20,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00458,INV01997,CUST0414,2025-06-23,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00459,INV01545,CUST0499,2025-06-16,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01545,Sent
+COL00460,INV01545,CUST0499,2025-06-17,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00461,INV01545,CUST0499,2025-06-19,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00462,INV01545,CUST0499,2025-06-23,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00463,INV01545,CUST0499,2025-06-26,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00464,INV02854,CUST0872,2025-06-18,Email,Reminder Sent,Automated Email reminder sent for invoice INV02854,Sent
+COL00465,INV02854,CUST0872,2025-06-20,Email,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00466,INV02854,CUST0872,2025-06-23,Email,Follow-up Sent,Follow-up Email message sent after promised date passed,Sent
+COL00467,INV02854,CUST0872,2025-06-25,Email,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00468,INV00001,CUST0658,2025-05-31,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00001,Sent
+COL00469,INV00001,CUST0658,2025-06-04,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00470,INV00001,CUST0658,2025-06-06,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00471,INV00001,CUST0658,2025-06-07,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00472,INV00001,CUST0658,2025-06-09,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00473,INV00153,CUST0460,2025-05-30,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00153,Sent
+COL00474,INV00153,CUST0460,2025-05-31,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00475,INV00153,CUST0460,2025-06-01,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00476,INV00153,CUST0460,2025-06-03,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00477,INV02863,CUST0050,2025-05-22,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02863,Sent
+COL00478,INV02863,CUST0050,2025-05-23,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00479,INV02863,CUST0050,2025-05-27,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00480,INV02863,CUST0050,2025-05-31,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00481,INV01119,CUST0448,2025-05-12,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01119,Sent
+COL00482,INV01119,CUST0448,2025-05-13,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00483,INV01119,CUST0448,2025-05-15,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00484,INV01119,CUST0448,2025-05-19,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00485,INV01119,CUST0448,2025-05-22,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00486,INV02816,CUST0053,2025-06-08,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02816,Sent
+COL00487,INV02816,CUST0053,2025-06-12,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00488,INV02816,CUST0053,2025-06-13,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00489,INV02816,CUST0053,2025-06-14,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00490,INV02816,CUST0053,2025-06-15,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00491,INV00757,CUST0530,2025-06-12,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00757,Sent
+COL00492,INV00757,CUST0530,2025-06-15,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00493,INV00757,CUST0530,2025-06-16,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00494,INV00757,CUST0530,2025-06-19,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00495,INV00757,CUST0530,2025-06-21,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00496,INV01747,CUST0719,2025-05-21,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01747,Sent
+COL00497,INV01747,CUST0719,2025-05-23,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00498,INV01747,CUST0719,2025-05-27,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00499,INV01747,CUST0719,2025-05-31,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00500,INV02097,CUST0789,2025-06-06,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02097,Sent
+COL00501,INV02097,CUST0789,2025-06-07,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00502,INV02097,CUST0789,2025-06-11,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00503,INV02097,CUST0789,2025-06-14,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00504,INV01148,CUST0408,2025-05-24,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01148,Sent
+COL00505,INV01148,CUST0408,2025-05-26,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00506,INV01148,CUST0408,2025-05-27,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00507,INV01148,CUST0408,2025-05-29,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00508,INV01148,CUST0408,2025-06-01,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00509,INV01407,CUST0520,2025-05-28,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01407,Sent
+COL00510,INV01407,CUST0520,2025-05-31,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00511,INV01407,CUST0520,2025-06-02,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00512,INV01407,CUST0520,2025-06-03,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00513,INV01407,CUST0520,2025-06-07,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00514,INV02102,CUST0151,2025-05-11,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02102,Sent
+COL00515,INV02102,CUST0151,2025-05-15,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00516,INV02102,CUST0151,2025-05-18,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00517,INV02102,CUST0151,2025-05-19,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00518,INV02102,CUST0151,2025-05-21,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00519,INV01007,CUST0826,2025-05-29,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01007,Sent
+COL00520,INV01007,CUST0826,2025-06-01,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00521,INV01007,CUST0826,2025-06-04,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00522,INV01007,CUST0826,2025-06-08,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00523,INV01527,CUST0798,2025-06-14,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01527,Sent
+COL00524,INV01527,CUST0798,2025-06-18,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00525,INV01527,CUST0798,2025-06-19,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00526,INV01527,CUST0798,2025-06-21,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00527,INV01378,CUST0691,2025-05-26,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01378,Sent
+COL00528,INV01378,CUST0691,2025-05-27,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00529,INV01378,CUST0691,2025-05-31,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00530,INV01378,CUST0691,2025-06-01,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00531,INV01378,CUST0691,2025-06-04,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00532,INV01653,CUST0970,2025-06-07,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01653,Sent
+COL00533,INV01653,CUST0970,2025-06-08,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00534,INV01653,CUST0970,2025-06-12,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00535,INV01653,CUST0970,2025-06-15,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00536,INV02777,CUST0084,2025-06-10,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02777,Sent
+COL00537,INV02777,CUST0084,2025-06-12,Phone Call,Customer Replied,Customer confirmed payment will be made shortly,Acknowledged
+COL00538,INV02777,CUST0084,2025-06-14,Phone Call,Payment Received,"Full payment received, invoice closed",Resolved
+COL00539,INV00681,CUST0038,2025-05-24,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00681,Sent
+COL00540,INV00681,CUST0038,2025-05-25,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00541,INV00681,CUST0038,2025-05-27,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00542,INV00681,CUST0038,2025-05-30,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00543,INV02887,CUST0585,2025-05-09,Email,Reminder Sent,Automated Email reminder sent for invoice INV02887,Sent
+COL00544,INV02887,CUST0585,2025-05-11,Email,No Response,No response received after 3 days,Unresolved
+COL00545,INV02887,CUST0585,2025-05-14,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00546,INV02887,CUST0585,2025-05-15,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00547,INV02887,CUST0585,2025-05-18,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00548,INV00529,CUST0215,2025-06-01,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00529,Sent
+COL00549,INV00529,CUST0215,2025-06-05,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00550,INV00529,CUST0215,2025-06-09,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00551,INV00529,CUST0215,2025-06-13,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00552,INV02483,CUST0450,2025-05-17,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02483,Sent
+COL00553,INV02483,CUST0450,2025-05-19,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00554,INV02483,CUST0450,2025-05-20,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00555,INV02483,CUST0450,2025-05-24,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00556,INV02538,CUST0951,2025-05-31,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02538,Sent
+COL00557,INV02538,CUST0951,2025-06-04,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00558,INV02538,CUST0951,2025-06-07,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00559,INV02538,CUST0951,2025-06-09,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00560,INV02275,CUST0692,2025-05-17,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02275,Sent
+COL00561,INV02275,CUST0692,2025-05-20,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00562,INV02275,CUST0692,2025-05-24,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00563,INV02275,CUST0692,2025-05-27,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00564,INV02275,CUST0692,2025-05-28,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00565,INV00015,CUST0858,2025-05-18,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00015,Sent
+COL00566,INV00015,CUST0858,2025-05-19,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00567,INV00015,CUST0858,2025-05-22,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00568,INV00015,CUST0858,2025-05-25,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00569,INV02765,CUST0834,2025-05-23,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02765,Sent
+COL00570,INV02765,CUST0834,2025-05-24,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00571,INV02765,CUST0834,2025-05-26,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00572,INV02765,CUST0834,2025-05-27,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00573,INV02552,CUST0447,2025-05-17,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02552,Sent
+COL00574,INV02552,CUST0447,2025-05-20,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00575,INV02552,CUST0447,2025-05-23,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00576,INV02552,CUST0447,2025-05-24,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00577,INV02378,CUST0711,2025-06-06,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02378,Sent
+COL00578,INV02378,CUST0711,2025-06-10,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00579,INV02378,CUST0711,2025-06-11,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00580,INV02378,CUST0711,2025-06-14,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00581,INV02378,CUST0711,2025-06-18,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00582,INV02405,CUST0032,2025-05-28,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02405,Sent
+COL00583,INV02405,CUST0032,2025-05-29,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00584,INV02405,CUST0032,2025-06-01,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00585,INV02405,CUST0032,2025-06-02,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00586,INV02405,CUST0032,2025-06-03,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00587,INV02351,CUST0080,2025-06-21,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02351,Sent
+COL00588,INV02351,CUST0080,2025-06-23,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00589,INV02351,CUST0080,2025-06-25,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00590,INV02351,CUST0080,2025-06-28,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00591,INV02344,CUST0830,2025-06-27,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02344,Sent
+COL00592,INV02344,CUST0830,2025-06-30,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00593,INV02344,CUST0830,2025-07-02,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00594,INV02344,CUST0830,2025-07-05,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00595,INV02763,CUST0033,2025-06-10,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02763,Sent
+COL00596,INV02763,CUST0033,2025-06-11,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00597,INV02763,CUST0033,2025-06-15,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00598,INV02763,CUST0033,2025-06-17,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00599,INV02763,CUST0033,2025-06-18,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00600,INV02412,CUST0225,2025-05-22,Email,Reminder Sent,Automated Email reminder sent for invoice INV02412,Sent
+COL00601,INV02412,CUST0225,2025-05-26,Email,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00602,INV02412,CUST0225,2025-05-30,Email,Follow-up Sent,Follow-up Email message sent after promised date passed,Sent
+COL00603,INV02412,CUST0225,2025-06-01,Email,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00604,INV02813,CUST0899,2025-05-25,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02813,Sent
+COL00605,INV02813,CUST0899,2025-05-29,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00606,INV02813,CUST0899,2025-05-30,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00607,INV02813,CUST0899,2025-06-01,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00608,INV01266,CUST0914,2025-06-11,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01266,Sent
+COL00609,INV01266,CUST0914,2025-06-15,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00610,INV01266,CUST0914,2025-06-19,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00611,INV01266,CUST0914,2025-06-22,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00612,INV01950,CUST0298,2025-06-19,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01950,Sent
+COL00613,INV01950,CUST0298,2025-06-22,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00614,INV01950,CUST0298,2025-06-25,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00615,INV01950,CUST0298,2025-06-28,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00616,INV01950,CUST0298,2025-07-02,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00617,INV02780,CUST0034,2025-05-11,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02780,Sent
+COL00618,INV02780,CUST0034,2025-05-14,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00619,INV02780,CUST0034,2025-05-18,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00620,INV02780,CUST0034,2025-05-22,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00621,INV02780,CUST0034,2025-05-23,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00622,INV00369,CUST0566,2025-06-01,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00369,Sent
+COL00623,INV00369,CUST0566,2025-06-03,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00624,INV00369,CUST0566,2025-06-04,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00625,INV00369,CUST0566,2025-06-06,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00626,INV00369,CUST0566,2025-06-10,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00627,INV00546,CUST0093,2025-06-05,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00546,Sent
+COL00628,INV00546,CUST0093,2025-06-09,WhatsApp,Customer Replied,Customer confirmed payment will be made shortly,Acknowledged
+COL00629,INV00546,CUST0093,2025-06-12,WhatsApp,Payment Received,"Full payment received, invoice closed",Resolved
+COL00630,INV02166,CUST0707,2025-06-11,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02166,Sent
+COL00631,INV02166,CUST0707,2025-06-15,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00632,INV02166,CUST0707,2025-06-17,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00633,INV02166,CUST0707,2025-06-19,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00634,INV01036,CUST0343,2025-06-18,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01036,Sent
+COL00635,INV01036,CUST0343,2025-06-19,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00636,INV01036,CUST0343,2025-06-21,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00637,INV01036,CUST0343,2025-06-24,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00638,INV02120,CUST0463,2025-05-10,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02120,Sent
+COL00639,INV02120,CUST0463,2025-05-13,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00640,INV02120,CUST0463,2025-05-15,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00641,INV02120,CUST0463,2025-05-18,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00642,INV02120,CUST0463,2025-05-21,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00643,INV02473,CUST0178,2025-05-14,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02473,Sent
+COL00644,INV02473,CUST0178,2025-05-15,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00645,INV02473,CUST0178,2025-05-19,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00646,INV02473,CUST0178,2025-05-23,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00647,INV00800,CUST0868,2025-05-30,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00800,Sent
+COL00648,INV00800,CUST0868,2025-06-01,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00649,INV00800,CUST0868,2025-06-05,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00650,INV00800,CUST0868,2025-06-08,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00651,INV00800,CUST0868,2025-06-11,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00652,INV01848,CUST0359,2025-05-29,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01848,Sent
+COL00653,INV01848,CUST0359,2025-06-02,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00654,INV01848,CUST0359,2025-06-05,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00655,INV01848,CUST0359,2025-06-08,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00656,INV02832,CUST0416,2025-06-07,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02832,Sent
+COL00657,INV02832,CUST0416,2025-06-09,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00658,INV02832,CUST0416,2025-06-10,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00659,INV02832,CUST0416,2025-06-13,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00660,INV01192,CUST0158,2025-06-15,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01192,Sent
+COL00661,INV01192,CUST0158,2025-06-19,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00662,INV01192,CUST0158,2025-06-23,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00663,INV01192,CUST0158,2025-06-27,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00664,INV02492,CUST0981,2025-06-05,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02492,Sent
+COL00665,INV02492,CUST0981,2025-06-08,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00666,INV02492,CUST0981,2025-06-09,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00667,INV02492,CUST0981,2025-06-11,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00668,INV00556,CUST0262,2025-05-09,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00556,Sent
+COL00669,INV00556,CUST0262,2025-05-13,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00670,INV00556,CUST0262,2025-05-17,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00671,INV00556,CUST0262,2025-05-21,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00672,INV00556,CUST0262,2025-05-22,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00673,INV00557,CUST0919,2025-05-15,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00557,Sent
+COL00674,INV00557,CUST0919,2025-05-19,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00675,INV00557,CUST0919,2025-05-23,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00676,INV00557,CUST0919,2025-05-27,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00677,INV01409,CUST0156,2025-06-09,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01409,Sent
+COL00678,INV01409,CUST0156,2025-06-10,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00679,INV01409,CUST0156,2025-06-12,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00680,INV01409,CUST0156,2025-06-14,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00681,INV01409,CUST0156,2025-06-16,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00682,INV02846,CUST0643,2025-05-09,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02846,Sent
+COL00683,INV02846,CUST0643,2025-05-13,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00684,INV02846,CUST0643,2025-05-14,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00685,INV02846,CUST0643,2025-05-15,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00686,INV02846,CUST0643,2025-05-16,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00687,INV01962,CUST0777,2025-06-15,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01962,Sent
+COL00688,INV01962,CUST0777,2025-06-17,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00689,INV01962,CUST0777,2025-06-18,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00690,INV01962,CUST0777,2025-06-21,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00691,INV00623,CUST0412,2025-05-24,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00623,Sent
+COL00692,INV00623,CUST0412,2025-05-27,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00693,INV00623,CUST0412,2025-05-31,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00694,INV00623,CUST0412,2025-06-01,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00695,INV02935,CUST0756,2025-05-22,Email,Reminder Sent,Automated Email reminder sent for invoice INV02935,Sent
+COL00696,INV02935,CUST0756,2025-05-23,Email,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00697,INV02935,CUST0756,2025-05-26,Email,Follow-up Sent,Follow-up Email message sent after promised date passed,Sent
+COL00698,INV02935,CUST0756,2025-05-28,Email,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00699,INV02503,CUST0443,2025-06-07,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02503,Sent
+COL00700,INV02503,CUST0443,2025-06-10,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00701,INV02503,CUST0443,2025-06-12,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00702,INV02503,CUST0443,2025-06-13,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00703,INV02503,CUST0443,2025-06-14,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00704,INV02992,CUST0594,2025-06-14,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02992,Sent
+COL00705,INV02992,CUST0594,2025-06-18,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00706,INV02992,CUST0594,2025-06-21,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00707,INV02992,CUST0594,2025-06-24,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00708,INV02992,CUST0594,2025-06-26,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00709,INV01718,CUST0844,2025-05-11,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01718,Sent
+COL00710,INV01718,CUST0844,2025-05-13,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00711,INV01718,CUST0844,2025-05-15,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00712,INV01718,CUST0844,2025-05-16,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00713,INV01718,CUST0844,2025-05-20,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00714,INV00068,CUST0401,2025-06-16,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00068,Sent
+COL00715,INV00068,CUST0401,2025-06-17,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00716,INV00068,CUST0401,2025-06-18,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00717,INV00068,CUST0401,2025-06-20,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00718,INV01025,CUST0027,2025-06-01,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01025,Sent
+COL00719,INV01025,CUST0027,2025-06-05,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00720,INV01025,CUST0027,2025-06-06,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00721,INV01025,CUST0027,2025-06-09,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00722,INV01025,CUST0027,2025-06-11,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00723,INV00729,CUST0311,2025-05-19,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00729,Sent
+COL00724,INV00729,CUST0311,2025-05-22,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00725,INV00729,CUST0311,2025-05-24,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00726,INV00729,CUST0311,2025-05-28,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00727,INV00729,CUST0311,2025-05-29,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00728,INV02632,CUST0908,2025-05-15,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02632,Sent
+COL00729,INV02632,CUST0908,2025-05-19,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00730,INV02632,CUST0908,2025-05-22,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00731,INV02632,CUST0908,2025-05-26,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00732,INV02931,CUST0014,2025-07-05,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02931,Sent
+COL00733,INV02931,CUST0014,2025-07-06,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00734,INV02931,CUST0014,2025-07-09,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00735,INV02931,CUST0014,2025-07-10,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00736,INV01927,CUST0819,2025-05-28,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01927,Sent
+COL00737,INV01927,CUST0819,2025-06-01,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00738,INV01927,CUST0819,2025-06-03,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00739,INV01927,CUST0819,2025-06-06,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00740,INV01927,CUST0819,2025-06-08,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00741,INV01795,CUST0765,2025-05-24,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01795,Sent
+COL00742,INV01795,CUST0765,2025-05-28,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00743,INV01795,CUST0765,2025-05-30,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00744,INV01795,CUST0765,2025-06-02,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00745,INV01228,CUST0554,2025-05-31,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01228,Sent
+COL00746,INV01228,CUST0554,2025-06-01,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00747,INV01228,CUST0554,2025-06-05,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00748,INV01228,CUST0554,2025-06-07,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00749,INV02593,CUST0761,2025-06-19,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02593,Sent
+COL00750,INV02593,CUST0761,2025-06-23,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00751,INV02593,CUST0761,2025-06-27,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00752,INV02593,CUST0761,2025-06-28,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00753,INV00913,CUST0851,2025-05-05,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00913,Sent
+COL00754,INV00913,CUST0851,2025-05-09,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00755,INV00913,CUST0851,2025-05-10,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00756,INV00913,CUST0851,2025-05-12,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00757,INV00913,CUST0851,2025-05-13,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00758,INV01595,CUST0732,2025-05-18,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01595,Sent
+COL00759,INV01595,CUST0732,2025-05-22,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00760,INV01595,CUST0732,2025-05-23,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00761,INV01595,CUST0732,2025-05-24,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00762,INV01790,CUST0541,2025-05-12,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01790,Sent
+COL00763,INV01790,CUST0541,2025-05-16,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00764,INV01790,CUST0541,2025-05-20,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00765,INV01790,CUST0541,2025-05-23,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00766,INV01790,CUST0541,2025-05-24,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00767,INV00523,CUST0768,2025-06-08,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00523,Sent
+COL00768,INV00523,CUST0768,2025-06-10,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00769,INV00523,CUST0768,2025-06-13,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00770,INV00523,CUST0768,2025-06-15,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00771,INV01743,CUST0496,2025-06-10,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01743,Sent
+COL00772,INV01743,CUST0496,2025-06-14,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00773,INV01743,CUST0496,2025-06-15,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00774,INV01743,CUST0496,2025-06-18,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00775,INV01743,CUST0496,2025-06-22,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00776,INV02957,CUST0815,2025-05-10,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02957,Sent
+COL00777,INV02957,CUST0815,2025-05-13,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00778,INV02957,CUST0815,2025-05-17,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00779,INV02957,CUST0815,2025-05-19,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00780,INV02957,CUST0815,2025-05-20,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00781,INV00344,CUST0105,2025-06-09,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00344,Sent
+COL00782,INV00344,CUST0105,2025-06-10,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00783,INV00344,CUST0105,2025-06-13,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00784,INV00344,CUST0105,2025-06-14,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00785,INV02757,CUST0161,2025-06-25,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02757,Sent
+COL00786,INV02757,CUST0161,2025-06-29,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00787,INV02757,CUST0161,2025-06-30,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00788,INV02757,CUST0161,2025-07-02,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00789,INV00197,CUST0579,2025-06-01,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00197,Sent
+COL00790,INV00197,CUST0579,2025-06-04,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00791,INV00197,CUST0579,2025-06-07,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00792,INV00197,CUST0579,2025-06-11,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00793,INV00197,CUST0579,2025-06-12,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00794,INV00125,CUST0066,2025-06-01,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00125,Sent
+COL00795,INV00125,CUST0066,2025-06-05,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00796,INV00125,CUST0066,2025-06-07,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00797,INV00125,CUST0066,2025-06-10,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00798,INV00125,CUST0066,2025-06-14,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00799,INV00185,CUST0560,2025-06-22,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00185,Sent
+COL00800,INV00185,CUST0560,2025-06-25,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00801,INV00185,CUST0560,2025-06-28,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00802,INV00185,CUST0560,2025-07-02,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00803,INV00185,CUST0560,2025-07-03,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00804,INV01914,CUST0008,2025-07-14,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01914,Sent
+COL00805,INV01914,CUST0008,2025-07-16,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00806,INV01914,CUST0008,2025-07-20,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00807,INV01914,CUST0008,2025-07-21,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00808,INV02020,CUST0988,2025-05-20,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02020,Sent
+COL00809,INV02020,CUST0988,2025-05-21,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00810,INV02020,CUST0988,2025-05-25,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00811,INV02020,CUST0988,2025-05-26,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00812,INV02020,CUST0988,2025-05-27,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00813,INV01731,CUST0373,2025-06-10,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01731,Sent
+COL00814,INV01731,CUST0373,2025-06-12,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00815,INV01731,CUST0373,2025-06-13,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00816,INV01731,CUST0373,2025-06-16,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00817,INV01213,CUST0804,2025-06-13,Email,Reminder Sent,Automated Email reminder sent for invoice INV01213,Sent
+COL00818,INV01213,CUST0804,2025-06-16,Email,No Response,No response received after 3 days,Unresolved
+COL00819,INV01213,CUST0804,2025-06-19,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00820,INV01213,CUST0804,2025-06-20,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00821,INV01213,CUST0804,2025-06-23,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00822,INV01427,CUST0420,2025-06-17,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01427,Sent
+COL00823,INV01427,CUST0420,2025-06-20,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00824,INV01427,CUST0420,2025-06-23,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00825,INV01427,CUST0420,2025-06-24,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00826,INV00409,CUST0288,2025-05-21,Email,Reminder Sent,Automated Email reminder sent for invoice INV00409,Sent
+COL00827,INV00409,CUST0288,2025-05-22,Email,No Response,No response received after 3 days,Unresolved
+COL00828,INV00409,CUST0288,2025-05-24,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00829,INV00409,CUST0288,2025-05-25,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00830,INV00409,CUST0288,2025-05-29,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00831,INV02415,CUST0983,2025-05-17,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02415,Sent
+COL00832,INV02415,CUST0983,2025-05-21,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00833,INV02415,CUST0983,2025-05-24,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00834,INV02415,CUST0983,2025-05-28,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00835,INV02415,CUST0983,2025-06-01,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00836,INV01463,CUST0804,2025-06-07,Email,Reminder Sent,Automated Email reminder sent for invoice INV01463,Sent
+COL00837,INV01463,CUST0804,2025-06-11,Email,No Response,No response received after 3 days,Unresolved
+COL00838,INV01463,CUST0804,2025-06-13,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00839,INV01463,CUST0804,2025-06-14,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00840,INV01463,CUST0804,2025-06-17,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00841,INV02602,CUST0087,2025-05-26,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02602,Sent
+COL00842,INV02602,CUST0087,2025-05-28,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00843,INV02602,CUST0087,2025-05-31,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00844,INV02602,CUST0087,2025-06-03,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00845,INV00255,CUST0642,2025-06-09,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00255,Sent
+COL00846,INV00255,CUST0642,2025-06-12,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00847,INV00255,CUST0642,2025-06-13,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00848,INV00255,CUST0642,2025-06-15,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00849,INV00255,CUST0642,2025-06-19,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00850,INV01683,CUST0002,2025-07-03,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01683,Sent
+COL00851,INV01683,CUST0002,2025-07-05,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00852,INV01683,CUST0002,2025-07-09,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00853,INV01683,CUST0002,2025-07-10,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00854,INV01683,CUST0002,2025-07-11,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00855,INV02092,CUST0586,2025-06-18,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02092,Sent
+COL00856,INV02092,CUST0586,2025-06-21,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00857,INV02092,CUST0586,2025-06-23,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00858,INV02092,CUST0586,2025-06-27,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00859,INV00193,CUST0876,2025-05-24,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00193,Sent
+COL00860,INV00193,CUST0876,2025-05-25,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00861,INV00193,CUST0876,2025-05-28,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00862,INV00193,CUST0876,2025-05-29,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00863,INV01985,CUST0367,2025-05-27,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01985,Sent
+COL00864,INV01985,CUST0367,2025-05-28,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00865,INV01985,CUST0367,2025-06-01,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00866,INV01985,CUST0367,2025-06-05,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00867,INV00559,CUST0169,2025-06-10,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00559,Sent
+COL00868,INV00559,CUST0169,2025-06-12,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00869,INV00559,CUST0169,2025-06-14,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00870,INV00559,CUST0169,2025-06-16,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00871,INV02119,CUST0303,2025-06-06,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02119,Sent
+COL00872,INV02119,CUST0303,2025-06-10,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00873,INV02119,CUST0303,2025-06-12,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL00874,INV02119,CUST0303,2025-06-13,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00875,INV00791,CUST0811,2025-06-20,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00791,Sent
+COL00876,INV00791,CUST0811,2025-06-23,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00877,INV00791,CUST0811,2025-06-26,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00878,INV00791,CUST0811,2025-06-29,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00879,INV00842,CUST0139,2025-05-17,Email,Reminder Sent,Automated Email reminder sent for invoice INV00842,Sent
+COL00880,INV00842,CUST0139,2025-05-20,Email,No Response,No response received after 3 days,Unresolved
+COL00881,INV00842,CUST0139,2025-05-23,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00882,INV00842,CUST0139,2025-05-25,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00883,INV00842,CUST0139,2025-05-29,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00884,INV01917,CUST0429,2025-06-12,Email,Reminder Sent,Automated Email reminder sent for invoice INV01917,Sent
+COL00885,INV01917,CUST0429,2025-06-14,Email,No Response,No response received after 3 days,Unresolved
+COL00886,INV01917,CUST0429,2025-06-16,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00887,INV01917,CUST0429,2025-06-18,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00888,INV01917,CUST0429,2025-06-20,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00889,INV02690,CUST0495,2025-06-15,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02690,Sent
+COL00890,INV02690,CUST0495,2025-06-17,WhatsApp,Customer Replied,Customer confirmed payment will be made shortly,Acknowledged
+COL00891,INV02690,CUST0495,2025-06-20,WhatsApp,Payment Received,"Full payment received, invoice closed",Resolved
+COL00892,INV00496,CUST0173,2025-05-07,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00496,Sent
+COL00893,INV00496,CUST0173,2025-05-11,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00894,INV00496,CUST0173,2025-05-14,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00895,INV00496,CUST0173,2025-05-16,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00896,INV00496,CUST0173,2025-05-18,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00897,INV01130,CUST0700,2025-06-17,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01130,Sent
+COL00898,INV01130,CUST0700,2025-06-21,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00899,INV01130,CUST0700,2025-06-22,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00900,INV01130,CUST0700,2025-06-23,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00901,INV01708,CUST0635,2025-06-03,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01708,Sent
+COL00902,INV01708,CUST0635,2025-06-07,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00903,INV01708,CUST0635,2025-06-09,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00904,INV01708,CUST0635,2025-06-13,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00905,INV00204,CUST0047,2025-05-19,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00204,Sent
+COL00906,INV00204,CUST0047,2025-05-20,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00907,INV00204,CUST0047,2025-05-23,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00908,INV00204,CUST0047,2025-05-25,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00909,INV00653,CUST0013,2025-06-04,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00653,Sent
+COL00910,INV00653,CUST0013,2025-06-05,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00911,INV00653,CUST0013,2025-06-07,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00912,INV00653,CUST0013,2025-06-09,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00913,INV00653,CUST0013,2025-06-10,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00914,INV00821,CUST0842,2025-05-08,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00821,Sent
+COL00915,INV00821,CUST0842,2025-05-10,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00916,INV00821,CUST0842,2025-05-14,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00917,INV00821,CUST0842,2025-05-17,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00918,INV00821,CUST0842,2025-05-18,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00919,INV00081,CUST0929,2025-06-01,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00081,Sent
+COL00920,INV00081,CUST0929,2025-06-04,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00921,INV00081,CUST0929,2025-06-06,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00922,INV00081,CUST0929,2025-06-07,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00923,INV00081,CUST0929,2025-06-10,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00924,INV00033,CUST0216,2025-05-24,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00033,Sent
+COL00925,INV00033,CUST0216,2025-05-26,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00926,INV00033,CUST0216,2025-05-27,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00927,INV00033,CUST0216,2025-05-29,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00928,INV01346,CUST0836,2025-05-18,Email,Reminder Sent,Automated Email reminder sent for invoice INV01346,Sent
+COL00929,INV01346,CUST0836,2025-05-19,Email,No Response,No response received after 3 days,Unresolved
+COL00930,INV01346,CUST0836,2025-05-21,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00931,INV01346,CUST0836,2025-05-22,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00932,INV01346,CUST0836,2025-05-25,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00933,INV00437,CUST0827,2025-06-20,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00437,Sent
+COL00934,INV00437,CUST0827,2025-06-23,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00935,INV00437,CUST0827,2025-06-25,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00936,INV00437,CUST0827,2025-06-28,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00937,INV00252,CUST0961,2025-05-07,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00252,Sent
+COL00938,INV00252,CUST0961,2025-05-09,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00939,INV00252,CUST0961,2025-05-10,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00940,INV00252,CUST0961,2025-05-14,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00941,INV00252,CUST0961,2025-05-18,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00942,INV00720,CUST0690,2025-05-15,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00720,Sent
+COL00943,INV00720,CUST0690,2025-05-19,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00944,INV00720,CUST0690,2025-05-20,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00945,INV00720,CUST0690,2025-05-24,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00946,INV00748,CUST0794,2025-05-23,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00748,Sent
+COL00947,INV00748,CUST0794,2025-05-24,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00948,INV00748,CUST0794,2025-05-26,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00949,INV00748,CUST0794,2025-05-30,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00950,INV00257,CUST0702,2025-05-22,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00257,Sent
+COL00951,INV00257,CUST0702,2025-05-26,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00952,INV00257,CUST0702,2025-05-29,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00953,INV00257,CUST0702,2025-06-01,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00954,INV00257,CUST0702,2025-06-05,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00955,INV00978,CUST0871,2025-06-16,Email,Reminder Sent,Automated Email reminder sent for invoice INV00978,Sent
+COL00956,INV00978,CUST0871,2025-06-19,Email,No Response,No response received after 3 days,Unresolved
+COL00957,INV00978,CUST0871,2025-06-22,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL00958,INV00978,CUST0871,2025-06-26,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00959,INV00978,CUST0871,2025-06-30,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00960,INV02731,CUST0459,2025-06-07,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02731,Sent
+COL00961,INV02731,CUST0459,2025-06-10,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00962,INV02731,CUST0459,2025-06-12,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00963,INV02731,CUST0459,2025-06-16,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00964,INV01990,CUST0754,2025-05-19,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01990,Sent
+COL00965,INV01990,CUST0754,2025-05-21,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00966,INV01990,CUST0754,2025-05-22,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00967,INV01990,CUST0754,2025-05-26,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00968,INV00140,CUST0467,2025-06-13,Email,Reminder Sent,Automated Email reminder sent for invoice INV00140,Sent
+COL00969,INV00140,CUST0467,2025-06-17,Email,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00970,INV00140,CUST0467,2025-06-18,Email,Follow-up Sent,Follow-up Email message sent after promised date passed,Sent
+COL00971,INV00140,CUST0467,2025-06-19,Email,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00972,INV01020,CUST0757,2025-06-03,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01020,Sent
+COL00973,INV01020,CUST0757,2025-06-06,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL00974,INV01020,CUST0757,2025-06-10,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL00975,INV01020,CUST0757,2025-06-12,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00976,INV01020,CUST0757,2025-06-14,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00977,INV01727,CUST0823,2025-06-09,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01727,Sent
+COL00978,INV01727,CUST0823,2025-06-10,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00979,INV01727,CUST0823,2025-06-12,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00980,INV01727,CUST0823,2025-06-16,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00981,INV01727,CUST0823,2025-06-17,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00982,INV00089,CUST0211,2025-05-28,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00089,Sent
+COL00983,INV00089,CUST0211,2025-05-30,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00984,INV00089,CUST0211,2025-06-01,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00985,INV00089,CUST0211,2025-06-04,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00986,INV00089,CUST0211,2025-06-07,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00987,INV02748,CUST0474,2025-05-19,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02748,Sent
+COL00988,INV02748,CUST0474,2025-05-21,Phone Call,No Response,No response received after 3 days,Unresolved
+COL00989,INV02748,CUST0474,2025-05-22,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL00990,INV02748,CUST0474,2025-05-23,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL00991,INV02748,CUST0474,2025-05-27,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL00992,INV01851,CUST0010,2025-07-08,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01851,Sent
+COL00993,INV01851,CUST0010,2025-07-10,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00994,INV01851,CUST0010,2025-07-13,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00995,INV01851,CUST0010,2025-07-15,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL00996,INV00297,CUST0824,2025-05-23,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00297,Sent
+COL00997,INV00297,CUST0824,2025-05-27,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL00998,INV00297,CUST0824,2025-05-30,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL00999,INV00297,CUST0824,2025-05-31,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01000,INV01942,CUST0394,2025-06-01,Email,Reminder Sent,Automated Email reminder sent for invoice INV01942,Sent
+COL01001,INV01942,CUST0394,2025-06-02,Email,No Response,No response received after 3 days,Unresolved
+COL01002,INV01942,CUST0394,2025-06-04,Email,Follow-up Sent,"Second Email follow-up sent, referenced payment terms",Sent
+COL01003,INV01942,CUST0394,2025-06-06,Email,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL01004,INV01942,CUST0394,2025-06-10,Email,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL01005,INV00487,CUST0773,2025-06-04,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00487,Sent
+COL01006,INV00487,CUST0773,2025-06-08,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01007,INV00487,CUST0773,2025-06-10,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL01008,INV00487,CUST0773,2025-06-12,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01009,INV00846,CUST0005,2025-07-04,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00846,Sent
+COL01010,INV00846,CUST0005,2025-07-08,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01011,INV00846,CUST0005,2025-07-10,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL01012,INV00846,CUST0005,2025-07-14,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01013,INV00601,CUST0744,2025-06-02,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00601,Sent
+COL01014,INV00601,CUST0744,2025-06-03,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL01015,INV00601,CUST0744,2025-06-05,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL01016,INV00601,CUST0744,2025-06-07,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL01017,INV00601,CUST0744,2025-06-09,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL01018,INV02755,CUST0551,2025-05-13,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02755,Sent
+COL01019,INV02755,CUST0551,2025-05-14,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01020,INV02755,CUST0551,2025-05-17,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL01021,INV02755,CUST0551,2025-05-18,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01022,INV02512,CUST0292,2025-06-11,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV02512,Sent
+COL01023,INV02512,CUST0292,2025-06-15,Phone Call,No Response,No response received after 3 days,Unresolved
+COL01024,INV02512,CUST0292,2025-06-18,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL01025,INV02512,CUST0292,2025-06-22,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL01026,INV02512,CUST0292,2025-06-25,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL01027,INV02469,CUST0100,2025-05-31,Email,Reminder Sent,Automated Email reminder sent for invoice INV02469,Sent
+COL01028,INV02469,CUST0100,2025-06-04,Email,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01029,INV02469,CUST0100,2025-06-08,Email,Follow-up Sent,Follow-up Email message sent after promised date passed,Sent
+COL01030,INV02469,CUST0100,2025-06-11,Email,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01031,INV02411,CUST0150,2025-06-05,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02411,Sent
+COL01032,INV02411,CUST0150,2025-06-09,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01033,INV02411,CUST0150,2025-06-11,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL01034,INV02411,CUST0150,2025-06-12,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01035,INV00814,CUST0202,2025-05-21,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00814,Sent
+COL01036,INV00814,CUST0202,2025-05-25,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01037,INV00814,CUST0202,2025-05-29,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL01038,INV00814,CUST0202,2025-05-31,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01039,INV02430,CUST0788,2025-06-07,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02430,Sent
+COL01040,INV02430,CUST0788,2025-06-11,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01041,INV02430,CUST0788,2025-06-13,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL01042,INV02430,CUST0788,2025-06-17,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01043,INV01101,CUST0296,2025-06-07,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV01101,Sent
+COL01044,INV01101,CUST0296,2025-06-08,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01045,INV01101,CUST0296,2025-06-09,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL01046,INV01101,CUST0296,2025-06-11,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01047,INV00142,CUST0611,2025-06-19,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00142,Sent
+COL01048,INV00142,CUST0611,2025-06-23,Phone Call,No Response,No response received after 3 days,Unresolved
+COL01049,INV00142,CUST0611,2025-06-26,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL01050,INV00142,CUST0611,2025-06-27,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL01051,INV00142,CUST0611,2025-07-01,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL01052,INV01904,CUST0345,2025-06-05,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01904,Sent
+COL01053,INV01904,CUST0345,2025-06-06,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL01054,INV01904,CUST0345,2025-06-08,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL01055,INV01904,CUST0345,2025-06-09,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL01056,INV01904,CUST0345,2025-06-12,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL01057,INV00271,CUST0536,2025-06-10,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00271,Sent
+COL01058,INV00271,CUST0536,2025-06-11,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01059,INV00271,CUST0536,2025-06-15,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL01060,INV00271,CUST0536,2025-06-17,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01061,INV02851,CUST0356,2025-06-01,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02851,Sent
+COL01062,INV02851,CUST0356,2025-06-02,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01063,INV02851,CUST0356,2025-06-03,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL01064,INV02851,CUST0356,2025-06-05,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01065,INV02568,CUST0033,2025-06-07,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV02568,Sent
+COL01066,INV02568,CUST0033,2025-06-11,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL01067,INV02568,CUST0033,2025-06-14,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL01068,INV02568,CUST0033,2025-06-16,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL01069,INV02568,CUST0033,2025-06-18,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL01070,INV01608,CUST0400,2025-05-21,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01608,Sent
+COL01071,INV01608,CUST0400,2025-05-24,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL01072,INV01608,CUST0400,2025-05-27,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL01073,INV01608,CUST0400,2025-05-29,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL01074,INV01608,CUST0400,2025-06-01,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL01075,INV01091,CUST0339,2025-05-21,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01091,Sent
+COL01076,INV01091,CUST0339,2025-05-25,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL01077,INV01091,CUST0339,2025-05-27,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL01078,INV01091,CUST0339,2025-05-30,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL01079,INV01091,CUST0339,2025-06-03,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL01080,INV01297,CUST0529,2025-05-17,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01297,Sent
+COL01081,INV01297,CUST0529,2025-05-20,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01082,INV01297,CUST0529,2025-05-22,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL01083,INV01297,CUST0529,2025-05-25,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01084,INV00176,CUST0948,2025-06-06,Email,Reminder Sent,Automated Email reminder sent for invoice INV00176,Sent
+COL01085,INV00176,CUST0948,2025-06-07,Email,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01086,INV00176,CUST0948,2025-06-09,Email,Follow-up Sent,Follow-up Email message sent after promised date passed,Sent
+COL01087,INV00176,CUST0948,2025-06-11,Email,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01088,INV01019,CUST0204,2025-05-19,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01019,Sent
+COL01089,INV01019,CUST0204,2025-05-21,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01090,INV01019,CUST0204,2025-05-24,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL01091,INV01019,CUST0204,2025-05-27,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01092,INV00738,CUST0898,2025-06-21,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV00738,Sent
+COL01093,INV00738,CUST0898,2025-06-23,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01094,INV00738,CUST0898,2025-06-26,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL01095,INV00738,CUST0898,2025-06-27,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01096,INV01959,CUST0983,2025-05-14,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01959,Sent
+COL01097,INV01959,CUST0983,2025-05-17,WhatsApp,No Response,No response received after 3 days,Unresolved
+COL01098,INV01959,CUST0983,2025-05-21,WhatsApp,Follow-up Sent,"Second WhatsApp follow-up sent, referenced payment terms",Sent
+COL01099,INV01959,CUST0983,2025-05-22,WhatsApp,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL01100,INV01959,CUST0983,2025-05-25,WhatsApp,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL01101,INV00472,CUST0258,2025-06-16,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00472,Sent
+COL01102,INV00472,CUST0258,2025-06-19,Phone Call,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01103,INV00472,CUST0258,2025-06-22,Phone Call,Follow-up Sent,Follow-up Phone Call message sent after promised date passed,Sent
+COL01104,INV00472,CUST0258,2025-06-26,Phone Call,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01105,INV01929,CUST0577,2025-06-06,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01929,Sent
+COL01106,INV01929,CUST0577,2025-06-08,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01107,INV01929,CUST0577,2025-06-11,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL01108,INV01929,CUST0577,2025-06-14,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval
+COL01109,INV00914,CUST0002,2025-07-01,Phone Call,Reminder Sent,Automated Phone Call reminder sent for invoice INV00914,Sent
+COL01110,INV00914,CUST0002,2025-07-05,Phone Call,No Response,No response received after 3 days,Unresolved
+COL01111,INV00914,CUST0002,2025-07-07,Phone Call,Follow-up Sent,"Second Phone Call follow-up sent, referenced payment terms",Sent
+COL01112,INV00914,CUST0002,2025-07-09,Phone Call,No Payment Received,Promised payment date passed with no payment,Unresolved
+COL01113,INV00914,CUST0002,2025-07-10,Phone Call,Escalation Recommended,AI recommends late fee notice + phone call; customer has repeated late-payment history,Needs Approval
+COL01114,INV01358,CUST0693,2025-05-18,WhatsApp,Reminder Sent,Automated WhatsApp reminder sent for invoice INV01358,Sent
+COL01115,INV01358,CUST0693,2025-05-21,WhatsApp,Customer Replied,"Customer requested extension, cited cash flow issue",Promise Made
+COL01116,INV01358,CUST0693,2025-05-24,WhatsApp,Follow-up Sent,Follow-up WhatsApp message sent after promised date passed,Sent
+COL01117,INV01358,CUST0693,2025-05-27,WhatsApp,Escalation Recommended,"AI flagged repeated delay pattern, recommends stronger follow-up with late fee notice",Needs Approval

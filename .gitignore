@@ -1,0 +1,11 @@
+.env
+__pycache__/
+.gemini/
+node_modules/
+*.pyc
+patch_*.py
+fix*.py
+python.py
+*_backup.*
+frontend/
+email farud/

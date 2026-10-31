@@ -1,0 +1,228 @@
+CustomerID,DisplayName,ContactName,Phone,PaymentTermsDays,CreditLimit,OverdueInvoiceCount,TotalOverdueAmount,AvgDaysOverdue,MaxDaysOverdue,PaymentReliabilityScore,RiskTier,PreferredChannel
+CUST0002,Cheema-Dyal,Nisha Tandon,915451680876,58,200000,2,487843.85000000003,0.0,0,9.4,High,Phone Call
+CUST0005,Nigam-Rao,Falguni Walla,8091343161,59,200000,1,98230.0,0.0,0,9.7,Medium,WhatsApp
+CUST0008,Nigam-Contractor,Faqid Dhaliwal,481754965,67,200000,1,156114.18,0.0,0,9.7,Medium,WhatsApp
+CUST0010,Kala Ltd,Chandresh Nath,3933529042,62,200000,1,85030.82,0.0,0,9.7,Medium,WhatsApp
+CUST0013,Chawla-Tripathi,Mohammed Subramaniam,1493689980,31,200000,1,214593.3,0.0,0,9.7,High,Phone Call
+CUST0014,Saini-Setty,Nakul Pingle,912290147679,60,200000,1,175896.26,0.0,0,9.7,Medium,Phone Call
+CUST0027,Sai Dewan,Wakeeta Bal,1146786691,21,50000,1,235919.6,4.0,4,8.4,High,Phone Call
+CUST0032,Gayathri Tripathi,Chandani Soman,916940974993,22,50000,1,217567.67,7.0,7,7.4,High,WhatsApp
+CUST0033,Samar Roy,David Devi,5278585497,30,50000,2,267524.11,0.0,0,9.4,High,WhatsApp
+CUST0034,Ladli Rana,Madhav Mannan,4733848421,6,50000,1,241094.45,23.0,23,2.0,High,WhatsApp
+CUST0038,Gavin Uppal,Christopher Setty,874064039,20,50000,1,174262.97,9.0,9,6.7,Medium,WhatsApp
+CUST0047,Fitan Loyal,Lajita Dube,910475412126,6,50000,1,149418.33,16.0,16,4.4,Medium,WhatsApp
+CUST0050,Nandini Warrior,Balhaar Parsa,5290965610,15,50000,1,110193.74,13.0,13,5.4,Medium,WhatsApp
+CUST0052,Quincy Sankaran,Ayush Hora,3341918255,11,50000,1,139260.88,11.0,11,6.0,Medium,WhatsApp
+CUST0053,Krish Munshi,William Mody,918669296627,35,50000,2,218683.03000000003,0.0,0,9.4,High,Phone Call
+CUST0057,Chakradhar Chaudhary,Amol Dash,3242415415,27,50000,1,269764.63,0.0,0,9.7,High,WhatsApp
+CUST0066,Girindra Shere,Logan Dara,916519941013,27,50000,2,250033.47,1.5,2,8.9,High,WhatsApp
+CUST0077,Wyatt Pradhan,Sanaya Goel,1406029333,13,50000,1,247275.45,16.0,16,4.4,High,WhatsApp
+CUST0079,Nidhi Rama,Ranveer Oza,2824172482,17,50000,2,483732.26,11.0,11,5.7,High,Phone Call
+CUST0080,Urmi Hayer,Lakshmi Wagle,915697252175,45,50000,1,82379.35,0.0,0,9.7,Medium,WhatsApp
+CUST0084,Tanmayi Minhas,Ucchal Bedi,5611002255,34,50000,1,60942.79,0.0,0,9.7,Low,Phone Call
+CUST0086,Warhi Gandhi,Vyanjana Nagi,3866317797,23,50000,1,86239.79,6.0,6,7.7,Medium,Phone Call
+CUST0087,Yashoda Jhaveri,Harita Patla,9975711305,20,50000,1,178309.0,8.0,8,7.0,Medium,WhatsApp
+CUST0093,Gopal Ganesh,Dominic Kade,6120750110,31,50000,1,77419.39,0.0,0,9.7,Low,WhatsApp
+CUST0100,Anirudh Mander,Tarak Sen,9292984257,25,50000,1,92793.73,3.0,3,8.7,Medium,Email
+CUST0105,Yahvi Menon,Jackson Varghese,3577907141,29,50000,1,117760.33,0.0,0,9.7,Medium,WhatsApp
+CUST0107,Chatura Vora,Vanya Zachariah,2718750036,11,50000,1,80216.84,18.0,18,3.7,Medium,WhatsApp
+CUST0116,Vinaya Kaul,Idika Sarna,2407784873,20,50000,1,131978.94,8.0,8,7.0,Medium,WhatsApp
+CUST0120,Chasmum Ahuja,Tristan Kala,9921075224,7,50000,1,220069.88,21.0,21,2.7,High,Phone Call
+CUST0124,Andrew Puri,Aadhya Garde,4070164510,9,50000,1,76344.81,20.0,20,3.0,Medium,Phone Call
+CUST0127,Vincent Kashyap,Jagrati Buch,5267722330,26,50000,1,156670.77,3.0,3,8.7,Medium,Phone Call
+CUST0128,Benjamin Rai,Meera Yadav,388608680,38,50000,1,108752.66,0.0,0,9.7,Medium,Phone Call
+CUST0136,Ekani Iyer,Bhavini Malhotra,914109881385,34,50000,1,169860.54,0.0,0,9.7,Medium,WhatsApp
+CUST0139,Warinder Ghose,Vidhi Contractor,2461919657,11,50000,2,345386.88,18.0,18,3.4,High,Email
+CUST0146,Indrajit Gour,Chaitaly Sibal,5421406650,20,50000,1,121942.41,8.0,8,7.0,Medium,WhatsApp
+CUST0150,Samaksh Sandhu,Neelima Nair,919251142625,22,50000,1,142340.56,0.0,0,9.7,Medium,WhatsApp
+CUST0151,Omaja Soni,Samuel Dhar,927914560,0,50000,1,162363.17,22.0,22,2.4,High,Phone Call
+CUST0156,Indrajit Rajagopal,Udyati Baria,918325381793,35,50000,1,249723.57,0.0,0,9.7,High,Phone Call
+CUST0158,Nisha Oza,Vedika Wagle,914243754025,41,50000,1,99850.71,0.0,0,9.7,Medium,Phone Call
+CUST0161,Indali Morar,Gagan Kale,2662991234,43,50000,1,157471.69,0.0,0,9.7,Medium,WhatsApp
+CUST0166,Indira Dyal,Yashasvi Bir,914280138759,31,50000,1,209536.0,0.0,0,9.7,High,Phone Call
+CUST0169,Lavanya Narain,Chavvi Char,914778485880,36,50000,1,90887.24,0.0,0,9.7,Medium,WhatsApp
+CUST0173,Pranit Bahl,Xalak Kala,6908357232,2,50000,1,127889.65,26.0,26,1.0,High,WhatsApp
+CUST0178,Ansh Bajaj,Gaurav Shere,9694215291,10,50000,1,101712.02,20.0,20,3.0,Medium,WhatsApp
+CUST0200,Hema Lal,Anjali Korpal,209700268,2,50000,1,167795.33,27.0,27,1.0,High,WhatsApp
+CUST0202,Anusha Handa,Zayyan Setty,6418775803,16,50000,1,196328.21,12.0,12,5.7,Medium,WhatsApp
+CUST0204,Charvi Sankaran,Harsh Bhalla,919639907676,5,50000,1,184980.04,17.0,17,4.0,Medium,WhatsApp
+CUST0210,Aryan Gola,Vivaan Lanka,8814311150,44,50000,1,135763.3,0.0,0,9.7,Medium,WhatsApp
+CUST0211,Urmi Vala,Mitali Kari,9877515366,22,50000,1,228444.17,7.0,7,7.4,High,Phone Call
+CUST0212,Chandani Nanda,Azad Dewan,916186371597,45,50000,1,161458.5,0.0,0,9.7,Medium,WhatsApp
+CUST0215,Yamini Nanda,Shravya Gala,911765636004,27,50000,1,134153.42,2.0,2,9.0,Medium,WhatsApp
+CUST0216,Harish Goel,Jeet Warrior,914275230837,10,50000,1,116780.32,11.0,11,6.0,Medium,WhatsApp
+CUST0223,Advika Shah,Aachal Kota,6691836264,22,50000,1,229728.48,7.0,7,7.4,High,WhatsApp
+CUST0225,Wahab Sridhar,Harrison Andra,138069847,17,50000,1,178238.91,11.0,11,6.0,Medium,Email
+CUST0258,Janaki Sani,Tanay Bhagat,2121461476,40,50000,1,164735.69,0.0,0,9.7,Medium,Phone Call
+CUST0262,Gautami Garde,Wyatt Raman,2626582631,4,50000,2,358474.9,24.5,25,1.2,High,Phone Call
+CUST0268,Warjas Bail,Andrew Agrawal,918805017164,44,50000,1,242536.91,0.0,0,9.7,High,WhatsApp
+CUST0271,Januja Rajan,Yochana Jain,2491271130,31,50000,2,408065.42000000004,0.0,0,9.4,High,Phone Call
+CUST0276,Suhani Palan,Imaran Anand,918498247414,29,50000,1,142610.61,0.0,0,9.7,Medium,WhatsApp
+CUST0285,Madhavi Parmar,Nakul Mani,8469081974,27,50000,1,251388.54,3.0,3,8.7,High,WhatsApp
+CUST0288,Faraj Krishna,Warda Parikh,4384588105,17,50000,1,234745.05,12.0,12,5.7,High,Email
+CUST0292,Edhitha Barman,Darsh Lad,919351187181,35,50000,2,337531.5,0.0,0,9.4,High,Phone Call
+CUST0294,Edhitha Luthra,Chaaya Kohli,1376515881,8,50000,1,118168.11,20.0,20,3.0,Medium,WhatsApp
+CUST0296,Ethan Pant,Nilima Sengupta,2298120995,31,50000,1,144139.44,0.0,0,9.7,Medium,Phone Call
+CUST0298,Balveer Zacharia,Abeer Suresh,6782741176,43,50000,2,349944.11,0.0,0,9.4,High,Phone Call
+CUST0303,Anita Dasgupta,Nandini Deep,6008921963,29,50000,1,128176.48,0.0,0,9.7,Medium,Phone Call
+CUST0304,Tristan Ray,Vasudha Mane,6581739063,1,50000,1,58226.98,28.0,28,1.0,High,WhatsApp
+CUST0311,Ayush Dua,Karan Butala,518439055,12,50000,1,204521.17,17.0,17,4.0,High,WhatsApp
+CUST0318,Praneel Gade,Zansi Cherian,1602529867,5,50000,1,121473.04,23.0,23,2.0,High,WhatsApp
+CUST0323,Ayushman Dugal,Indira Sankar,7368269116,23,50000,1,142909.87,7.0,7,7.4,Medium,WhatsApp
+CUST0325,Ojas Sodhi,Kamala Bajaj,5327352410,41,50000,1,95013.22,0.0,0,9.7,Medium,WhatsApp
+CUST0329,Mason Mall,Ronith Parikh,918335061581,40,50000,1,268107.73,0.0,0,9.7,High,Email
+CUST0332,Rishi Chopra,Tanay Mohanty,4939252362,14,50000,1,204117.09,15.0,15,4.7,High,Phone Call
+CUST0339,Tanmayi Babu,Lajita Salvi,1643167045,13,50000,1,302473.25,14.0,14,5.0,High,WhatsApp
+CUST0343,Ria Dalal,Yoshita Nazareth,7158415608,37,50000,1,154415.71,0.0,0,9.7,Medium,Phone Call
+CUST0345,Upadhriti Nagy,Charita Acharya,9910622723,33,50000,1,259908.83,0.0,0,9.7,High,WhatsApp
+CUST0355,Kavya Boase,Ranbir Tara,2959272827,8,50000,1,175606.9,21.0,21,2.7,High,Email
+CUST0356,Sara Dada,Hamsini Koshy,507918158,30,50000,1,191184.26,1.0,1,9.4,Medium,WhatsApp
+CUST0359,Zehaan Anne,Benjamin Sen,911271285246,24,50000,1,106136.36,4.0,4,8.4,Medium,WhatsApp
+CUST0367,Omkaar Patla,Rehaan Varghese,910344765047,24,50000,1,165379.25,7.0,7,7.4,Medium,WhatsApp
+CUST0373,Lohit Keer,Tarak Saha,915496919284,33,50000,1,169001.28,0.0,0,9.7,Medium,WhatsApp
+CUST0380,Dayita Arora,Pratyush Nath,7692778943,22,50000,1,62381.1,7.0,7,7.4,Low,WhatsApp
+CUST0386,Guneet Sami,Vritti Bala,4811317653,43,50000,1,276435.21,0.0,0,9.7,High,WhatsApp
+CUST0388,Jack Chaudhuri,Liam Deo,6085816704,13,50000,1,213384.01,16.0,16,4.4,High,Phone Call
+CUST0389,Ronith Sehgal,Adya Sridhar,332426050,5,50000,1,187746.01,24.0,24,1.7,High,WhatsApp
+CUST0393,Watika Prasad,Manya Sule,9141686013,37,50000,1,164454.56,0.0,0,9.7,Medium,WhatsApp
+CUST0394,Lila Munshi,Logan Golla,914188421630,24,50000,3,430992.17,4.3,5,7.7,High,Email
+CUST0400,Arya Shere,Suhani Gill,162047876,17,50000,1,216831.01,12.0,12,5.7,High,WhatsApp
+CUST0401,Jack Sachar,Keya Mistry,913627924632,41,50000,1,108165.16,0.0,0,9.7,Medium,WhatsApp
+CUST0405,Radha Subramanian,Falguni Upadhyay,4128333721,38,50000,1,190912.72,0.0,0,9.7,Medium,WhatsApp
+CUST0406,Urvashi Balasubramanian,Kamala Dani,3663439252,38,50000,1,155856.7,0.0,0,9.7,Medium,WhatsApp
+CUST0408,Azad Ramaswamy,Nicholas Solanki,6634533722,18,50000,1,246814.65,9.0,9,6.7,High,Phone Call
+CUST0412,Amol Thaker,Charan Taneja,8528306153,19,50000,1,46071.54,10.0,10,6.4,Medium,Phone Call
+CUST0414,Varenya Panchal,Harini Ramachandran,3239791378,33,50000,1,134382.76,0.0,0,9.7,Medium,WhatsApp
+CUST0416,Charita Ray,Atharv Mane,9151145512,32,50000,1,164181.14,0.0,0,9.7,Medium,WhatsApp
+CUST0420,Rachita Sheth,Darsh Bhasin,1424426078,41,50000,1,142831.06,0.0,0,9.7,Medium,WhatsApp
+CUST0422,Aarav Srivastava,Rachit Chopra,916999516793,15,50000,1,185936.94,14.0,14,5.0,Medium,Email
+CUST0423,Vihaan Roy,Samarth Sibal,918723335104,31,50000,1,147185.96,0.0,0,9.7,Medium,WhatsApp
+CUST0429,Dipta Raghavan,Banjeet Tripathi,43655158,38,50000,1,261936.59,0.0,0,9.7,High,Email
+CUST0434,Tarak Desai,Ekantika Kara,911987561786,20,50000,1,140453.6,9.0,9,6.7,Medium,Phone Call
+CUST0442,Aarav Ahuja,Mahika Ramachandran,3113950016,11,50000,1,149163.83,18.0,18,3.7,Medium,WhatsApp
+CUST0443,Jyoti Kannan,Anamika Badal,6207266292,30,50000,2,289346.47,0.0,0,9.4,High,Phone Call
+CUST0445,Tejas Sem,Chaman Mohanty,912648016440,1,50000,1,206590.32,30.0,30,1.0,High,Phone Call
+CUST0447,Warinder Ravel,Alexander Patla,2235521650,4,50000,1,113934.75,18.0,18,3.7,Medium,WhatsApp
+CUST0448,Wahab Sani,Amol Dutt,3869484249,0,50000,1,139156.1,21.0,21,2.7,High,WhatsApp
+CUST0450,Amruta Balan,Madhavi Raj,1248255442,13,50000,1,192222.9,16.0,16,4.4,Medium,Phone Call
+CUST0459,Nisha Garg,Prisha Narain,2325539835,26,50000,1,104758.82,0.0,0,9.7,Medium,WhatsApp
+CUST0460,Wishi Dada,Sanya Sarna,912053978713,27,50000,1,193968.1,3.0,3,8.7,Medium,WhatsApp
+CUST0463,Chatresh Contractor,Jack Chowdhury,910190725873,5,50000,1,103248.38,23.0,23,2.0,High,WhatsApp
+CUST0467,Hitesh Devan,Triya Saraf,911810306831,39,50000,1,190139.98,0.0,0,9.7,Medium,Email
+CUST0474,Gavin Chad,Yasti Tata,2769704095,13,50000,1,302491.45,15.0,15,4.7,High,Phone Call
+CUST0495,Laban Mallick,Peter Thakur,911788224731,39,50000,1,71717.91,0.0,0,9.7,Low,WhatsApp
+CUST0496,Pranav Sheth,Gabriel Murty,915370923007,38,50000,1,323390.07,0.0,0,9.7,High,WhatsApp
+CUST0499,Saumya Nayak,Fariq Patla,910908551074,42,50000,1,209974.26,0.0,0,9.7,High,WhatsApp
+CUST0510,Lila Ramanathan,Matthew Bumb,918056856670,22,50000,1,165236.32,6.0,6,7.7,Medium,Email
+CUST0520,Michael Dhar,Yashoda Badal,8922256062,21,50000,2,373404.02,7.0,7,7.1,High,Phone Call
+CUST0529,Daksha Raj,Manbir Kapoor,1213756589,4,50000,1,185672.06,17.0,17,4.0,Medium,WhatsApp
+CUST0530,Falak Ranganathan,Timothy Chad,914236220334,31,50000,1,253279.77,0.0,0,9.7,High,Phone Call
+CUST0536,Pranav Nadkarni,Wakeeta Chaudry,4338722054,36,50000,1,130327.46,0.0,0,9.7,Medium,Phone Call
+CUST0541,Mohini Mukhopadhyay,Radhika Dayal,2622132041,6,50000,1,245935.23,22.0,22,2.4,High,WhatsApp
+CUST0544,Ikbal Acharya,Ranveer Dubey,2188352791,7,50000,1,152106.0,21.0,21,2.7,High,Phone Call
+CUST0551,Rajata Sridhar,Divya Sandal,533470474,2,50000,1,164813.08,20.0,20,3.0,Medium,WhatsApp
+CUST0554,Isaac Shenoy,Ishani Mital,3053788033,24,50000,1,175931.04,4.0,4,8.4,Medium,Phone Call
+CUST0560,Krish Murty,Jairaj Kohli,8581810450,41,50000,3,425934.71,0.0,0,9.1,High,WhatsApp
+CUST0563,Krishna Swaminathan,Abhiram Lalla,2814447189,20,50000,1,208221.77,11.0,11,6.0,High,WhatsApp
+CUST0565,Yauvani Kapadia,Tanish Ravel,913090915386,26,50000,1,181203.35,2.0,2,9.0,Medium,WhatsApp
+CUST0566,Triya Desai,Amrita Mammen,7941932453,20,50000,1,214080.87,2.0,2,9.0,High,WhatsApp
+CUST0570,Charvi Memon,Qarin Patel,915239412094,23,50000,1,191866.34,0.0,0,9.7,Medium,Email
+CUST0571,Farhan Shroff,Arjun Desai,1602119158,7,50000,1,210010.16,22.0,22,2.4,High,Phone Call
+CUST0575,Lipika Konda,Chandresh Bajaj,913711815198,11,50000,1,80122.42,18.0,18,3.7,Medium,Phone Call
+CUST0577,Hiral Tella,Watika Lala,3642357004,33,50000,1,143668.19,0.0,0,9.7,Medium,WhatsApp
+CUST0579,Ekta Kapur,Devika Raj,6346019153,25,50000,1,273354.44,4.0,4,8.4,High,WhatsApp
+CUST0580,Nihal Nadkarni,Jonathan Shanker,6665622419,4,50000,1,210210.47,24.0,24,1.7,High,Phone Call
+CUST0585,Sachi Virk,Urishilla Devan,1616088197,5,50000,2,514664.01999999996,21.0,26,2.4,High,Email
+CUST0586,Abhimanyu Gopal,Alexander Peri,914432362216,35,50000,1,156154.01,0.0,0,9.7,Medium,WhatsApp
+CUST0594,Hitesh Borde,Kamala Suri,2042985144,39,50000,2,372418.44,0.0,0,9.4,High,WhatsApp
+CUST0598,Chakradhar Gandhi,Faras Prabhu,8909322533,37,50000,1,156917.88,0.0,0,9.7,Medium,WhatsApp
+CUST0602,Anika Kadakia,Harish Cheema,9724792542,15,50000,1,174157.67,13.0,13,5.4,Medium,Phone Call
+CUST0611,Vivaan Raval,Jhalak Mishra,9900277291,44,50000,1,248621.39,0.0,0,9.7,High,Phone Call
+CUST0613,Urishilla Jha,Samarth Modi,550492217,21,50000,1,244623.73,9.0,9,6.7,High,WhatsApp
+CUST0619,Amaira Seth,Daniel Krish,3652405536,13,50000,1,152043.27,14.0,14,5.0,Medium,WhatsApp
+CUST0634,Siddharth Mander,Ganga Rao,5217970566,23,50000,1,211067.77,6.0,6,7.7,High,WhatsApp
+CUST0635,Karan Hegde,Dev Pau,173167156,29,50000,1,190058.4,0.0,0,9.7,Medium,WhatsApp
+CUST0642,Aarini Toor,Bakhshi Murty,3266432239,25,50000,1,208763.3,0.0,0,9.7,High,Phone Call
+CUST0643,Aayush Bora,Shravya Sarkar,4742256787,4,50000,1,246478.57,24.0,24,1.7,High,WhatsApp
+CUST0647,Yauvani Sabharwal,Oscar Bath,3094134909,27,50000,1,193085.4,0.0,0,9.7,Medium,WhatsApp
+CUST0658,Parth Mital,Keya Pradhan,919660734467,28,50000,1,325964.43,2.0,2,9.0,High,WhatsApp
+CUST0659,Agastya Edwin,Faraj Varghese,1344760948,17,50000,1,182741.56,7.0,7,7.4,Medium,Phone Call
+CUST0664,Kashvi Thakkar,Darpan Chaudhry,919151143678,37,50000,2,369822.89,0.0,0,9.4,High,WhatsApp
+CUST0674,Gaurang Bhatia,Radha Tak,1160499100,34,50000,1,146831.75,0.0,0,9.7,Medium,WhatsApp
+CUST0685,Qarin Khosla,Zashil Ghosh,914172415536,19,50000,1,149922.65,9.0,9,6.7,Medium,Email
+CUST0687,Chasmum Chahal,Ucchal Goel,916693706325,44,50000,1,157206.09,0.0,0,9.7,Medium,Phone Call
+CUST0690,Omya Bhavsar,Avi Dutta,916190223116,13,50000,1,147462.45,18.0,18,3.7,Medium,WhatsApp
+CUST0691,Ekbal Devi,Zansi Mane,914294300037,20,50000,1,227279.23,9.0,9,6.7,High,WhatsApp
+CUST0692,Jonathan Srinivas,Harshil Swaminathan,1538201140,9,50000,1,228590.13,19.0,19,3.4,High,WhatsApp
+CUST0693,Thomas Kothari,Jasmit Ramanathan,8784962249,5,50000,1,112033.68,17.0,17,4.0,Medium,WhatsApp
+CUST0700,Rushil Dutta,Dominic Soni,3534581956,43,50000,1,195135.15,0.0,0,9.7,Medium,WhatsApp
+CUST0702,Aayush Sibal,Abhimanyu Wason,7382777711,16,50000,1,249423.93,13.0,13,5.4,High,WhatsApp
+CUST0707,Chandran Chadha,Krishna Badal,4327163033,35,50000,1,123002.35,0.0,0,9.7,Medium,WhatsApp
+CUST0711,Sara Ranganathan,Megha Nair,917499359812,29,50000,1,211631.11,0.0,0,9.7,High,WhatsApp
+CUST0712,Edhitha Balan,Bina Dash,7893912956,6,50000,1,115334.58,16.0,16,4.4,Medium,WhatsApp
+CUST0719,Inaya Pall,Hema Buch,919351174555,12,50000,1,161627.54,13.0,13,5.4,Medium,Phone Call
+CUST0727,Irya Dayal,Aarini Chaudhry,916348508951,37,50000,1,264943.15,0.0,0,9.7,High,WhatsApp
+CUST0730,Mekhala Wali,Sarthak Sagar,6896987036,1,50000,1,209042.39,28.0,28,1.0,High,Email
+CUST0732,Vansha Mane,Dakshesh Mutti,911486565818,12,50000,1,154539.07,16.0,16,4.4,Medium,Phone Call
+CUST0739,Yashoda Gola,Faqid Bobal,9429920237,2,50000,1,157441.37,26.0,26,1.0,High,WhatsApp
+CUST0744,Vedhika Oza,Chakradev Deshmukh,8925714025,27,50000,1,275071.93,2.0,2,9.0,High,WhatsApp
+CUST0749,Pahal Pau,Hema Gole,910047091103,43,50000,1,145593.88,0.0,0,9.7,Medium,Phone Call
+CUST0754,Thomas Mukhopadhyay,Benjamin Bhakta,914292421959,11,50000,1,81315.05,17.0,17,4.0,Medium,WhatsApp
+CUST0755,Ronith Krish,Gaurangi Parekh,910304407781,17,50000,1,124091.69,11.0,11,6.0,Medium,WhatsApp
+CUST0756,Guneet Dhaliwal,Amara Om,1910616691,17,50000,1,177307.51,11.0,11,6.0,Medium,Email
+CUST0757,Lakshmi Dhingra,Rishi Madan,915932572287,28,50000,1,216535.64,2.0,2,9.0,High,WhatsApp
+CUST0761,Jagrati Chander,Urvi Kale,6708488686,39,50000,1,172507.24,0.0,0,9.7,Medium,WhatsApp
+CUST0765,Anvi Anand,Ronith Mital,3586671554,18,50000,1,129343.36,10.0,10,6.4,Medium,Phone Call
+CUST0768,Zansi Nayar,Anita Sarraf,9070554943,35,50000,1,132575.74,0.0,0,9.7,Medium,Phone Call
+CUST0773,Rudra Sangha,Wriddhish Pillai,2288341335,24,50000,1,183820.28,0.0,0,9.7,Medium,WhatsApp
+CUST0777,Qasim Savant,Sarthak Ramachandran,6477090676,41,50000,1,148214.07,0.0,0,9.7,Medium,WhatsApp
+CUST0788,Deepa Dhar,Ekiya Kota,915507868878,31,50000,1,92219.01,0.0,0,9.7,Medium,WhatsApp
+CUST0789,Sathvik Deep,Veda Dutta,914249562917,22,50000,1,160757.46,0.0,0,9.7,Medium,WhatsApp
+CUST0794,Ekaraj Gokhale,Upma Sengupta,914434354978,17,50000,1,97364.66,11.0,11,6.0,Medium,WhatsApp
+CUST0796,Amrita Bhargava,Gaurangi Divan,917226414756,1,50000,1,216726.24,28.0,28,1.0,High,Phone Call
+CUST0798,Yahvi Suresh,Ekta Nadkarni,911697920675,38,50000,1,148021.54,0.0,0,9.7,Medium,Phone Call
+CUST0804,Advik Srinivas,Vinaya Dugar,913735640783,33,50000,2,368949.07,0.0,0,9.4,High,Email
+CUST0811,Ethan Choudhary,Michael Rai,3960610471,42,50000,1,198717.81,0.0,0,9.7,Medium,WhatsApp
+CUST0815,Ansh Bhat,Ridhi Mannan,6989484817,3,50000,1,179898.13,25.0,25,1.4,High,WhatsApp
+CUST0819,Aryan Ramaswamy,Kamala Lall,8970145570,22,50000,1,215164.7,6.0,6,7.7,High,WhatsApp
+CUST0823,Ekani Gandhi,Dhriti Goyal,8436868111,37,50000,1,269288.38,0.0,0,9.7,High,Phone Call
+CUST0824,Lipika Ganesan,Varenya Ben,910463721626,20,50000,1,116811.45,10.0,10,6.4,Medium,WhatsApp
+CUST0825,Upadhriti Karan,Rohan Parmer,919247411173,44,50000,1,156885.07,0.0,0,9.7,Medium,WhatsApp
+CUST0826,Samesh Johal,Akshay Basak,2924828732,22,50000,1,145623.79,7.0,7,7.4,Medium,WhatsApp
+CUST0827,Aarnav Sodhi,Abeer Bhatt,918741627963,37,50000,1,166715.92,0.0,0,9.7,Medium,WhatsApp
+CUST0830,Zaitra Aggarwal,Chakrika Char,919699613152,44,50000,1,170322.24,0.0,0,9.7,Medium,WhatsApp
+CUST0834,Jonathan Shukla,Falguni Ramesh,7885285898,9,50000,1,157846.58,13.0,13,5.4,Medium,WhatsApp
+CUST0836,Yashawini Murthy,Yashica Kapoor,1678434073,12,50000,1,286631.94,17.0,17,4.0,High,Email
+CUST0842,Nakul Purohit,Isaiah Agate,912600822837,2,50000,1,229995.11,27.0,27,1.0,High,WhatsApp
+CUST0844,Akshay Sathe,Anjali Saha,1298897284,3,50000,1,195764.84,25.0,25,1.4,High,Phone Call
+CUST0851,Nachiket Divan,Alka Dubey,4829878192,0,50000,1,138196.75,29.0,29,1.0,High,WhatsApp
+CUST0858,Ganga Kala,Ishanvi Singhal,912285704240,11,50000,1,189595.1,17.0,17,4.0,Medium,WhatsApp
+CUST0866,Chasmum Patel,Raghav Dada,913356831723,7,50000,1,239570.51,8.0,8,7.0,High,Email
+CUST0868,Atharv Hayre,Yahvi Bose,399630667,23,50000,1,259380.91,6.0,6,7.7,High,Phone Call
+CUST0871,Odika Sama,Zansi Sankar,917120631755,45,50000,1,273514.92,0.0,0,9.7,High,Email
+CUST0872,Kala Sarna,Isaiah Muni,8611460361,42,50000,1,128418.73,0.0,0,9.7,Medium,Email
+CUST0876,Jacob Rout,Vedant Gaba,7100170781,21,50000,1,141520.1,9.0,9,6.7,Medium,Phone Call
+CUST0880,Kiaan Chopra,Akshay Gulati,703780886,10,50000,1,182520.59,19.0,19,3.4,Medium,WhatsApp
+CUST0886,Tanay Barad,Tanmayi Sidhu,321985965,11,50000,1,138579.68,17.0,17,4.0,Medium,WhatsApp
+CUST0891,Sai Mahal,Aishani Pant,3806250230,22,50000,1,207836.68,0.0,0,9.7,High,WhatsApp
+CUST0892,Rachit Chaudry,Lopa Balay,918803546946,14,50000,1,195796.96,14.0,14,5.0,Medium,WhatsApp
+CUST0898,Gaurav Bhattacharyya,Chandran Kalla,4180446081,44,50000,1,185744.39,0.0,0,9.7,Medium,WhatsApp
+CUST0899,Gaurangi Thaker,Odika Deep,9839859074,18,50000,1,199880.46,10.0,10,6.4,Medium,WhatsApp
+CUST0905,Garima Batra,Zayan Nayar,7204767666,25,50000,1,177089.69,4.0,4,8.4,Medium,Email
+CUST0908,Xalak Kumer,Tanmayi Sarkar,9033122239,11,50000,1,133934.55,20.0,20,3.0,Medium,WhatsApp
+CUST0909,Aadhya Ahuja,Andrew Kant,76228212,38,50000,1,163716.86,0.0,0,9.7,Medium,Phone Call
+CUST0914,Avi Raj,Lakshmi Shenoy,919610237264,36,50000,1,167497.73,0.0,0,9.7,Medium,WhatsApp
+CUST0919,Samesh Jaggi,Megha Sibal,332739974,4,50000,1,197799.83,18.0,18,3.7,Medium,WhatsApp
+CUST0920,Ishwar Ramanathan,Zarna Lala,3833061443,15,50000,1,102503.33,7.0,7,7.4,Medium,Email
+CUST0922,Chaitanya Ravel,Jagat Balan,917838478483,20,50000,1,223551.3,2.0,2,9.0,High,Email
+CUST0929,Januja Mane,Omaja Shenoy,919567125593,21,50000,1,219679.99,1.0,1,9.4,High,WhatsApp
+CUST0930,Rudra Bhatnagar,Jhalak Chowdhury,54558345,28,50000,1,213880.07,1.0,1,9.4,High,Phone Call
+CUST0945,Girindra Tak,William Balasubramanian,9169833179,10,50000,2,343897.62,20.0,21,2.7,High,WhatsApp
+CUST0946,Jyoti Sibal,Widisha Raja,910785622719,26,50000,2,341880.79000000004,3.5,4,8.2,High,WhatsApp
+CUST0948,Shivani Jain,Janaki Ramakrishnan,1356397489,24,50000,1,185660.53,0.0,0,9.7,Medium,Email
+CUST0951,Varsha Thaman,Ishaan Grewal,5173922293,24,50000,1,135747.08,5.0,5,8.0,Medium,WhatsApp
+CUST0961,Brinda Ben,Wridesh Kamdar,9724725426,2,50000,1,192956.9,26.0,26,1.0,High,WhatsApp
+CUST0970,Tanmayi Kapoor,Ishaan Yohannan,315758593,24,50000,1,162976.45,0.0,0,9.7,Medium,Phone Call
+CUST0981,Damini Pandya,Tanmayi Tripathi,911742718322,27,50000,1,134672.32,0.0,0,9.7,Medium,WhatsApp
+CUST0983,Teerth Karnik,Rishi Deol,9215100260,10,50000,2,260982.94,19.0,19,3.1,High,WhatsApp
+CUST0988,Krishna Sen,Bahadurjit Sathe,8574911066,6,50000,1,201731.75,16.0,16,4.4,High,WhatsApp
