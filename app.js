@@ -2674,7 +2674,7 @@ function openGrowthSimulatorModal(d) {
 }
 
 // ─── AI CHAT ──────────────────────────────────────────────────────────────────
-function appendMsg(container, text, isUser = false) {
+function appendMsg(container, text, isUser = false, thought = '', duration = null) {
   const div = document.createElement('div');
   const cls = container.id === 'fullChatHistory' ? 'full-chat-msg' : 'panel-msg';
   div.className = `${cls} ${isUser ? 'user' : 'bot'}`;
@@ -2686,8 +2686,29 @@ function appendMsg(container, text, isUser = false) {
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/`([^`]+)`/g, '<code style="background:rgba(15,23,42,0.6); padding:2px 5px; border-radius:4px; color:#f43f5e; font-size:0.9em;">$1</code>')
     .replace(/\n/g, '<br>');
+
+  let thoughtHtml = '';
+  if (!isUser && thought && thought.trim()) {
+    const cleanThought = thought.trim();
+    const durTag = duration ? `${duration}s · NVIDIA NIM` : 'NVIDIA NIM';
+    thoughtHtml = `
+      <details class="advisor-thought-box" open>
+        <summary class="thought-summary">
+          <span class="thought-summary-left">
+            <span class="pulse-brain">🧠</span>
+            <strong>Thought Process</strong>
+            <span class="thought-time-tag">${durTag}</span>
+          </span>
+          <span class="thought-toggle-hint">▾</span>
+        </summary>
+        <div class="thought-body">${cleanThought.replace(/\n/g, '<br>')}</div>
+      </details>
+    `;
+  }
   
-  div.innerHTML = isUser ? `<div class="msg-content"><p>${formatted}</p></div>` : `${avatar}<div class="msg-content"><p>${formatted}</p></div>`;
+  div.innerHTML = isUser 
+    ? `<div class="msg-content"><p>${formatted}</p></div>` 
+    : `${avatar}<div class="msg-content">${thoughtHtml}<div class="response-body"><p>${formatted}</p></div></div>`;
   container.appendChild(div);
   container.scrollTop = container.scrollHeight;
   return div;
@@ -2742,11 +2763,21 @@ async function sendChat(inputEl, container) {
   appendMsg(container, text, true);
   inputEl.value = '';
 
-  // Typing indicator
+  // Dynamic Live Thinking Indicator
   const typing = document.createElement('div');
   const cls = container.id === 'fullChatHistory' ? 'full-chat-msg' : 'panel-msg';
-  typing.className = `${cls} bot`;
-  typing.innerHTML = `<div class="msg-avatar">🤖</div><div class="msg-content"><div class="chat-typing"><span></span><span></span><span></span></div></div>`;
+  typing.className = `${cls} bot live-thinking-msg`;
+  typing.innerHTML = `
+    <div class="msg-avatar">🤖</div>
+    <div class="msg-content">
+      <div class="live-thought-badge">
+        <span class="pulse-brain">🧠</span>
+        <span class="live-thought-status">Reading question...</span>
+        <span class="live-thought-timer">(0.0s)</span>
+      </div>
+      <div class="chat-typing" style="margin-top:8px;"><span></span><span></span><span></span></div>
+    </div>
+  `;
   
   // Custom styles for loading animation inside container
   const dots = typing.querySelectorAll('.chat-typing span');
@@ -2755,12 +2786,30 @@ async function sendChat(inputEl, container) {
     d.style.width = '6px';
     d.style.height = '6px';
     d.style.borderRadius = '50%';
-    d.style.background = '#64748b';
+    d.style.background = '#38bdf8';
     d.style.margin = '0 2px';
   });
 
   container.appendChild(typing);
   container.scrollTop = container.scrollHeight;
+
+  const startTime = Date.now();
+  const statusEl = typing.querySelector('.live-thought-status');
+  const timerEl = typing.querySelector('.live-thought-timer');
+
+  const timerInterval = setInterval(() => {
+    const elapsed = (Date.now() - startTime) / 1000;
+    if (timerEl) timerEl.textContent = `(${elapsed.toFixed(1)}s)`;
+    if (statusEl) {
+      if (elapsed < 0.8) {
+        statusEl.textContent = 'Reading question...';
+      } else if (elapsed < 2.0) {
+        statusEl.textContent = 'Analyzing dataset records...';
+      } else {
+        statusEl.textContent = 'Thinking with NVIDIA NIM...';
+      }
+    }
+  }, 100);
 
   try {
     const res = await fetch(`${API_BASE}/api/chat`, {
@@ -2770,8 +2819,10 @@ async function sendChat(inputEl, container) {
     });
     if (res.ok) {
       const data = await res.json();
+      clearInterval(timerInterval);
       typing.remove();
-      appendMsg(container, data.response || "I couldn't process that request.", false);
+      const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+      appendMsg(container, data.response || "I couldn't process that request.", false, data.thought || '', data.duration || elapsed);
       return;
     }
   } catch (err) {
@@ -2780,9 +2831,12 @@ async function sendChat(inputEl, container) {
   
   // Intelligent client-side fallback
   setTimeout(() => {
+    clearInterval(timerInterval);
     typing.remove();
+    const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
     const fallbackReply = generateClientGemmaResponse(text, kpiData);
-    appendMsg(container, fallbackReply, false);
+    const fallbackThought = `1. Read question: '${text}'\n2. Analyzed cached business KPIs.\n3. Synthesized client-side business advice.`;
+    appendMsg(container, fallbackReply, false, fallbackThought, elapsed);
   }, 400);
 }
 

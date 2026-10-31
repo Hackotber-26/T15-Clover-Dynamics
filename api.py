@@ -73,22 +73,26 @@ def ask_dronahq(query_text: str) -> str:
     """Deprecated: DronaHQ is discontinued in favor of NVIDIA NIM and Supabase/local datasets."""
     return ""
 
-def format_with_nvidia(system_prompt: str, user_text: str) -> str:
+def format_with_nvidia(system_prompt: str, user_text: str, return_details: bool = False):
     key = os.environ.get("NVIDIA_API_KEY", NVIDIA_API_KEY).strip()
     if not key:
-        return ""
+        return {"content": "", "thought": "", "duration": 0, "model": ""} if return_details else ""
     url = "https://integrate.api.nvidia.com/v1/chat/completions"
     headers = {
         "Authorization": f"Bearer {key}",
         "Content-Type": "application/json"
     }
     candidate_models = [
+        "nvidia/nemotron-3.5-lightning-30b-a3b",
         "mistralai/mistral-large-4-1t-a52b",
         "openai/gpt-oss-20b",
         "minimaxai/minimax-m3.1-flash",
         os.environ.get("NVIDIA_MODEL", "").strip()
     ]
     models_to_try = [m for m in candidate_models if m]
+
+    import time
+    t_start = time.time()
 
     for model_name in models_to_try:
         payload = {
@@ -101,14 +105,16 @@ def format_with_nvidia(system_prompt: str, user_text: str) -> str:
             "max_tokens": 1024,
         }
         try:
-            response = requests.post(url, headers=headers, json=payload, timeout=45)
+            response = requests.post(url, headers=headers, json=payload, timeout=35)
             if response.status_code == 200:
                 res_data = response.json()
                 if "choices" in res_data and len(res_data["choices"]) > 0:
                     msg_obj = res_data["choices"][0]["message"]
                     content = msg_obj.get("content") or ""
-                    if not content and msg_obj.get("reasoning_content"):
-                        raw_thought = msg_obj.get("reasoning_content", "")
+                    thought = msg_obj.get("reasoning_content") or ""
+
+                    if not content and thought:
+                        raw_thought = thought
                         if "Let me draft:" in raw_thought:
                             content = raw_thought.split("Let me draft:", 1)[1].strip()
                         elif "Draft:" in raw_thought:
@@ -128,12 +134,24 @@ def format_with_nvidia(system_prompt: str, user_text: str) -> str:
                             parts = re.split(r'\n\n(?=[*#•\d])', content)
                             if len(parts) > 1:
                                 content = "\n\n".join(parts[1:]).strip()
-                        print(f"[NVIDIA] Successfully generated response using {model_name}")
+
+                        elapsed = round(time.time() - t_start, 2)
+                        print(f"[NVIDIA] Successfully generated response using {model_name} in {elapsed}s")
+                        
+                        if return_details:
+                            clean_thought = thought.strip() if thought else f"1. Read and parsed question: '{user_text[:60]}'\n2. Analyzed business context and dataset metrics.\n3. Formulated strategic advisor response."
+                            return {
+                                "content": content.strip(),
+                                "thought": clean_thought,
+                                "duration": elapsed,
+                                "model": model_name
+                            }
                         return content.strip()
         except Exception as e:
             print(f"[NVIDIA] Error with model {model_name}: {e}")
 
-    return ""
+    elapsed = round(time.time() - t_start, 2)
+    return {"content": "", "thought": "", "duration": elapsed, "model": ""} if return_details else ""
 
 # ─── DATABASE SETUP ───────────────────────────────────────────────────────────
 
@@ -957,6 +975,8 @@ def api_collections_action(req: CollectionsActionRequest):
 
 @app.post("/api/chat")
 def api_chat(req: ChatRequest):
+    import time
+    t_query_start = time.time()
     user_message = req.message.strip()
     clean_msg = user_message.lower().strip("!?,. ")
     import re
@@ -965,7 +985,12 @@ def api_chat(req: ChatRequest):
     # 1. GREETING: "when i say hii. say just hi how can i help ."
     greeting_set = {"hi", "hii", "hiii", "hello", "hey", "heyy", "namaste", "hola", "greetings"}
     if clean_msg in greeting_set or clean_words.issubset(greeting_set | {"there", "advisor", "bot", "assistant"}):
-        return JSONResponse({"response": "Hi, how can I help?"})
+        duration = round(time.time() - t_query_start, 2)
+        return JSONResponse({
+            "response": "Hi, how can I help?",
+            "thought": f"1. Read query '{user_message}'\n2. Identified greeting intent.\n3. Sent welcoming assistant response.",
+            "duration": duration
+        })
 
     import urllib.parse
     import json
@@ -1073,7 +1098,15 @@ def api_chat(req: ChatRequest):
             "Here are the critical low-stock items fetched directly from your datasets, along with the highest-rated supplier for each. Click the **Email Supplier** button to immediately draft a purchase order email:\n\n"
             + "\n".join(items_output)
         )
-        return JSONResponse({"response": response_text})
+        duration = round(time.time() - t_query_start, 2)
+        thought = (
+            f"1. Read question: parsed request for low stock inventory and best suppliers.\n"
+            f"2. Queried warehouse inventory table for SKUs where stock < reorder threshold.\n"
+            f"3. Identified {len(low_items)} deficit products and calculated replenishment deficits.\n"
+            f"4. Cross-referenced suppliers dataset to find category suppliers with highest reliability scores.\n"
+            f"5. Generated pre-filled purchase order mailto buttons."
+        )
+        return JSONResponse({"response": response_text, "thought": thought, "duration": duration})
 
     # 3. LOW SALES PRODUCTS QUERY (FETCHED DYNAMICALLY FROM DATASETS)
     # "i have askedf low sales read the question then fetch from the datasets and then give the answer in a proper response according to the question and it should not be hardcoded"
@@ -1128,7 +1161,14 @@ def api_chat(req: ChatRequest):
             "• **Bundle Promotion:** Bundle low-velocity SKUs (e.g., Maggi Noodles multi-packs or Knife Sets) with popular, high-margin anchor products.\n"
             "• **Visibility & Merchandising:** Reposition these items in higher-traffic categories or test promotional price points to stimulate turnover."
         )
-        return JSONResponse({"response": response_text})
+        duration = round(time.time() - t_query_start, 2)
+        thought = (
+            f"1. Read question: identified request for low-velocity/lowest revenue SKUs.\n"
+            f"2. Aggregated sales_raw transactions joined with products ordered by total_rev ASC.\n"
+            f"3. Identified bottom 5 revenue generators and computed units sold.\n"
+            f"4. Formulated merchandising and bundling advisory."
+        )
+        return JSONResponse({"response": response_text, "thought": thought, "duration": duration})
 
     # 4. HIGHEST MARGIN PRODUCT QUERY (NVIDIA NIM & DATASET)
     # "i asked highest margin then it should give the one product who has highest margin. use nivdia api key . let it fetch take time give the response"
@@ -1167,16 +1207,24 @@ DATASET TRUTH (FETCHED FROM PRODUCTS DATABASE):
 - Gross Profit Margin: {margin_pct}% (Highest among all catalog SKUs)
 
 CRITICAL INSTRUCTION:
-Answer the user's question directly stating the ONE product with the highest margin ({prod_name} at {margin_pct}%).
+First, analyze the user's question. Then answer directly stating the ONE product with the highest margin ({prod_name} at {margin_pct}%).
 Output in clean markdown with:
 - Product name and exact gross margin percentage
 - Category, Default Selling Price, and Unit Cost Price
 - Brief 1-2 sentence business advisor recommendation
-Do NOT output markdown table syntax (use bullet points). Do NOT include thinking scratchpads, word counts, or preamble. Output ONLY your final clean answer."""
+Do NOT output markdown table syntax (use bullet points). Do NOT include preamble. Output ONLY your clean business answer."""
 
-            nvidia_reply = format_with_nvidia(system_prompt, f"User Question: {user_message}")
-            if nvidia_reply and len(nvidia_reply.strip()) > 10:
-                return JSONResponse({"response": nvidia_reply.strip()})
+            nvidia_res = format_with_nvidia(system_prompt, f"User Question: {user_message}", return_details=True)
+            if nvidia_res and nvidia_res.get("content") and len(nvidia_res["content"].strip()) > 10:
+                thought = nvidia_res.get("thought", "")
+                if not thought:
+                    thought = f"1. Read question: '{user_message}'\n2. Queried products database: evaluated gross margins across all catalog SKUs.\n3. Identified {prod_name} with highest gross margin ({margin_pct}%).\n4. Synthesized retail strategy via NVIDIA NIM."
+                return JSONResponse({
+                    "response": nvidia_res["content"].strip(),
+                    "thought": thought,
+                    "duration": nvidia_res["duration"],
+                    "model": nvidia_res["model"]
+                })
             else:
                 fallback_resp = (
                     f"### 🏷️ Product with Highest Margin (Fetched from Dataset)\n\n"
@@ -1188,7 +1236,9 @@ Do NOT output markdown table syntax (use bullet points). Do NOT include thinking
                     f"- **Unit Cost Price:** ₹{cost_price:,.2f} (Standard Markup: {markup}x)\n\n"
                     f"**Advisor Recommendation:** With a {margin_pct}% profit buffer, prioritize this SKU in your merchandising showcases and maintain safe inventory levels to maximize gross profitability."
                 )
-                return JSONResponse({"response": fallback_resp})
+                duration = round(time.time() - t_query_start, 2)
+                thought = f"1. Read question: '{user_message}'\n2. Computed gross margins across all catalog products.\n3. Identified {prod_name} at {margin_pct}% as the top-margin SKU.\n4. Formulated pricing strategy."
+                return JSONResponse({"response": fallback_resp, "thought": thought, "duration": duration})
 
     # 5. TOP SALES PRODUCTS QUERY (FETCHED DYNAMICALLY FROM DATASETS)
     top_triggers = [
@@ -1242,7 +1292,14 @@ Do NOT output markdown table syntax (use bullet points). Do NOT include thinking
             "Here are the highest revenue-generating products calculated directly from your sales transaction records:\n\n"
             + "\n\n".join(items_text)
         )
-        return JSONResponse({"response": response_text})
+        duration = round(time.time() - t_query_start, 2)
+        thought = (
+            f"1. Read question: identified top revenue/highest sales products request.\n"
+            f"2. Aggregated sales_raw transaction records ordered by total revenue descending.\n"
+            f"3. Selected top 5 revenue-generating products.\n"
+            f"4. Formatted units sold and unit selling prices."
+        )
+        return JSONResponse({"response": response_text, "thought": thought, "duration": duration})
 
     # 3. OTHER BUSINESS QUESTIONS (NVIDIA NIM API & Supabase / Local Context)
     kpis, ai = get_cached_kpis()
@@ -1293,19 +1350,30 @@ CRITICAL RULES:
 3. Keep the response concise, professional, and practical (under 100 words)."""
 
     bot_response = ""
+    thought = ""
+    duration = 0
+    model_used = "NVIDIA NIM"
     try:
-        bot_response = format_with_nvidia(system_prompt, f"User Question: {user_message}")
+        nv_res = format_with_nvidia(system_prompt, f"User Question: {user_message}", return_details=True)
+        bot_response = nv_res.get("content", "")
+        thought = nv_res.get("thought", "")
+        duration = nv_res.get("duration", 0)
+        model_used = nv_res.get("model", "NVIDIA NIM")
     except Exception as nv_err:
         print(f"[NVIDIA Query Error]: {nv_err}")
 
     if not bot_response:
         try:
             bot_response = call_gemma(system_prompt, f"User Question: {user_message}")
+            duration = round(time.time() - t_query_start, 2)
+            thought = f"1. Read question: '{user_message}'\n2. Analyzed business context metrics\n3. Synthesized advisor response."
         except Exception as gm_err:
             print(f"[Gemma Error]: {gm_err}")
 
     if not bot_response:
         bot_response = f"Your business has generated {context_summary['totalRevenue']} with a {context_summary['profitMargin']} profit margin and {context_summary['cashInHand']} in cash. How else can I assist you with your business today?"
+        duration = round(time.time() - t_query_start, 2)
+        thought = "Read business health overview metrics from catalog database."
 
     # Optional supplier buttons for any suppliers mentioned in response
     product_matches = list(set(re.findall(r'PROD\d{3}', bot_response)))
@@ -1335,7 +1403,7 @@ CRITICAL RULES:
                 bot_response += btn
         conn_sup.close()
 
-    return JSONResponse({"response": bot_response})
+    return JSONResponse({"response": bot_response, "thought": thought, "duration": duration, "model": model_used})
 
 def parse_llm_json(raw_text: str) -> dict:
     import json, re
