@@ -97,17 +97,26 @@ def format_with_nvidia(system_prompt: str, user_text: str) -> str:
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_text}
             ],
-            "temperature": 0.2,
-            "max_tokens": 400,
+            "temperature": 0.1,
+            "max_tokens": 1024,
         }
         try:
-            response = requests.post(url, headers=headers, json=payload, timeout=12)
+            response = requests.post(url, headers=headers, json=payload, timeout=45)
             if response.status_code == 200:
                 res_data = response.json()
                 if "choices" in res_data and len(res_data["choices"]) > 0:
                     msg_obj = res_data["choices"][0]["message"]
-                    content = msg_obj.get("content") or msg_obj.get("reasoning_content") or ""
-                    if content:
+                    content = msg_obj.get("content") or ""
+                    if not content and msg_obj.get("reasoning_content"):
+                        raw_thought = msg_obj.get("reasoning_content", "")
+                        if "Let me draft:" in raw_thought:
+                            content = raw_thought.split("Let me draft:", 1)[1].strip()
+                        elif "Draft:" in raw_thought:
+                            content = raw_thought.split("Draft:", 1)[1].strip()
+                        elif "**" in raw_thought:
+                            content = raw_thought[raw_thought.find("**"):].strip()
+
+                    if content and content.strip():
                         import re
                         if "Let me draft:" in content:
                             content = content.split("Let me draft:", 1)[1].strip()
@@ -1121,19 +1130,80 @@ def api_chat(req: ChatRequest):
         )
         return JSONResponse({"response": response_text})
 
-    # 4. TOP SALES PRODUCTS QUERY (FETCHED DYNAMICALLY FROM DATASETS)
+    # 4. HIGHEST MARGIN PRODUCT QUERY (NVIDIA NIM & DATASET)
+    # "i asked highest margin then it should give the one product who has highest margin. use nivdia api key . let it fetch take time give the response"
+    is_highest_margin_query = (
+        ("highest margin" in clean_msg or "top margin" in clean_msg or "max margin" in clean_msg or "best margin" in clean_msg or "maximum margin" in clean_msg) or
+        (("margin" in clean_words or "margins" in clean_words or "markup" in clean_words or "margin" in clean_msg) and
+         any(w in clean_words for w in ["highest", "top", "best", "max", "maximum", "most", "biggest", "greatest", "largest", "high", "which", "product"]))
+    )
+
+    if is_highest_margin_query:
+        conn = get_db()
+        cur = conn.cursor()
+        cur.execute("""
+            SELECT p.ProductID, p.ProductName, c.CategoryName, CAST(p.DefaultSellingPrice AS REAL),
+                   CAST(p.StandardMarkup AS REAL),
+                   round(((CAST(p.StandardMarkup AS REAL) - 1.0) / CAST(p.StandardMarkup AS REAL) * 100), 1) as margin_pct
+            FROM products p
+            JOIN categories c ON p.CategoryID = c.CategoryID
+            ORDER BY margin_pct DESC, CAST(p.DefaultSellingPrice AS REAL) DESC
+            LIMIT 1
+        """)
+        top_margin = cur.fetchone()
+        conn.close()
+
+        if top_margin:
+            prod_id, prod_name, cat_name, price, markup, margin_pct = top_margin
+            cost_price = round(price / markup, 2) if markup > 0 else 0
+
+            system_prompt = f"""You are the AI Business Advisor for an Indian SME Retail & Distribution company powered by NVIDIA NIM & Supabase.
+DATASET TRUTH (FETCHED FROM PRODUCTS DATABASE):
+- Product with the highest gross margin: {prod_name} ({prod_id})
+- Category: {cat_name}
+- Default Selling Price: ₹{price:,.2f}
+- Unit Cost Price: ₹{cost_price:,.2f}
+- Standard Markup: {markup}x
+- Gross Profit Margin: {margin_pct}% (Highest among all catalog SKUs)
+
+CRITICAL INSTRUCTION:
+Answer the user's question directly stating the ONE product with the highest margin ({prod_name} at {margin_pct}%).
+Output in clean markdown with:
+- Product name and exact gross margin percentage
+- Category, Default Selling Price, and Unit Cost Price
+- Brief 1-2 sentence business advisor recommendation
+Do NOT output markdown table syntax (use bullet points). Do NOT include thinking scratchpads, word counts, or preamble. Output ONLY your final clean answer."""
+
+            nvidia_reply = format_with_nvidia(system_prompt, f"User Question: {user_message}")
+            if nvidia_reply and len(nvidia_reply.strip()) > 10:
+                return JSONResponse({"response": nvidia_reply.strip()})
+            else:
+                fallback_resp = (
+                    f"### 🏷️ Product with Highest Margin (Fetched from Dataset)\n\n"
+                    f"The product with the highest profit margin in your business catalog is **{prod_name}** with a gross profit margin of **{margin_pct}%**.\n\n"
+                    f"- **Product:** **{prod_name}** ({prod_id})\n"
+                    f"- **Category:** {cat_name}\n"
+                    f"- **Gross Profit Margin:** **{margin_pct}%** (Highest across all catalog SKUs)\n"
+                    f"- **Default Selling Price:** ₹{price:,.2f}\n"
+                    f"- **Unit Cost Price:** ₹{cost_price:,.2f} (Standard Markup: {markup}x)\n\n"
+                    f"**Advisor Recommendation:** With a {margin_pct}% profit buffer, prioritize this SKU in your merchandising showcases and maintain safe inventory levels to maximize gross profitability."
+                )
+                return JSONResponse({"response": fallback_resp})
+
+    # 5. TOP SALES PRODUCTS QUERY (FETCHED DYNAMICALLY FROM DATASETS)
     top_triggers = [
-        "top product", "top products", "highest sale", "highest sales",
-        "best selling", "top selling", "best product", "best products",
-        "top sales", "most sold", "most popular", "highest revenue",
-        "highest selling", "best performing"
+        "top sales", "highest sales", "highest sale",
+        "best selling", "top selling", "most sold", "highest revenue",
+        "highest selling"
     ]
     is_top_sales_query = (
-        not is_inventory_query and not is_low_sales_query and (
+        not is_inventory_query and not is_low_sales_query and not is_highest_margin_query and
+        not ("margin" in clean_words or "margins" in clean_words or "markup" in clean_words or "margin" in clean_msg) and (
             any(t in clean_msg for t in top_triggers) or
             (("top" in clean_words or "highest" in clean_words or "leading" in clean_words) and
-             ("sales" in clean_words or "sale" in clean_words or "selling" in clean_words or "sold" in clean_words or "product" in clean_words or "products" in clean_words or "revenue" in clean_words)) or
-            (("best" in clean_words) and ("sales" in clean_words or "selling" in clean_words or "seller" in clean_words))
+             ("sales" in clean_words or "sale" in clean_words or "selling" in clean_words or "sold" in clean_words or "revenue" in clean_words)) or
+            (("best" in clean_words) and ("sales" in clean_words or "selling" in clean_words or "seller" in clean_words)) or
+            (clean_msg in ["top products", "top product", "best products", "best product"])
         )
     )
 
