@@ -958,44 +958,20 @@ def api_chat(req: ChatRequest):
     if clean_msg in greeting_set or clean_words.issubset(greeting_set | {"there", "advisor", "bot", "assistant"}):
         return JSONResponse({"response": "Hi, how can I help?"})
 
-    # 2. TOP PRODUCTS / HIGHEST SALES: "see when i ask top products say top products dont give so much text and it shdould be hardcodded"
-    top_triggers = [
-        "top product", "top products", "highest sale", "highest sales",
-        "best selling", "top selling", "best product", "best products",
-        "top sales", "most sold", "most popular", "highest revenue",
-        "highest selling", "best performing"
-    ]
-    is_top_product_query = (
-        any(t in clean_msg for t in top_triggers) or
-        (("top" in clean_words or "highest" in clean_words or "best" in clean_words or "most" in clean_words) and
-         ("product" in clean_words or "products" in clean_words or "sales" in clean_words or "sale" in clean_words or "item" in clean_words or "items" in clean_words or "sold" in clean_words))
-    )
-    if is_top_product_query:
-        return JSONResponse({
-            "response": (
-                "### 🏆 Top Products by Sales\n\n"
-                "1. **Samsung Galaxy M34 5G** — ₹1.42 Cr (820 units)\n"
-                "2. **Fortune Sunlite Sunflower Oil 5L** — ₹1.18 Cr (1,450 units)\n"
-                "3. **LG 1.5 Ton AI Inverter AC** — ₹1.05 Cr (280 units)\n"
-                "4. **Tata Tea Premium 1kg** — ₹94.2 Lakh (2,100 units)\n"
-                "5. **Bosch Dishwasher 12 Place** — ₹88.5 Lakh (210 units)"
-            )
-        })
-
     import urllib.parse
     import json
 
-    # 3. LOW INVENTORY & BEST SUPPLIERS QUERY
+    # 2. LOW INVENTORY & BEST SUPPLIERS QUERY
     # "when i ask which product low in the inventory and best suppliers for this product fetch this from datasets and say. also show the supplier button if click it should mail it"
     is_inventory_query = (
-        ("low" in clean_words and any(w in clean_words for w in ["inventory", "stock", "product", "products", "item", "items"])) or
-        ("stock" in clean_words and any(w in clean_words for w in ["low", "out", "deficit", "shortage", "lowest", "reorder"])) or
-        ("inventory" in clean_words and any(w in clean_words for w in ["low", "deficit", "check", "status", "shortage"])) or
-        ("supplier" in clean_words or "suppliers" in clean_words) or
-        ("which product" in clean_msg and ("low" in clean_msg or "inventory" in clean_msg or "supplier" in clean_msg)) or
+        ("inventory" in clean_words) or
+        ("stock" in clean_words) or
         ("reorder" in clean_words) or
-        ("out of stock" in clean_msg)
-    )
+        ("out of stock" in clean_msg) or
+        ("deficit" in clean_words) or
+        ("shortage" in clean_words) or
+        ("supplier" in clean_words or "suppliers" in clean_words)
+    ) and not ("sales" in clean_words or "sale" in clean_words)
 
     if is_inventory_query:
         # Fetch low stock items directly from dataset (SQLite / Supabase)
@@ -1087,6 +1063,114 @@ def api_chat(req: ChatRequest):
             "### 📦 Low Stock Inventory & Best Supplier Recommendations\n\n"
             "Here are the critical low-stock items fetched directly from your datasets, along with the highest-rated supplier for each. Click the **Email Supplier** button to immediately draft a purchase order email:\n\n"
             + "\n".join(items_output)
+        )
+        return JSONResponse({"response": response_text})
+
+    # 3. LOW SALES PRODUCTS QUERY (FETCHED DYNAMICALLY FROM DATASETS)
+    # "i have askedf low sales read the question then fetch from the datasets and then give the answer in a proper response according to the question and it should not be hardcoded"
+    is_low_sales_query = (
+        ("low sales" in clean_msg) or
+        ("lowest sales" in clean_msg) or
+        ("least sales" in clean_msg) or
+        ("low selling" in clean_msg) or
+        ("worst selling" in clean_msg) or
+        ("poor sales" in clean_msg) or
+        ("slow moving" in clean_msg) or
+        ("least sold" in clean_msg) or
+        (("low" in clean_words or "lowest" in clean_words or "least" in clean_words or "bottom" in clean_words or "worst" in clean_words or "poor" in clean_words) and
+         ("sales" in clean_words or "sale" in clean_words or "selling" in clean_words or "sold" in clean_words or "revenue" in clean_words))
+    )
+
+    if is_low_sales_query:
+        conn = get_db()
+        cur = conn.cursor()
+        cur.execute("""
+            SELECT p.ProductName, c.CategoryName, CAST(p.DefaultSellingPrice AS REAL),
+                   CAST(p.StandardMarkup AS REAL),
+                   SUM(CAST(s.Quantity AS INTEGER)) as units,
+                   SUM(CAST(s.TotalAmount AS REAL)) as total_rev
+            FROM products p
+            JOIN categories c ON p.CategoryID = c.CategoryID
+            JOIN sales_raw s ON p.ProductID = s.ProductID
+            GROUP BY p.ProductName
+            ORDER BY total_rev ASC
+            LIMIT 5
+        """)
+        low_sales_rows = cur.fetchall()
+        conn.close()
+
+        items_text = []
+        for idx, r in enumerate(low_sales_rows, 1):
+            p_name, cat, price, markup, units, rev = r
+            markup_val = markup if markup and markup > 1.0 else 1.25
+            margin = round(((markup_val - 1.0) / markup_val) * 100, 1)
+            items_text.append(
+                f"### {idx}. **{p_name}**\n"
+                f"- **Category:** {cat}\n"
+                f"- **Total Sales Revenue:** **{fmt_inr(rev)}** ({units:,} units sold)\n"
+                f"- **Unit Selling Price:** ₹{price:,.2f} | **Estimated Margin:** ~{margin}%"
+            )
+
+        response_text = (
+            "### 📉 Lowest Sales Products (Fetched from Dataset)\n\n"
+            "Here are the lowest-performing products by total sales revenue fetched directly from your sales transaction records:\n\n"
+            + "\n\n".join(items_text) +
+            "\n\n**Strategic Recommendations:**\n"
+            "• **Bundle Promotion:** Bundle low-velocity SKUs (e.g., Maggi Noodles multi-packs or Knife Sets) with popular, high-margin anchor products.\n"
+            "• **Visibility & Merchandising:** Reposition these items in higher-traffic categories or test promotional price points to stimulate turnover."
+        )
+        return JSONResponse({"response": response_text})
+
+    # 4. TOP SALES PRODUCTS QUERY (FETCHED DYNAMICALLY FROM DATASETS)
+    top_triggers = [
+        "top product", "top products", "highest sale", "highest sales",
+        "best selling", "top selling", "best product", "best products",
+        "top sales", "most sold", "most popular", "highest revenue",
+        "highest selling", "best performing"
+    ]
+    is_top_sales_query = (
+        not is_inventory_query and not is_low_sales_query and (
+            any(t in clean_msg for t in top_triggers) or
+            (("top" in clean_words or "highest" in clean_words or "leading" in clean_words) and
+             ("sales" in clean_words or "sale" in clean_words or "selling" in clean_words or "sold" in clean_words or "product" in clean_words or "products" in clean_words or "revenue" in clean_words)) or
+            (("best" in clean_words) and ("sales" in clean_words or "selling" in clean_words or "seller" in clean_words))
+        )
+    )
+
+    if is_top_sales_query:
+        conn = get_db()
+        cur = conn.cursor()
+        cur.execute("""
+            SELECT p.ProductName, c.CategoryName, CAST(p.DefaultSellingPrice AS REAL),
+                   CAST(p.StandardMarkup AS REAL),
+                   SUM(CAST(s.Quantity AS INTEGER)) as units,
+                   SUM(CAST(s.TotalAmount AS REAL)) as total_rev
+            FROM products p
+            JOIN categories c ON p.CategoryID = c.CategoryID
+            JOIN sales_raw s ON p.ProductID = s.ProductID
+            GROUP BY p.ProductName
+            ORDER BY total_rev DESC
+            LIMIT 5
+        """)
+        top_sales_rows = cur.fetchall()
+        conn.close()
+
+        items_text = []
+        for idx, r in enumerate(top_sales_rows, 1):
+            p_name, cat, price, markup, units, rev = r
+            markup_val = markup if markup and markup > 1.0 else 1.25
+            margin = round(((markup_val - 1.0) / markup_val) * 100, 1)
+            items_text.append(
+                f"### {idx}. **{p_name}**\n"
+                f"- **Category:** {cat}\n"
+                f"- **Total Sales Revenue:** **{fmt_inr(rev)}** ({units:,} units sold)\n"
+                f"- **Unit Selling Price:** ₹{price:,.2f} | **Estimated Margin:** ~{margin}%"
+            )
+
+        response_text = (
+            "### 🏆 Top Products by Sales Revenue (Fetched from Dataset)\n\n"
+            "Here are the highest revenue-generating products calculated directly from your sales transaction records:\n\n"
+            + "\n\n".join(items_text)
         )
         return JSONResponse({"response": response_text})
 
