@@ -70,90 +70,12 @@ def call_gemma(system_prompt: str, user_text: str = "") -> str:
     return ""
 
 def ask_dronahq(query_text: str) -> str:
-    # Reload environment variables in case .env was updated
-    try:
-        load_dotenv(override=True)
-    except Exception:
-        pass
-    webhook_url = os.environ.get("DRONAHQ_WEBHOOK_URL", DRONAHQ_WEBHOOK_URL).strip()
-    api_key = os.environ.get("DRONAHQ_API_KEY", DRONAHQ_API_KEY).strip()
-
-    if not webhook_url or not api_key:
-        raise ValueError("Missing DRONAHQ_WEBHOOK_URL or DRONAHQ_API_KEY in environment configuration.")
-
-    headers = {
-        "api-key": api_key,
-        "Content-Type": "application/json"
-    }
-    payload = {
-        "query": query_text,
-        "message": query_text
-    }
-    
-    response = requests.post(webhook_url, headers=headers, json=payload, timeout=30)
-    
-    # If 404 and credentials might be swapped in .env, attempt swapped pair
-    if response.status_code == 404:
-        import re
-        url_match = re.search(r'([a-f0-9\-]{36})', webhook_url)
-        key_is_uuid = bool(re.match(r'^[a-f0-9\-]{36}$', api_key))
-        if url_match and key_is_uuid:
-            swapped_url = webhook_url.replace(url_match.group(1), api_key)
-            swapped_headers = {
-                "api-key": url_match.group(1),
-                "Content-Type": "application/json"
-            }
-            try:
-                alt_resp = requests.post(swapped_url, headers=swapped_headers, json=payload, timeout=30)
-                if alt_resp.status_code == 200:
-                    response = alt_resp
-            except Exception:
-                pass
-
-    if response.status_code == 402:
-        error_msg = "Your DronaHQ credit balance has been exhausted."
-        try:
-            detail = response.json().get("detail", {})
-            error_msg = detail.get("message", error_msg)
-        except Exception:
-            pass
-        raise RuntimeError(f"DronaHQ Error (402): {error_msg}")
-
-    response.raise_for_status()
-    try:
-        data = response.json()
-    except Exception:
-        return response.text.strip()
-
-    if isinstance(data, dict):
-        if "response" in data:
-            r = data["response"]
-            if isinstance(r, dict):
-                if "text" in r and r["text"]:
-                    return str(r["text"]).strip()
-                elif "message" in r and r["message"]:
-                    return str(r["message"]).strip()
-                elif "recommendations" in r:
-                    return f"{r.get('message', '')}\n\n" + "\n".join(r["recommendations"])
-                return json.dumps(r)
-            elif isinstance(r, str):
-                return r.strip()
-        for k in ["result", "text", "output", "data"]:
-            if k in data and data[k]:
-                val = data[k]
-                return str(val).strip() if not isinstance(val, (dict, list)) else json.dumps(val)
-        if "message" in data and data["message"] and "completed" not in str(data["message"]).lower():
-            return str(data["message"]).strip()
-        return json.dumps(data)
-    elif isinstance(data, str):
-        return data.strip()
-    return str(data)
+    """Deprecated: DronaHQ is discontinued in favor of NVIDIA NIM and Supabase/local datasets."""
+    return ""
 
 def format_with_nvidia(system_prompt: str, user_text: str) -> str:
     key = os.environ.get("NVIDIA_API_KEY", NVIDIA_API_KEY).strip()
-    model = os.environ.get("NVIDIA_MODEL", NVIDIA_MODEL).strip() or "meta/llama-3.2-11b-vision-instruct"
     if not key:
-        print("[NVIDIA] Warning: NVIDIA_API_KEY is not set.")
         return ""
     url = "https://integrate.api.nvidia.com/v1/chat/completions"
     headers = {
@@ -161,13 +83,12 @@ def format_with_nvidia(system_prompt: str, user_text: str) -> str:
         "Content-Type": "application/json"
     }
     candidate_models = [
-        model,
-        "meta/llama-3.2-11b-vision-instruct"
+        "mistralai/mistral-large-4-1t-a52b",
+        "openai/gpt-oss-20b",
+        "minimaxai/minimax-m3.1-flash",
+        os.environ.get("NVIDIA_MODEL", "").strip()
     ]
-    models_to_try = []
-    for m in candidate_models:
-        if m and m not in models_to_try:
-            models_to_try.append(m)
+    models_to_try = [m for m in candidate_models if m]
 
     for model_name in models_to_try:
         payload = {
@@ -177,19 +98,18 @@ def format_with_nvidia(system_prompt: str, user_text: str) -> str:
                 {"role": "user", "content": user_text}
             ],
             "temperature": 0.2,
-            "max_tokens": 800,
+            "max_tokens": 400,
         }
         try:
-            response = requests.post(url, headers=headers, json=payload, timeout=25)
+            response = requests.post(url, headers=headers, json=payload, timeout=12)
             if response.status_code == 200:
                 res_data = response.json()
                 if "choices" in res_data and len(res_data["choices"]) > 0:
-                    content = res_data["choices"][0]["message"].get("content", "")
+                    msg_obj = res_data["choices"][0]["message"]
+                    content = msg_obj.get("content") or msg_obj.get("reasoning_content") or ""
                     if content:
                         print(f"[NVIDIA] Successfully generated response using {model_name}")
                         return content.strip()
-            else:
-                print(f"[NVIDIA] Model {model_name} HTTP {response.status_code}: {response.text[:120]}")
         except Exception as e:
             print(f"[NVIDIA] Error with model {model_name}: {e}")
 
@@ -1008,11 +928,6 @@ def api_collections_action(req: CollectionsActionRequest):
             if not email_body:
                 email_body = f"Subject: Payment Reminder\n\nDear {req.customer_name},\n\nThis is a polite reminder that your payment of {req.amount} is currently overdue. Please process the pending amount at your earliest convenience to avoid any late fees.\n\nThank you,\nCollections Team"
             
-            # Send the generated email via DronaHQ Webhook if available
-            try:
-                ask_dronahq(f"ACTION: SEND_EMAIL\\nTO: {req.customer_name}\\nBODY:\\n{email_body}")
-            except Exception:
-                pass
             return JSONResponse({"status": "success", "message": "Email generated successfully.", "email_body": email_body})
         except Exception as e:
             return JSONResponse({"status": "error", "message": str(e)}, status_code=500)
@@ -1022,17 +937,129 @@ def api_collections_action(req: CollectionsActionRequest):
 
 @app.post("/api/chat")
 def api_chat(req: ChatRequest):
-    kpis, ai = get_cached_kpis()
-    msg = req.message.lower().strip()
-    
+    user_message = req.message.strip()
+    clean_msg = user_message.lower().strip("!?,. ")
+    import re
+    clean_words = set(re.findall(r'\b\w+\b', clean_msg))
+
+    # 1. GREETING: "when i say hii. say just hi how can i help ."
+    greeting_set = {"hi", "hii", "hiii", "hello", "hey", "heyy", "namaste", "hola", "greetings"}
+    if clean_msg in greeting_set or clean_words.issubset(greeting_set | {"there", "advisor", "bot", "assistant"}):
+        return JSONResponse({"response": "Hi, how can I help?"})
+
+    import urllib.parse
     import json
-    
-    # Extract matching product context dynamically based on user query
+
+    # 2. LOW INVENTORY & BEST SUPPLIERS QUERY
+    # "when i ask which product low in the inventory and best suppliers for this product fetch this from datasets and say. also show the supplier button if click it should mail it"
+    is_inventory_query = (
+        ("low" in clean_words and any(w in clean_words for w in ["inventory", "stock", "product", "products", "item", "items"])) or
+        ("stock" in clean_words and any(w in clean_words for w in ["low", "out", "deficit", "shortage", "lowest", "reorder"])) or
+        ("inventory" in clean_words and any(w in clean_words for w in ["low", "deficit", "check", "status", "shortage"])) or
+        ("supplier" in clean_words or "suppliers" in clean_words) or
+        ("which product" in clean_msg and ("low" in clean_msg or "inventory" in clean_msg or "supplier" in clean_msg)) or
+        ("reorder" in clean_words) or
+        ("out of stock" in clean_msg)
+    )
+
+    if is_inventory_query:
+        # Fetch low stock items directly from dataset (SQLite / Supabase)
+        conn = get_db()
+        cur = conn.cursor()
+        cur.execute("""
+            SELECT p.ProductID, p.ProductName, p.CategoryID,
+                   CAST(i.QuantityInStock AS INTEGER) as stock,
+                   CAST(i.ReorderPoint AS INTEGER) as reorder,
+                   (CAST(i.ReorderPoint AS INTEGER) - CAST(i.QuantityInStock AS INTEGER)) as deficit,
+                   s.SupplierID, s.SupplierName, s.ContactEmail, s.ReliabilityScore,
+                   cat.CategoryName
+            FROM inventory i
+            JOIN products p ON i.ProductID = p.ProductID
+            LEFT JOIN suppliers s ON p.SupplierID = s.SupplierID
+            LEFT JOIN categories cat ON p.CategoryID = cat.CategoryID
+            WHERE CAST(i.QuantityInStock AS INTEGER) < CAST(i.ReorderPoint AS INTEGER)
+            ORDER BY deficit DESC, stock ASC
+            LIMIT 5
+        """)
+        low_items = cur.fetchall()
+
+        items_output = []
+        for idx, item in enumerate(low_items, 1):
+            prod_id, name, cat_id, stock, reorder, deficit, sup_id, sup_name, sup_email, rel_score, cat_name = item
+
+            # Query the best supplier in this category with highest reliability score
+            cur.execute("""
+                SELECT SupplierID, SupplierName, ContactEmail, ReliabilityScore
+                FROM suppliers
+                WHERE PrimaryCategory = ?
+                ORDER BY CAST(ReliabilityScore AS INTEGER) DESC
+                LIMIT 1
+            """, (cat_name,))
+            best_cat_sup = cur.fetchone()
+
+            # Determine best supplier recommendation
+            if best_cat_sup and (not rel_score or int(best_cat_sup[3] or 0) >= int(rel_score or 0)):
+                best_name = best_cat_sup[1]
+                best_email = best_cat_sup[2]
+                best_rel = str(best_cat_sup[3])
+            else:
+                best_name = sup_name or "Direct Supplier"
+                best_email = sup_email or "procurement@merchant.com"
+                best_rel = str(rel_score or "8")
+
+            # Formulate pre-filled email draft (mailto:)
+            mail_subject = urllib.parse.quote(f"Purchase Order: Urgent Restock for {name} ({prod_id})")
+            mail_body = urllib.parse.quote(
+                f"Dear {best_name},\n\n"
+                f"We are placing an urgent purchase order to restock {deficit} units of {name}.\n\n"
+                f"Order Specifications:\n"
+                f"• Product: {name}\n"
+                f"• Product ID / SKU: {prod_id}\n"
+                f"• Reorder Quantity: {deficit} units\n"
+                f"• Current Warehouse Stock: {stock} units (Threshold: {reorder})\n\n"
+                f"Please confirm availability, current unit pricing, and estimated dispatch date.\n\n"
+                f"Best regards,\n"
+                f"Arjun Mehta\n"
+                f"Procurement & Operations | Merchant AI Box"
+            )
+            mail_link = f"mailto:{best_email}?subject={mail_subject}&body={mail_body}"
+
+            btn_html = (
+                f'<div style="margin: 8px 0 14px 0;">'
+                f'<a href="{mail_link}" class="btn-supplier-order" '
+                f'style="display:inline-flex; align-items:center; gap:8px; padding:8px 16px; background:#2563eb; color:#ffffff; font-weight:600; font-size:13px; text-decoration:none; border-radius:6px; box-shadow:0 2px 4px rgba(37,99,235,0.25);" '
+                f'target="_blank">'
+                f'✉️ Email Supplier ({best_name})'
+                f'</a>'
+                f'</div>'
+            )
+
+            stock_badge = "⚠️ **OUT OF STOCK**" if stock == 0 else f"⚠️ Low Stock ({stock} remaining)"
+
+            items_output.append(
+                f"### {idx}. **{name}**\n"
+                f"- **Inventory Status:** {stock_badge}\n"
+                f"- **Current Stock:** **{stock} units** (Reorder Threshold: {reorder} units)\n"
+                f"- **Deficit to Reorder:** **{deficit} units**\n"
+                f"- **Category:** {cat_name or 'General'}\n"
+                f"- **Best Recommended Supplier:** **{best_name}** (⭐ Reliability: **{best_rel}/10**)\n"
+                f"- **Supplier Email:** `{best_email}`\n"
+                f"{btn_html}"
+            )
+        conn.close()
+
+        response_text = (
+            "### 📦 Low Stock Inventory & Best Supplier Recommendations\n\n"
+            "Here are the critical low-stock items fetched directly from your datasets, along with the highest-rated supplier for each. Click the **Email Supplier** button to immediately draft a purchase order email:\n\n"
+            + "\n".join(items_output)
+        )
+        return JSONResponse({"response": response_text})
+
+    # 3. OTHER BUSINESS QUESTIONS (NVIDIA NIM API & Supabase / Local Context)
+    kpis, ai = get_cached_kpis()
     conn = get_db()
     cur = conn.cursor()
-    
-    # Find if user mentioned any specific product in their message
-    words = [w for w in msg.replace('%', ' ').replace(',', ' ').split() if len(w) > 3]
+    words = [w for w in clean_msg.replace('%', ' ').replace(',', ' ').split() if len(w) > 3]
     matched_products = []
     for word in words:
         cur.execute("""
@@ -1051,7 +1078,6 @@ def api_chat(req: ChatRequest):
             matched_products.append(f"{p_name}: Price=₹{p_price:.2f}, Cost=₹{cost:.2f}, Margin={margin:.1f}%, Sold={int(p_units)} units")
     conn.close()
 
-    # Build clean, high-density business context
     context_summary = {
         "business": "Indian SME Retail & Distribution",
         "totalRevenue": kpis.get("totalRevenueFmt", "₹20.19Cr"),
@@ -1066,163 +1092,59 @@ def api_chat(req: ChatRequest):
         "lowStockItems": kpis.get("lowStockItems", [])
     }
 
-    system_prompt = f"""You are the AI Business Advisor powered by DronaHQ for Arjun's Indian SME (Retail & Distribution).
-Answer the user's business question with clear financial reasoning, projected impact on volume/margin/revenue, and actionable recommendations.
+    system_prompt = f"""You are the AI Business Advisor for Arjun's Indian SME (Retail & Distribution) powered by NVIDIA NIM & Supabase.
+Answer the user's business question with clear financial reasoning and actionable recommendations.
 
 [CURRENT BUSINESS CONTEXT]
 {json.dumps(context_summary, indent=2, ensure_ascii=False)}
 
 GUIDELINES:
 1. Answer directly with data-driven reasoning and clear markdown bullet points.
-2. If the user asks about price changes, calculate the exact new price, margin change, and demand trend impact.
+2. If asked about pricing, calculate new price and margin.
 3. Keep the response concise, professional, and practical (under 150 words)."""
 
+    bot_response = ""
     try:
-        user_message = req.message.strip()
-        print(f"[AI Advisor] Incoming message: {user_message}")
-        
-        # 1. Primary: Direct DronaHQ Agent
-        bot_response = ""
-        dhq_error_detail = ""
-        
-        # Check if the query is a simple greeting
-        clean_msg = user_message.lower().strip("!?. ")
-        greetings = {"hi", "hello", "hey", "hola", "namaste", "good morning", "good afternoon", "good evening"}
-        is_greeting = clean_msg in greetings or (len(clean_msg.split()) <= 2 and any(clean_msg.startswith(g) for g in ["hi", "hello", "hey"]))
+        bot_response = format_with_nvidia(system_prompt, f"User Question: {user_message}")
+    except Exception as nv_err:
+        print(f"[NVIDIA Query Error]: {nv_err}")
 
+    if not bot_response:
         try:
-            print(f"[AI Advisor] Querying DronaHQ Agent directly for: {user_message}")
-            if is_greeting:
-                # DronaHQ responds best to natural assistance inquiries
-                bot_response = ask_dronahq(f"{user_message}! How can you assist me with my business?")
-            else:
-                # Query user question directly to DronaHQ (it has built-in tools for stock, pricing, and suppliers)
-                bot_response = ask_dronahq(user_message)
-                
-                # If DronaHQ returns that it doesn't have the info, provide concise financial context
-                if not bot_response or "don't have that information" in bot_response.lower():
-                    context_prefix = (
-                        f"Business context (Revenue: {context_summary['totalRevenue']}, "
-                        f"Net Profit: {context_summary['netProfit']} ({context_summary['profitMargin']} margin), "
-                        f"Cash in Hand: {context_summary['cashInHand']}, "
-                        f"Overdue Receivables: {context_summary['overdueInvoices']}): "
-                    )
-                    alt_resp = ask_dronahq(f"{context_prefix}{user_message}")
-                    if alt_resp and "don't have that information" not in alt_resp.lower():
-                        bot_response = alt_resp
-        except Exception as dhq_err:
-            dhq_error_detail = str(dhq_err)
-            print(f"[DronaHQ Query Error]: {dhq_err}")
-            bot_response = ""
+            bot_response = call_gemma(system_prompt, f"User Question: {user_message}")
+        except Exception as gm_err:
+            print(f"[Gemma Error]: {gm_err}")
 
-        # 2. If DronaHQ credit limit / payment error, inform clearly
-        if not bot_response and "402" in dhq_error_detail:
-            print(f"[AI Advisor] DronaHQ credits exhausted (HTTP 402).")
-            bot_response = (
-                "⚠️ **DronaHQ Credits Exhausted**: Your DronaHQ agent credit balance has been exhausted.\n\n"
-                "Please add credits to your DronaHQ account or update `DRONAHQ_WEBHOOK_URL` / `DRONAHQ_API_KEY` in your `.env` file.\n\n"
-            )
-            try:
-                gemma_reply = call_gemma(system_prompt, f"User Question: {user_message}")
-                if gemma_reply:
-                    bot_response += gemma_reply
-            except Exception:
-                pass
+    if not bot_response:
+        bot_response = f"Your business has generated {context_summary['totalRevenue']} with a {context_summary['profitMargin']} profit margin and {context_summary['cashInHand']} in cash. How else can I assist you with your business today?"
 
-        # 3. Secondary fallback if DronaHQ gave no response
-        if not bot_response:
-            try:
-                print(f"[AI Advisor] Falling back to Gemma for: {user_message}")
-                user_query = f"User Question: {user_message}"
-                bot_response = call_gemma(system_prompt, user_query)
-            except Exception as e:
-                print(f"[Gemma Error]: {e}")
-            
-        if not bot_response:
-            bot_response = "I am connected to DronaHQ. How else can I assist with your sales, inventory, or pricing today?"
+    # Optional supplier buttons for any suppliers mentioned in response
+    product_matches = list(set(re.findall(r'PROD\d{3}', bot_response)))
+    if product_matches:
+        conn_prod = get_db()
+        cur_prod = conn_prod.cursor()
+        for prod_id in product_matches:
+            cur_prod.execute("SELECT ProductName FROM products WHERE ProductID = ?", (prod_id,))
+            row = cur_prod.fetchone()
+            if row:
+                prod_name = row[0]
+                bot_response = bot_response.replace(prod_id, f"**{prod_name}** ({prod_id})")
+        conn_prod.close()
 
-        # Optional intercept to parse supplier IDs and append order button
-        import re
-        supplier_matches = list(set(re.findall(r'SUP\d{3}', bot_response)))
-        if supplier_matches:
-            conn_sup = get_db()
-            cur_sup = conn_sup.cursor()
-            for sup_id in supplier_matches:
-                cur_sup.execute("SELECT SupplierName, ContactEmail, ReliabilityScore FROM suppliers WHERE SupplierID = ?", (sup_id,))
-                row = cur_sup.fetchone()
-                if row:
-                    sup_name, sup_email, rel_score = row
-                    
-                    # Fetch total orders to show interaction history
-                    cur_sup.execute("SELECT COUNT(*), SUM(TotalAmountSpent) FROM purchase_orders WHERE SupplierID = ?", (sup_id,))
-                    po_stats = cur_sup.fetchone()
-                    total_orders = po_stats[0] if po_stats else 0
-                    total_spent = po_stats[1] if po_stats and po_stats[1] else 0
-
-                    # Replace the raw ID with the supplier name
-                    bot_response = bot_response.replace(sup_id, f"**{sup_name}** ({sup_id})")
-                    
-                    # Add benefits block
-                    
-                    if int(rel_score) >= 7:
-                        rel_str = f"Score of {rel_score}/10 based on past on-time deliveries."
-                    else:
-                        rel_str = "Maintains steady procurement standards for this product category."
-                        
-                    benefits_html = f"""<div style="margin-top: 15px; padding: 12px; background-color: #f8fafc; border-left: 4px solid #3b82f6; border-radius: 4px;">
-                        <h4 style="margin: 0 0 8px 0; color: #1e293b; font-size: 14px;">Why we recommend {sup_name}:</h4>
-                        <ul style="margin: 0; padding-left: 20px; font-size: 13px; color: #475569;">
-                            <li><strong>Trusted Supplier:</strong> {rel_str}</li>
-                            <li><strong>Proven Track Record:</strong> Successfully fulfilled {total_orders} past orders.</li>
-                            <li><strong>Volume Partnership:</strong> We have a substantial history of successful large-scale trade with this vendor.</li>
-                        </ul>
-                    </div>"""
-                    bot_response += benefits_html
-                    
-                    # Generate email body with Gemma / Nvidia
-                    email_prompt_sys = f"You are writing an email on behalf of Arjun (business owner). Write ONLY the email body (no subject, no pleasantries like 'Sincerely, [Your Name]' at the end, just the core message and sign off as Arjun). The email is to the supplier {sup_name} to place an order for the product the user is asking about."
-                    email_prompt_user = f"User request context: {req.message}. Draft a short email body to order the necessary stock."
-                    ai_email_body = call_gemma(email_prompt_sys, email_prompt_user) or format_with_nvidia(email_prompt_sys, email_prompt_user)
-                    
-                    import urllib.parse
-                    if ai_email_body:
-                        # clean up any markdown if present
-                        ai_email_body = ai_email_body.replace('**', '')
-                        body_encoded = urllib.parse.quote(ai_email_body)
-                    else:
-                        body_encoded = f"Hi {urllib.parse.quote(sup_name)},%0A%0AWe would like to place an order."
-                    
-                    # Append order button
-                    order_btn = f'<br><a href="mailto:{sup_email}?subject=Purchase%20Order%20Inquiry&body={body_encoded}" class="action-btn" style="display:inline-block; margin-top:5px; padding:8px 16px; background-color:#3b82f6; color:white; text-decoration:none; border-radius:4px; font-weight:bold;">🛒 Order from {sup_name}</a>'
-                    bot_response += order_btn
-            conn_sup.close()
-
-        # Intercept to parse product IDs
-        product_matches = list(set(re.findall(r'PROD\d{3}', bot_response)))
-        if product_matches:
-            conn_prod = get_db()
-            cur_prod = conn_prod.cursor()
-            for prod_id in product_matches:
-                cur_prod.execute("SELECT ProductName FROM products WHERE ProductID = ?", (prod_id,))
-                row = cur_prod.fetchone()
-                if row:
-                    prod_name = row[0]
-                    bot_response = bot_response.replace(prod_id, f"**{prod_name}** ({prod_id})")
-            conn_prod.close()
-
-    except Exception as e:
-        print(f"LLM API Error: {e}")
-        # Local heuristic fallback
-        msg_lower = req.message.lower().strip()
-        if "stock" in msg_lower and ("lowest" in msg_lower or "out of" in msg_lower):
-            low_stock = kpis.get("lowStockItems", [])
-            if low_stock:
-                item = low_stock[0]
-                bot_response = f"**Fallback Data (LLM Error):** The product with the lowest stock is **{item['name']}** with only {item['qty']} units left (Reorder point: {item['reorder']})."
-            else:
-                bot_response = "**Fallback Data:** All stock levels look normal."
-        else:
-            bot_response = "I am unable to process that request right now due to an API error."
+    supplier_matches = list(set(re.findall(r'SUP\d{3}', bot_response)))
+    if supplier_matches:
+        conn_sup = get_db()
+        cur_sup = conn_sup.cursor()
+        for sup_id in supplier_matches:
+            cur_sup.execute("SELECT SupplierName, ContactEmail, ReliabilityScore FROM suppliers WHERE SupplierID = ?", (sup_id,))
+            row = cur_sup.fetchone()
+            if row:
+                sup_name, sup_email, rel_score = row
+                bot_response = bot_response.replace(sup_id, f"**{sup_name}**")
+                mail_link = f"mailto:{sup_email}?subject=Purchase%20Order%20Inquiry&body=Dear%20{urllib.parse.quote(sup_name)}%2C%0A%0AWe%20would%20like%20to%20place%20an%20order."
+                btn = f'<br><a href="{mail_link}" class="btn-supplier-order" style="display:inline-block; margin-top:6px; padding:6px 14px; background:#2563eb; color:#fff; text-decoration:none; border-radius:4px; font-weight:600;" target="_blank">✉️ Email {sup_name}</a>'
+                bot_response += btn
+        conn_sup.close()
 
     return JSONResponse({"response": bot_response})
 

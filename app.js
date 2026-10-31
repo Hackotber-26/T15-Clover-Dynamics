@@ -2680,7 +2680,12 @@ function appendMsg(container, text, isUser = false) {
   div.className = `${cls} ${isUser ? 'user' : 'bot'}`;
   
   const avatar = isUser ? '' : `<div class="msg-avatar">🤖</div>`;
-  const formatted = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+  let formatted = text
+    .replace(/^### (.*$)/gim, '<h4 style="margin:8px 0 4px 0; color:#38bdf8; font-size:1rem;">$1</h4>')
+    .replace(/^## (.*$)/gim, '<h3 style="margin:10px 0 6px 0; color:#818cf8; font-size:1.1rem;">$1</h3>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/`([^`]+)`/g, '<code style="background:rgba(15,23,42,0.6); padding:2px 5px; border-radius:4px; color:#f43f5e; font-size:0.9em;">$1</code>')
+    .replace(/\n/g, '<br>');
   
   div.innerHTML = isUser ? `<div class="msg-content"><p>${formatted}</p></div>` : `${avatar}<div class="msg-content"><p>${formatted}</p></div>`;
   container.appendChild(div);
@@ -2690,7 +2695,10 @@ function appendMsg(container, text, isUser = false) {
 
 // ─── CLIENT-SIDE GEMMA AI RESPONSE GENERATOR ─────────────────────────────────
 function generateClientGemmaResponse(prompt, d) {
-  const p = (prompt || '').toLowerCase();
+  const p = (prompt || '').toLowerCase().trim();
+  if (['hi', 'hii', 'hiii', 'hello', 'hey', 'heyy'].includes(p)) {
+    return "Hi, how can I help?";
+  }
   const rev = d?.totalRevenueFmt || '₹20.19Cr';
   const prof = d?.netProfitFmt || '₹-1.99Cr';
   const margin = d?.netProfitMargin || '-9.9';
@@ -2788,7 +2796,7 @@ function initChat() {
   });
 
   $('btnRestartChat')?.addEventListener('click', () => {
-    if (panelBody) panelBody.innerHTML = `<div class="panel-msg bot"><div class="msg-avatar">🤖</div><div class="msg-content"><p>Hi Arjun! I'm your AI Business Advisor powered by DronaHQ. How can I help you today?</p></div></div>`;
+    if (panelBody) panelBody.innerHTML = `<div class="panel-msg bot"><div class="msg-avatar">🤖</div><div class="msg-content"><p>Hi Arjun! I'm your AI Business Advisor powered by NVIDIA & Supabase. How can I help you today?</p></div></div>`;
   });
 }
 
