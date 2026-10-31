@@ -83,10 +83,10 @@ def format_with_nvidia(system_prompt: str, user_text: str, return_details: bool 
         "Content-Type": "application/json"
     }
     candidate_models = [
-        "nvidia/nemotron-3.5-lightning-30b-a3b",
         "mistralai/mistral-large-4-1t-a52b",
         "openai/gpt-oss-20b",
         "minimaxai/minimax-m3.1-flash",
+        "nvidia/nemotron-3.5-lightning-30b-a3b",
         os.environ.get("NVIDIA_MODEL", "").strip()
     ]
     models_to_try = [m for m in candidate_models if m]
@@ -119,7 +119,9 @@ def format_with_nvidia(system_prompt: str, user_text: str, return_details: bool 
                             content = raw_thought.split("Let me draft:", 1)[1].strip()
                         elif "Draft:" in raw_thought:
                             content = raw_thought.split("Draft:", 1)[1].strip()
-                        elif "**" in raw_thought:
+                        elif raw_thought.strip().startswith("Here's a thinking process") or raw_thought.strip().startswith("Analyze User Input"):
+                            content = ""
+                        elif "**" in raw_thought and not raw_thought.strip().startswith("1. "):
                             content = raw_thought[raw_thought.find("**"):].strip()
 
                     if content and content.strip():
@@ -130,23 +132,25 @@ def format_with_nvidia(system_prompt: str, user_text: str, return_details: bool 
                             content = content.split("Draft:", 1)[1].strip()
                         if "Word count check" in content:
                             content = re.sub(r'Word count check:.*$', '', content, flags=re.DOTALL).strip()
-                        if content.startswith("The user is asking") or content.startswith("Looking at the"):
+                        if content.startswith("Here's a thinking process") or content.startswith("Analyze User Input") or content.startswith("The user is asking") or content.startswith("Looking at the"):
                             parts = re.split(r'\n\n(?=[*#•\d])', content)
                             if len(parts) > 1:
                                 content = "\n\n".join(parts[1:]).strip()
+                            else:
+                                content = ""
 
-                        elapsed = round(time.time() - t_start, 2)
-                        print(f"[NVIDIA] Successfully generated response using {model_name} in {elapsed}s")
-                        
-                        if return_details:
-                            clean_thought = thought.strip() if thought else f"1. Read and parsed question: '{user_text[:60]}'\n2. Analyzed business context and dataset metrics.\n3. Formulated strategic advisor response."
-                            return {
-                                "content": content.strip(),
-                                "thought": clean_thought,
-                                "duration": elapsed,
-                                "model": model_name
-                            }
-                        return content.strip()
+                        if content and content.strip():
+                            elapsed = round(time.time() - t_start, 2)
+                            print(f"[NVIDIA] Successfully generated response using {model_name} in {elapsed}s")
+                            
+                            if return_details:
+                                return {
+                                    "content": content.strip(),
+                                    "thought": thought.strip() if thought else "",
+                                    "duration": elapsed,
+                                    "model": model_name
+                                }
+                            return content.strip()
         except Exception as e:
             print(f"[NVIDIA] Error with model {model_name}: {e}")
 
@@ -1170,13 +1174,66 @@ def api_chat(req: ChatRequest):
         )
         return JSONResponse({"response": response_text, "thought": thought, "duration": duration})
 
-    # 4. HIGHEST MARGIN PRODUCT QUERY (NVIDIA NIM & DATASET)
-    # "i asked highest margin then it should give the one product who has highest margin. use nivdia api key . let it fetch take time give the response"
-    is_highest_margin_query = (
-        ("highest margin" in clean_msg or "top margin" in clean_msg or "max margin" in clean_msg or "best margin" in clean_msg or "maximum margin" in clean_msg) or
-        (("margin" in clean_words or "margins" in clean_words or "markup" in clean_words or "margin" in clean_msg) and
-         any(w in clean_words for w in ["highest", "top", "best", "max", "maximum", "most", "biggest", "greatest", "largest", "high", "which", "product"]))
-    )
+    # 4. MARGIN QUERIES: LOW MARGIN VS HIGHEST MARGIN
+    has_margin = any(w in clean_words for w in ["margin", "margins", "markup", "markups"]) or "margin" in clean_msg or "markup" in clean_msg
+    is_low_margin_query = has_margin and any(w in clean_words for w in [
+        "low", "lowest", "least", "bottom", "worst", "min", "minimum", "poor", "smaller", "smallest"
+    ])
+    is_highest_margin_query = has_margin and not is_low_margin_query and any(w in clean_words for w in [
+        "highest", "top", "best", "max", "maximum", "most", "biggest", "greatest", "largest", "high", "higher"
+    ])
+
+    if is_low_margin_query:
+        conn = get_db()
+        cur = conn.cursor()
+        cur.execute("""
+            SELECT p.ProductID, p.ProductName, c.CategoryName, CAST(p.DefaultSellingPrice AS REAL),
+                   CAST(p.StandardMarkup AS REAL),
+                   round(((CAST(p.StandardMarkup AS REAL) - 1.0) / CAST(p.StandardMarkup AS REAL) * 100), 1) as margin_pct
+            FROM products p
+            JOIN categories c ON p.CategoryID = c.CategoryID
+            WHERE CAST(p.StandardMarkup AS REAL) > 0
+            ORDER BY margin_pct ASC, CAST(p.DefaultSellingPrice AS REAL) ASC
+            LIMIT 1
+        """)
+        low_margin = cur.fetchone()
+        conn.close()
+
+        if low_margin:
+            prod_id, prod_name, cat_name, price, markup, margin_pct = low_margin
+            cost_price = round(price / markup, 2) if markup > 0 else 0
+
+            system_prompt = f"""You are the AI Business Advisor for an Indian SME Retail & Distribution company powered by NVIDIA NIM & Supabase.
+DATASET TRUTH (FETCHED FROM PRODUCTS DATABASE):
+- Product with lowest gross margin: {prod_name} ({prod_id})
+- Category: {cat_name}
+- Default Selling Price: ₹{price:,.2f}
+- Unit Cost Price: ₹{cost_price:,.2f}
+- Standard Markup: {markup}x
+- Gross Profit Margin: {margin_pct}% (Lowest across catalog SKUs)
+
+CRITICAL INSTRUCTION:
+Give a short, concise response (under 50 words) stating the lowest margin product, its margin, category, price, cost, and 1 quick advice sentence. Output ONLY the final answer in clean markdown bullet points. NO preamble, NO thinking scratchpads."""
+
+            nvidia_res = format_with_nvidia(system_prompt, f"User Question: {user_message}", return_details=True)
+            if nvidia_res and nvidia_res.get("content") and len(nvidia_res["content"].strip()) > 10:
+                duration = nvidia_res["duration"]
+                return JSONResponse({
+                    "response": nvidia_res["content"].strip(),
+                    "thought": "",
+                    "duration": duration,
+                    "model": nvidia_res.get("model", "NVIDIA NIM")
+                })
+            else:
+                fallback_resp = (
+                    f"- **Product:** **{prod_name}** ({prod_id})\n"
+                    f"- **Gross Margin:** **{margin_pct}%** (Lowest in catalog)\n"
+                    f"- **Category:** {cat_name}\n"
+                    f"- **Selling Price:** ₹{price:,.2f} | **Unit Cost:** ₹{cost_price:,.2f}\n"
+                    f"- **Advice:** High-velocity staple with razor-thin margin. Avoid discounts and negotiate 3–5% bulk procurement rebates."
+                )
+                duration = round(time.time() - t_query_start, 2)
+                return JSONResponse({"response": fallback_resp, "thought": "", "duration": duration})
 
     if is_highest_margin_query:
         conn = get_db()
@@ -1199,7 +1256,7 @@ def api_chat(req: ChatRequest):
 
             system_prompt = f"""You are the AI Business Advisor for an Indian SME Retail & Distribution company powered by NVIDIA NIM & Supabase.
 DATASET TRUTH (FETCHED FROM PRODUCTS DATABASE):
-- Product with the highest gross margin: {prod_name} ({prod_id})
+- Product with highest gross margin: {prod_name} ({prod_id})
 - Category: {cat_name}
 - Default Selling Price: ₹{price:,.2f}
 - Unit Cost Price: ₹{cost_price:,.2f}
@@ -1207,38 +1264,27 @@ DATASET TRUTH (FETCHED FROM PRODUCTS DATABASE):
 - Gross Profit Margin: {margin_pct}% (Highest among all catalog SKUs)
 
 CRITICAL INSTRUCTION:
-First, analyze the user's question. Then answer directly stating the ONE product with the highest margin ({prod_name} at {margin_pct}%).
-Output in clean markdown with:
-- Product name and exact gross margin percentage
-- Category, Default Selling Price, and Unit Cost Price
-- Brief 1-2 sentence business advisor recommendation
-Do NOT output markdown table syntax (use bullet points). Do NOT include preamble. Output ONLY your clean business answer."""
+Give a short, concise response (under 50 words) stating the highest margin product, its margin, category, price, cost, and 1 quick advice sentence. Output ONLY the final answer in clean markdown bullet points. NO preamble, NO thinking scratchpads."""
 
             nvidia_res = format_with_nvidia(system_prompt, f"User Question: {user_message}", return_details=True)
             if nvidia_res and nvidia_res.get("content") and len(nvidia_res["content"].strip()) > 10:
-                thought = nvidia_res.get("thought", "")
-                if not thought:
-                    thought = f"1. Read question: '{user_message}'\n2. Queried products database: evaluated gross margins across all catalog SKUs.\n3. Identified {prod_name} with highest gross margin ({margin_pct}%).\n4. Synthesized retail strategy via NVIDIA NIM."
+                duration = nvidia_res["duration"]
                 return JSONResponse({
                     "response": nvidia_res["content"].strip(),
-                    "thought": thought,
-                    "duration": nvidia_res["duration"],
-                    "model": nvidia_res["model"]
+                    "thought": "",
+                    "duration": duration,
+                    "model": nvidia_res.get("model", "NVIDIA NIM")
                 })
             else:
                 fallback_resp = (
-                    f"### 🏷️ Product with Highest Margin (Fetched from Dataset)\n\n"
-                    f"The product with the highest profit margin in your business catalog is **{prod_name}** with a gross profit margin of **{margin_pct}%**.\n\n"
                     f"- **Product:** **{prod_name}** ({prod_id})\n"
+                    f"- **Gross Margin:** **{margin_pct}%** (Highest in catalog)\n"
                     f"- **Category:** {cat_name}\n"
-                    f"- **Gross Profit Margin:** **{margin_pct}%** (Highest across all catalog SKUs)\n"
-                    f"- **Default Selling Price:** ₹{price:,.2f}\n"
-                    f"- **Unit Cost Price:** ₹{cost_price:,.2f} (Standard Markup: {markup}x)\n\n"
-                    f"**Advisor Recommendation:** With a {margin_pct}% profit buffer, prioritize this SKU in your merchandising showcases and maintain safe inventory levels to maximize gross profitability."
+                    f"- **Selling Price:** ₹{price:,.2f} | **Unit Cost:** ₹{cost_price:,.2f}\n"
+                    f"- **Advice:** Prioritize this high-margin SKU in promotions and maintain safe inventory levels to maximize gross profit."
                 )
                 duration = round(time.time() - t_query_start, 2)
-                thought = f"1. Read question: '{user_message}'\n2. Computed gross margins across all catalog products.\n3. Identified {prod_name} at {margin_pct}% as the top-margin SKU.\n4. Formulated pricing strategy."
-                return JSONResponse({"response": fallback_resp, "thought": thought, "duration": duration})
+                return JSONResponse({"response": fallback_resp, "thought": "", "duration": duration})
 
     # 5. TOP SALES PRODUCTS QUERY (FETCHED DYNAMICALLY FROM DATASETS)
     top_triggers = [
@@ -1247,8 +1293,7 @@ Do NOT output markdown table syntax (use bullet points). Do NOT include preamble
         "highest selling"
     ]
     is_top_sales_query = (
-        not is_inventory_query and not is_low_sales_query and not is_highest_margin_query and
-        not ("margin" in clean_words or "margins" in clean_words or "markup" in clean_words or "margin" in clean_msg) and (
+        not is_inventory_query and not is_low_sales_query and not is_low_margin_query and not is_highest_margin_query and not has_margin and (
             any(t in clean_msg for t in top_triggers) or
             (("top" in clean_words or "highest" in clean_words or "leading" in clean_words) and
              ("sales" in clean_words or "sale" in clean_words or "selling" in clean_words or "sold" in clean_words or "revenue" in clean_words)) or

@@ -2674,41 +2674,22 @@ function openGrowthSimulatorModal(d) {
 }
 
 // ─── AI CHAT ──────────────────────────────────────────────────────────────────
-function appendMsg(container, text, isUser = false, thought = '', duration = null) {
+function appendMsg(container, text, isUser = false) {
   const div = document.createElement('div');
   const cls = container.id === 'fullChatHistory' ? 'full-chat-msg' : 'panel-msg';
   div.className = `${cls} ${isUser ? 'user' : 'bot'}`;
   
   const avatar = isUser ? '' : `<div class="msg-avatar">🤖</div>`;
   let formatted = text
-    .replace(/^### (.*$)/gim, '<h4 style="margin:8px 0 4px 0; color:#38bdf8; font-size:1rem;">$1</h4>')
-    .replace(/^## (.*$)/gim, '<h3 style="margin:10px 0 6px 0; color:#818cf8; font-size:1.1rem;">$1</h3>')
+    .replace(/^### (.*$)/gim, '<h4 style="margin:4px 0 2px 0; color:#38bdf8; font-size:0.95rem;">$1</h4>')
+    .replace(/^## (.*$)/gim, '<h3 style="margin:6px 0 3px 0; color:#818cf8; font-size:1.05rem;">$1</h3>')
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/`([^`]+)`/g, '<code style="background:rgba(15,23,42,0.6); padding:2px 5px; border-radius:4px; color:#f43f5e; font-size:0.9em;">$1</code>')
     .replace(/\n/g, '<br>');
-
-  let thoughtHtml = '';
-  if (!isUser && thought && thought.trim()) {
-    const cleanThought = thought.trim();
-    const durTag = duration ? `${duration}s · NVIDIA NIM` : 'NVIDIA NIM';
-    thoughtHtml = `
-      <details class="advisor-thought-box" open>
-        <summary class="thought-summary">
-          <span class="thought-summary-left">
-            <span class="pulse-brain">🧠</span>
-            <strong>Thought Process</strong>
-            <span class="thought-time-tag">${durTag}</span>
-          </span>
-          <span class="thought-toggle-hint">▾</span>
-        </summary>
-        <div class="thought-body">${cleanThought.replace(/\n/g, '<br>')}</div>
-      </details>
-    `;
-  }
   
   div.innerHTML = isUser 
     ? `<div class="msg-content"><p>${formatted}</p></div>` 
-    : `${avatar}<div class="msg-content">${thoughtHtml}<div class="response-body"><p>${formatted}</p></div></div>`;
+    : `${avatar}<div class="msg-content"><div class="response-body"><p>${formatted}</p></div></div>`;
   container.appendChild(div);
   container.scrollTop = container.scrollHeight;
   return div;
@@ -2727,34 +2708,40 @@ function generateClientGemmaResponse(prompt, d) {
   const collRate = d?.collectionRate || 92.1;
   const cash = d?.cashInHandFmt || '₹43.42Cr';
 
-  if (p.includes('low sale') || p.includes('low sales') || p.includes('lowest sale') || p.includes('lowest sales') || p.includes('worst selling') || p.includes('least sold') || (p.includes('low') && p.includes('sales'))) {
-    return `### 📉 Lowest Sales Products (Fetched from Dataset)\n\n1. **Maggi Masala Noodles 2-min (Pack of 2)** — ₹71.1k (2,673 units sold)\n   - **Category:** Packaged Foods | **Unit Price:** ₹26.60\n2. **Maggi Masala Noodles 2-min (Pack of 1)** — ₹1.07 Lakh (7,627 units sold)\n   - **Category:** Packaged Foods | **Unit Price:** ₹14.00\n3. **Maggi Masala Noodles 2-min (Pack of 3)** — ₹1.12 Lakh (2,806 units sold)\n   - **Category:** Packaged Foods | **Unit Price:** ₹39.90\n4. **Tata Salt 1kg (Pack of 3)** — ₹1.68 Lakh (2,103 units sold)\n   - **Category:** Fresh Groceries | **Unit Price:** ₹79.80\n5. **Prestige Stainless Steel Knife Set (5pc)** — ₹1.98 Lakh (233 units sold)\n   - **Category:** Kitchen Gadgets | **Unit Price:** ₹850.00\n\n**Actionable Insight:** These items generate low turnover revenue. Consider bundling multi-packs with high-traffic grocery essentials or testing promotional discounts to stimulate customer demand.`;
+  // Low margin
+  if (p.includes('low margin') || p.includes('lowest margin') || p.includes('least margin') || (p.includes('margin') && (p.includes('low') || p.includes('lowest') || p.includes('least') || p.includes('bottom') || p.includes('worst')))) {
+    return `- **Product:** **Amul Butter 500g (Pack of 3)** (PROD054)\n- **Gross Margin:** **9.1%** (Lowest in catalog)\n- **Category:** Packaged Foods\n- **Selling Price:** ₹741.00 | **Unit Cost:** ₹673.64\n- **Advice:** High-velocity staple with razor-thin margin. Avoid discounts and negotiate 3–5% bulk procurement rebates.`;
   }
 
-  if (p.includes('highest margin') || p.includes('top margin') || p.includes('max margin') || p.includes('best margin') || (p.includes('margin') && (p.includes('highest') || p.includes('top') || p.includes('best') || p.includes('max') || p.includes('which') || p.includes('product')))) {
-    return `### 🏷️ Product with Highest Margin (Fetched from Dataset)\n\nThe product with the highest gross margin in your business catalog is **Global Desi Palazzo Set** with a profit margin of **44.1%**.\n\n- **Product:** **Global Desi Palazzo Set** (PROD253)\n- **Category:** Women's Apparel\n- **Gross Profit Margin:** **44.1%** (Highest across all catalog SKUs)\n- **Default Selling Price:** ₹1,100.00\n- **Unit Cost Price:** ₹614.53 (Standard Markup: 1.79x)\n\n**Advisor Recommendation:** Prioritize this SKU in your merchandising and promotional strategy. With a 44.1% margin buffer, it is your strongest profit contributor per unit sold.`;
+  // Highest margin
+  if (p.includes('highest margin') || p.includes('top margin') || p.includes('max margin') || p.includes('best margin') || (p.includes('margin') && (p.includes('highest') || p.includes('top') || p.includes('best') || p.includes('max') || p.includes('most')))) {
+    return `- **Product:** **Global Desi Palazzo Set** (PROD253)\n- **Gross Margin:** **44.1%** (Highest in catalog)\n- **Category:** Women's Apparel\n- **Selling Price:** ₹1,100.00 | **Unit Cost:** ₹614.53\n- **Advice:** Prioritize this high-margin SKU in promotions and maintain safe inventory levels to maximize gross profit.`;
+  }
+
+  if (p.includes('low sale') || p.includes('low sales') || p.includes('lowest sale') || p.includes('lowest sales') || p.includes('worst selling') || p.includes('least sold') || (p.includes('low') && p.includes('sales'))) {
+    return `### 📉 Lowest Sales Products (Fetched from Dataset)\n\n1. **Maggi Masala Noodles 2-min (Pack of 2)** — ₹71.1k (2,673 units sold)\n   - **Category:** Packaged Foods | **Unit Price:** ₹26.60\n2. **Maggi Masala Noodles 2-min (Pack of 1)** — ₹1.07 Lakh (7,627 units sold)\n   - **Category:** Packaged Foods | **Unit Price:** ₹14.00\n3. **Maggi Masala Noodles 2-min (Pack of 3)** — ₹1.12 Lakh (2,806 units sold)\n   - **Category:** Packaged Foods | **Unit Price:** ₹39.90\n4. **Tata Salt 1kg (Pack of 3)** — ₹1.68 Lakh (2,103 units sold)\n   - **Category:** Fresh Groceries | **Unit Price:** ₹79.80\n5. **Prestige Stainless Steel Knife Set (5pc)** — ₹1.98 Lakh (233 units sold)\n   - **Category:** Kitchen Gadgets | **Unit Price:** ₹850.00`;
   }
 
   if (!p.includes('margin') && (p.includes('top product') || p.includes('highest sales') || p.includes('highest sale') || (p.includes('top') && p.includes('product')) || p.includes('best selling') || (p.includes('product') && p.includes('highest')))) {
     return `### 🏆 Top Products by Sales Revenue (Fetched from Dataset)\n\n1. **Bosch Dishwasher 12 Place** — ₹2.84 Cr (677 units sold)\n   - **Category:** Large Appliances | **Unit Price:** ₹42,000\n2. **Samsung Front Load Washer 7kg** — ₹1.88 Cr (588 units sold)\n   - **Category:** Large Appliances | **Unit Price:** ₹32,000\n3. **Van Heusen Blazer** — ₹1.88 Cr (4,170 units sold)\n   - **Category:** Men's Apparel | **Unit Price:** ₹4,500\n4. **Inalsa Food Processor** — ₹1.25 Cr (2,778 units sold)\n   - **Category:** Kitchen Gadgets | **Unit Price:** ₹4,500\n5. **LG Frost Free Refrigerator 260L** — ₹90.22 Lakh (347 units sold)\n   - **Category:** Large Appliances | **Unit Price:** ₹26,000`;
   }
   if (p.includes('profit') || p.includes('margin') || p.includes('loss')) {
-    return `### 📊 Profitability Analysis\n\n- **Gross Turnover:** ${rev}\n- **Net Profit:** ${prof} (${margin}% margin)\n- **COGS:** ${d?.totalCOGSFmt || '₹14.96Cr'}\n- **Total Operating Expenses:** ${d?.totalExpensesFmt || '₹7.23Cr'}\n\n**Strategic Recommendation:**\n1. Re-negotiate bulk discount terms with top suppliers (*Reliance Retail*, *ITC*).\n2. Implement a 4–6% price optimization on inelastic high-demand products.\n3. Audit logistics expenses which currently account for ~25% of operational overhead.`;
+    return `### 📊 Profitability Analysis\n\n- **Gross Turnover:** ${rev}\n- **Net Profit:** ${prof} (${margin}% margin)\n- **COGS:** ${d?.totalCOGSFmt || '₹14.96Cr'}\n- **Total Operating Expenses:** ${d?.totalExpensesFmt || '₹7.23Cr'}`;
   }
   if (p.includes('cash') || p.includes('collection') || p.includes('overdue') || p.includes('receivable')) {
-    return `### 💰 Cash Flow & Collections Advisory\n\n- **Cash in Hand:** ${cash}\n- **Pending Receivables:** ${d?.pendingReceivablesFmt || '₹4.33Cr'}\n- **Overdue Invoices:** ${d?.overdueCount || 144} invoices (${overdue})\n- **Collection Rate:** ${collRate}%\n\n**Action Plan:**\n1. **Immediate Escalation:** Follow up with *Sunrise Stores* (₹8.45L overdue 42 days) and *Apex Electronics* (₹6.20L overdue 35 days).\n2. **Credit Term Optimization:** Transition repeat B2B clients from 30-day to 15-day payment cycles.\n3. **Early Settlement Incentive:** Introduce a 1.5% prompt-payment discount for clearing within 7 days.`;
+    return `### 💰 Cash Flow & Collections Advisory\n\n- **Cash in Hand:** ${cash}\n- **Pending Receivables:** ${d?.pendingReceivablesFmt || '₹4.33Cr'}\n- **Overdue Invoices:** ${d?.overdueCount || 144} invoices (${overdue})\n- **Collection Rate:** ${collRate}%`;
   }
   if (p.includes('product') || p.includes('selling') || p.includes('price') || p.includes('pricing')) {
-    return `### 🏷️ Product & Pricing Intelligence\n\n**Top Performers by Revenue:**\n1. **Samsung Galaxy M34 5G** — ₹1.42Cr (820 units) → *Action: Increase price +5%*\n2. **Fortune Sunlite Sunflower Oil 5L** — ₹1.18Cr (1,450 units) → *Action: Maintain competitive pricing*\n3. **LG 1.5 Ton AI Inverter AC** — ₹1.05Cr (280 units) → *Action: Bundle with warranty service*\n4. **Tata Tea Premium 1kg** — ₹94.2L (2,100 units) → *Action: Increase price +4%*\n\n**Inventory Alert:** 60 products are currently below safe reorder thresholds.`;
+    return `### 🏷️ Product & Pricing Intelligence\n\n**Top Performers by Revenue:**\n1. **Samsung Galaxy M34 5G** — ₹1.42Cr (820 units)\n2. **Fortune Sunlite Sunflower Oil 5L** — ₹1.18Cr (1,450 units)\n3. **LG 1.5 Ton AI Inverter AC** — ₹1.05Cr (280 units)\n4. **Tata Tea Premium 1kg** — ₹94.2L (2,100 units)`;
   }
   if (p.includes('supplier') || p.includes('vendor') || p.includes('purchase')) {
-    return `### 🚚 Supplier Intelligence\n\n- **Total Spend:** ${d?.totalPOSpend || '₹19.5Cr'} across ${d?.totalSuppliers || 40} suppliers.\n- **Top Partners:** *Reliance Retail Ltd* (19.5% share, 8.5/10 reliability), *ITC Distribution* (16% share, 9.0/10 reliability).\n\n**Optimization Opportunities:**\n- Consolidate packaging & FMCG procurement to claim a 5% volume rebate.\n- Diversify away from vendors with reliability scores below 5.0 to reduce delayed order penalties.`;
+    return `### 🚚 Supplier Intelligence\n\n- **Total Spend:** ${d?.totalPOSpend || '₹19.5Cr'} across ${d?.totalSuppliers || 40} suppliers.\n- **Top Partners:** *Reliance Retail Ltd* (19.5% share, 8.5/10 reliability), *ITC Distribution* (16% share, 9.0/10 reliability).`;
   }
   if (p.includes('customer') || p.includes('client') || p.includes('high value')) {
-    return `### 👥 Customer Growth & Retention\n\n- **Active Customer Base:** ${d?.activeCustomers || 956} / ${d?.totalCustomers || 1000} (95.6% active)\n- **Top Accounts:** *Aarav Enterprise* (₹42.5L), *Vihan Supermarket* (₹38.1L), *Neha Retail Hub* (₹34.8L)\n\n**Advisor Insight:** Top 20% of accounts generate ~63% of your gross sales. Implement a dedicated key account manager and VIP loyalty pricing tiers.`;
+    return `### 👥 Customer Growth & Retention\n\n- **Active Customer Base:** ${d?.activeCustomers || 956} / ${d?.totalCustomers || 1000} (95.6% active)\n- **Top Accounts:** *Aarav Enterprise* (₹42.5L), *Vihan Supermarket* (₹38.1L), *Neha Retail Hub* (₹34.8L)`;
   }
 
-  return `### 🤖 Gemma Business Growth Advisory\n\n**Current Business Snapshot:**\n- **Revenue:** ${rev} · **Health Score:** ${d?.healthScore || 82}/100\n- **Collection Rate:** ${collRate}% (${overdue} overdue across ${d?.overdueCount || 144} invoices)\n- **Cash in Hand:** ${cash}\n\n**Next Best Actions:**\n1. Check **Pricing Advisor** to optimize margins on top selling electronics & groceries.\n2. Review **Collections Summary** to recover aged receivables.\n3. Run **Growth Simulator** to model a 10% revenue expansion scenario!`;
+  return `### 🤖 Business Growth Advisory\n\n- **Revenue:** ${rev} · **Health Score:** ${d?.healthScore || 82}/100\n- **Collection Rate:** ${collRate}% (${overdue} overdue)\n- **Cash in Hand:** ${cash}`;
 }
 
 async function sendChat(inputEl, container) {
@@ -2763,7 +2750,7 @@ async function sendChat(inputEl, container) {
   appendMsg(container, text, true);
   inputEl.value = '';
 
-  // Dynamic Live Thinking Indicator
+  // Clean live thinking indicator
   const typing = document.createElement('div');
   const cls = container.id === 'fullChatHistory' ? 'full-chat-msg' : 'panel-msg';
   typing.className = `${cls} bot live-thinking-msg`;
@@ -2772,14 +2759,13 @@ async function sendChat(inputEl, container) {
     <div class="msg-content">
       <div class="live-thought-badge">
         <span class="pulse-brain">🧠</span>
-        <span class="live-thought-status">Reading question...</span>
+        <span class="live-thought-status">Analyzing query...</span>
         <span class="live-thought-timer">(0.0s)</span>
       </div>
-      <div class="chat-typing" style="margin-top:8px;"><span></span><span></span><span></span></div>
+      <div class="chat-typing" style="margin-top:6px;"><span></span><span></span><span></span></div>
     </div>
   `;
   
-  // Custom styles for loading animation inside container
   const dots = typing.querySelectorAll('.chat-typing span');
   dots.forEach(d => {
     d.style.display = 'inline-block';
@@ -2794,21 +2780,11 @@ async function sendChat(inputEl, container) {
   container.scrollTop = container.scrollHeight;
 
   const startTime = Date.now();
-  const statusEl = typing.querySelector('.live-thought-status');
   const timerEl = typing.querySelector('.live-thought-timer');
 
   const timerInterval = setInterval(() => {
     const elapsed = (Date.now() - startTime) / 1000;
     if (timerEl) timerEl.textContent = `(${elapsed.toFixed(1)}s)`;
-    if (statusEl) {
-      if (elapsed < 0.8) {
-        statusEl.textContent = 'Reading question...';
-      } else if (elapsed < 2.0) {
-        statusEl.textContent = 'Analyzing dataset records...';
-      } else {
-        statusEl.textContent = 'Thinking with NVIDIA NIM...';
-      }
-    }
   }, 100);
 
   try {
@@ -2821,8 +2797,7 @@ async function sendChat(inputEl, container) {
       const data = await res.json();
       clearInterval(timerInterval);
       typing.remove();
-      const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-      appendMsg(container, data.response || "I couldn't process that request.", false, data.thought || '', data.duration || elapsed);
+      appendMsg(container, data.response || "I couldn't process that request.", false);
       return;
     }
   } catch (err) {
@@ -2833,10 +2808,8 @@ async function sendChat(inputEl, container) {
   setTimeout(() => {
     clearInterval(timerInterval);
     typing.remove();
-    const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
     const fallbackReply = generateClientGemmaResponse(text, kpiData);
-    const fallbackThought = `1. Read question: '${text}'\n2. Analyzed cached business KPIs.\n3. Synthesized client-side business advice.`;
-    appendMsg(container, fallbackReply, false, fallbackThought, elapsed);
+    appendMsg(container, fallbackReply, false);
   }, 400);
 }
 
