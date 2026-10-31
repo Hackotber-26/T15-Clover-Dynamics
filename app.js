@@ -1934,16 +1934,24 @@ function openPricingAdvisorModal() {
       if (!q) return;
       
       const originalText = askBtn.innerHTML;
-      askBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+      askBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right:6px"></i> Analyzing...';
+      askBtn.style.minWidth = '120px';
       askBtn.disabled = true;
       askInput.disabled = true;
+      
+      // Give NVIDIA up to 20s to think and analyze
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 20000);
       
       try {
         const res = await fetch('/api/pricing-advisor', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ product_name: q })
+          body: JSON.stringify({ product_name: q }),
+          signal: controller.signal
         });
+        
+        clearTimeout(timeoutId);
         
         if (res.ok) {
           const data = await res.json();
@@ -1951,15 +1959,22 @@ function openPricingAdvisorModal() {
           selectedIdx = 0;
           renderPricingDetails();
           askInput.value = '';
+          showToast('success', 'Pricing Advisor', `Analysis complete for "${data.name}"`);
           return;
         } else {
           showToast('error', 'Pricing Advisor', 'Unable to fetch pricing for this product.');
         }
       } catch (e) {
-        console.log('Pricing API error:', e);
-        showToast('error', 'Pricing Advisor', 'Network timeout while analyzing product.');
+        clearTimeout(timeoutId);
+        if (e.name === 'AbortError') {
+          showToast('error', 'Pricing Advisor', 'Analysis timed out. Please try again.');
+        } else {
+          console.log('Pricing API error:', e);
+          showToast('error', 'Pricing Advisor', 'Network error while analyzing product.');
+        }
       } finally {
         askBtn.innerHTML = originalText;
+        askBtn.style.minWidth = '';
         askBtn.disabled = false;
         askInput.disabled = false;
       }
