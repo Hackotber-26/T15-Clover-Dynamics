@@ -2706,6 +2706,9 @@ function generateClientGemmaResponse(prompt, d) {
   const collRate = d?.collectionRate || 92.1;
   const cash = d?.cashInHandFmt || '₹43.42Cr';
 
+  if (p.includes('top product') || p.includes('highest sales') || p.includes('highest sale') || (p.includes('top') && p.includes('product')) || p.includes('best selling') || (p.includes('product') && p.includes('highest'))) {
+    return `### 🏆 Top Products by Sales\n\n1. **Samsung Galaxy M34 5G** — ₹1.42 Cr (820 units)\n2. **Fortune Sunlite Sunflower Oil 5L** — ₹1.18 Cr (1,450 units)\n3. **LG 1.5 Ton AI Inverter AC** — ₹1.05 Cr (280 units)\n4. **Tata Tea Premium 1kg** — ₹94.2 Lakh (2,100 units)\n5. **Bosch Dishwasher 12 Place** — ₹88.5 Lakh (210 units)`;
+  }
   if (p.includes('profit') || p.includes('margin') || p.includes('loss')) {
     return `### 📊 Profitability Analysis\n\n- **Gross Turnover:** ${rev}\n- **Net Profit:** ${prof} (${margin}% margin)\n- **COGS:** ${d?.totalCOGSFmt || '₹14.96Cr'}\n- **Total Operating Expenses:** ${d?.totalExpensesFmt || '₹7.23Cr'}\n\n**Strategic Recommendation:**\n1. Re-negotiate bulk discount terms with top suppliers (*Reliance Retail*, *ITC*).\n2. Implement a 4–6% price optimization on inelastic high-demand products.\n3. Audit logistics expenses which currently account for ~25% of operational overhead.`;
   }

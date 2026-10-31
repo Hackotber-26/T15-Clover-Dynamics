@@ -108,6 +108,17 @@ def format_with_nvidia(system_prompt: str, user_text: str) -> str:
                     msg_obj = res_data["choices"][0]["message"]
                     content = msg_obj.get("content") or msg_obj.get("reasoning_content") or ""
                     if content:
+                        import re
+                        if "Let me draft:" in content:
+                            content = content.split("Let me draft:", 1)[1].strip()
+                        elif "Draft:" in content:
+                            content = content.split("Draft:", 1)[1].strip()
+                        if "Word count check" in content:
+                            content = re.sub(r'Word count check:.*$', '', content, flags=re.DOTALL).strip()
+                        if content.startswith("The user is asking") or content.startswith("Looking at the"):
+                            parts = re.split(r'\n\n(?=[*#•\d])', content)
+                            if len(parts) > 1:
+                                content = "\n\n".join(parts[1:]).strip()
                         print(f"[NVIDIA] Successfully generated response using {model_name}")
                         return content.strip()
         except Exception as e:
@@ -947,10 +958,34 @@ def api_chat(req: ChatRequest):
     if clean_msg in greeting_set or clean_words.issubset(greeting_set | {"there", "advisor", "bot", "assistant"}):
         return JSONResponse({"response": "Hi, how can I help?"})
 
+    # 2. TOP PRODUCTS / HIGHEST SALES: "see when i ask top products say top products dont give so much text and it shdould be hardcodded"
+    top_triggers = [
+        "top product", "top products", "highest sale", "highest sales",
+        "best selling", "top selling", "best product", "best products",
+        "top sales", "most sold", "most popular", "highest revenue",
+        "highest selling", "best performing"
+    ]
+    is_top_product_query = (
+        any(t in clean_msg for t in top_triggers) or
+        (("top" in clean_words or "highest" in clean_words or "best" in clean_words or "most" in clean_words) and
+         ("product" in clean_words or "products" in clean_words or "sales" in clean_words or "sale" in clean_words or "item" in clean_words or "items" in clean_words or "sold" in clean_words))
+    )
+    if is_top_product_query:
+        return JSONResponse({
+            "response": (
+                "### 🏆 Top Products by Sales\n\n"
+                "1. **Samsung Galaxy M34 5G** — ₹1.42 Cr (820 units)\n"
+                "2. **Fortune Sunlite Sunflower Oil 5L** — ₹1.18 Cr (1,450 units)\n"
+                "3. **LG 1.5 Ton AI Inverter AC** — ₹1.05 Cr (280 units)\n"
+                "4. **Tata Tea Premium 1kg** — ₹94.2 Lakh (2,100 units)\n"
+                "5. **Bosch Dishwasher 12 Place** — ₹88.5 Lakh (210 units)"
+            )
+        })
+
     import urllib.parse
     import json
 
-    # 2. LOW INVENTORY & BEST SUPPLIERS QUERY
+    # 3. LOW INVENTORY & BEST SUPPLIERS QUERY
     # "when i ask which product low in the inventory and best suppliers for this product fetch this from datasets and say. also show the supplier button if click it should mail it"
     is_inventory_query = (
         ("low" in clean_words and any(w in clean_words for w in ["inventory", "stock", "product", "products", "item", "items"])) or
@@ -1093,15 +1128,15 @@ def api_chat(req: ChatRequest):
     }
 
     system_prompt = f"""You are the AI Business Advisor for Arjun's Indian SME (Retail & Distribution) powered by NVIDIA NIM & Supabase.
-Answer the user's business question with clear financial reasoning and actionable recommendations.
+Answer the user's business question directly with clear financial reasoning and actionable recommendations.
 
 [CURRENT BUSINESS CONTEXT]
 {json.dumps(context_summary, indent=2, ensure_ascii=False)}
 
-GUIDELINES:
-1. Answer directly with data-driven reasoning and clear markdown bullet points.
-2. If asked about pricing, calculate new price and margin.
-3. Keep the response concise, professional, and practical (under 150 words)."""
+CRITICAL RULES:
+1. Output ONLY the final direct answer for the user. Do NOT write your thinking process, scratchpads, planning, or self-evaluations.
+2. Answer directly with data-driven reasoning and clear markdown bullet points.
+3. Keep the response concise, professional, and practical (under 100 words)."""
 
     bot_response = ""
     try:
